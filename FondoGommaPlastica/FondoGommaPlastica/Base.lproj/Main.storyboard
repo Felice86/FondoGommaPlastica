@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_verde" translatesAutoresizingMaskIntoConstraints="NO" id="790-li-i2r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_FGP" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-4j-HhZ">
+                                <rect key="frame" x="102" y="199" width="117" height="171"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB3-Pd-HiP">
+                                <rect key="frame" x="102" y="473" width="116" height="45"/>
+                                <state key="normal" image="pulsante_entra"/>
+                                <connections>
+                                    <segue destination="m17-yv-dhN" kind="presentation" identifier="entrataIdentifier" modalTransitionStyle="crossDissolve" id="Kno-TX-03u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="790-li-i2r" secondAttribute="trailing" id="00b-jb-Su7"/>
+                            <constraint firstItem="UGe-4j-HhZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Vq-SV-1cS"/>
+                            <constraint firstItem="UGe-4j-HhZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFN-ol-cMG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="790-li-i2r" secondAttribute="bottom" id="MLB-k3-Rdh"/>
+                            <constraint firstItem="tB3-Pd-HiP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SvL-ST-sWu"/>
+                            <constraint firstItem="790-li-i2r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bvX-u1-uUy"/>
+                            <constraint firstAttribute="trailing" secondItem="790-li-i2r" secondAttribute="trailing" id="cvk-Pv-XAN"/>
+                            <constraint firstItem="790-li-i2r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fst-BW-bkL"/>
+                            <constraint firstItem="790-li-i2r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qJ2-iA-foY"/>
+                            <constraint firstItem="790-li-i2r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ujV-hc-O9o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="790-li-i2r" secondAttribute="bottom" id="wll-ui-O3D"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tB3-Pd-HiP" secondAttribute="bottom" constant="50" id="ymZ-cZ-pDn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bvX-u1-uUy"/>
+                                <exclude reference="cvk-Pv-XAN"/>
+                                <exclude reference="qJ2-iA-foY"/>
+                                <exclude reference="wll-ui-O3D"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="386"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uO6-QZ-J7N">
+            <objects>
+                <viewController id="m17-yv-dhN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pPU-Nu-dD4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rzf-Jz-OXR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tAM-NG-4YQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="n9r-W7-LW6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-30-VP5" userLabel="scrollerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omini_grandi" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-7H-uji">
+                                        <rect key="frame" x="110" y="0.0" width="101" height="94"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-GA-5JE" userLabel="frecciaSinistraButton">
+                                        <rect key="frame" x="0.0" y="101" width="160" height="27"/>
+                                        <state key="normal" image="freccia_sinistra"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHB-KW-xg1" userLabel="frecciaDestraButton">
+                                        <rect key="frame" x="160" y="101" width="160" height="27"/>
+                                        <state key="normal" image="freccia_destra"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefono_piccolo" translatesAutoresizingMaskIntoConstraints="NO" id="WW7-KK-wkm">
+                                        <rect key="frame" x="38" y="0.0" width="72" height="95"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lente_piccola" translatesAutoresizingMaskIntoConstraints="NO" id="zSR-zW-esk">
+                                        <rect key="frame" x="211" y="0.0" width="69" height="96"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jTa-GA-5JE" firstAttribute="width" secondItem="MHB-KW-xg1" secondAttribute="width" id="0MI-kn-aEh"/>
+                                    <constraint firstAttribute="bottom" secondItem="jTa-GA-5JE" secondAttribute="bottom" id="4Lg-Kp-dcF"/>
+                                    <constraint firstItem="MHB-KW-xg1" firstAttribute="leading" secondItem="jTa-GA-5JE" secondAttribute="trailing" id="6dI-Na-oSq"/>
+                                    <constraint firstAttribute="trailing" secondItem="MHB-KW-xg1" secondAttribute="trailing" id="9NL-mB-MRk"/>
+                                    <constraint firstItem="jTa-GA-5JE" firstAttribute="leading" secondItem="SIU-30-VP5" secondAttribute="leading" id="Fqn-Hn-erg"/>
+                                    <constraint firstAttribute="bottom" secondItem="MHB-KW-xg1" secondAttribute="bottom" id="Gz7-EA-b35"/>
+                                    <constraint firstAttribute="height" constant="128" id="I9B-it-PFH"/>
+                                    <constraint firstItem="ieh-7H-uji" firstAttribute="top" secondItem="SIU-30-VP5" secondAttribute="top" id="QCC-zV-88w"/>
+                                    <constraint firstItem="WW7-KK-wkm" firstAttribute="top" secondItem="SIU-30-VP5" secondAttribute="top" id="Um7-ax-rrU"/>
+                                    <constraint firstItem="ieh-7H-uji" firstAttribute="leading" secondItem="WW7-KK-wkm" secondAttribute="trailing" id="YuU-zz-Rv9"/>
+                                    <constraint firstItem="zSR-zW-esk" firstAttribute="top" secondItem="SIU-30-VP5" secondAttribute="top" id="Z5W-a8-Ger"/>
+                                    <constraint firstItem="ieh-7H-uji" firstAttribute="centerX" secondItem="SIU-30-VP5" secondAttribute="centerX" id="aML-k3-tsf"/>
+                                    <constraint firstItem="zSR-zW-esk" firstAttribute="leading" secondItem="ieh-7H-uji" secondAttribute="trailing" id="odM-9r-Q5R"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chi_siamo" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-nh-9nm">
+                                <rect key="frame" x="0.0" y="128" width="320" height="127"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer_verde" translatesAutoresizingMaskIntoConstraints="NO" id="P4D-ZG-GWv">
+                                <rect key="frame" x="0.0" y="494" width="320" height="74"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxN-fP-uhv">
+                                <rect key="frame" x="16" y="263" width="288" height="168"/>
+                                <mutableString key="text">È il fondo pensione complementareper i lavoratori e i familiari a caricodei lavoratori del settore gomma, cavi elettrici e affini e materie plastiche; è costituito nella forma di associazione riconosciuta ed è iscritto al n° 125 dell’Albo Covipdei fondi pensione: le caratteristiche generali del Fondo sonodescritte nello Statuto.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P4D-ZG-GWv" firstAttribute="top" secondItem="NxN-fP-uhv" secondAttribute="bottom" constant="8" id="0IG-Bk-cfx"/>
+                            <constraint firstItem="eGq-nh-9nm" firstAttribute="top" secondItem="SIU-30-VP5" secondAttribute="bottom" id="219-xl-gqX"/>
+                            <constraint firstItem="eGq-nh-9nm" firstAttribute="leading" secondItem="tAM-NG-4YQ" secondAttribute="leading" id="3OX-nT-xuP"/>
+                            <constraint firstItem="rzf-Jz-OXR" firstAttribute="top" secondItem="n9r-W7-LW6" secondAttribute="bottom" id="3tJ-rH-3CM"/>
+                            <constraint firstAttribute="trailing" secondItem="eGq-nh-9nm" secondAttribute="trailing" id="Gdw-Wj-Hnp"/>
+                            <constraint firstItem="SIU-30-VP5" firstAttribute="leading" secondItem="tAM-NG-4YQ" secondAttribute="leading" id="NbR-Dl-AL0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NxN-fP-uhv" secondAttribute="trailing" id="Pkl-IL-di6"/>
+                            <constraint firstAttribute="trailing" secondItem="SIU-30-VP5" secondAttribute="trailing" id="bke-76-4Gx"/>
+                            <constraint firstItem="SIU-30-VP5" firstAttribute="top" secondItem="tAM-NG-4YQ" secondAttribute="top" id="drJ-Wa-9jn"/>
+                            <constraint firstItem="n9r-W7-LW6" firstAttribute="top" secondItem="tAM-NG-4YQ" secondAttribute="top" id="gUX-gn-xa6"/>
+                            <constraint firstItem="NxN-fP-uhv" firstAttribute="leading" secondItem="tAM-NG-4YQ" secondAttribute="leadingMargin" id="gtW-73-y2q"/>
+                            <constraint firstAttribute="trailing" secondItem="n9r-W7-LW6" secondAttribute="trailing" id="jbK-qT-cpA"/>
+                            <constraint firstItem="n9r-W7-LW6" firstAttribute="leading" secondItem="tAM-NG-4YQ" secondAttribute="leading" id="jwi-xh-zi9"/>
+                            <constraint firstAttribute="trailing" secondItem="P4D-ZG-GWv" secondAttribute="trailing" id="oYR-og-h5e"/>
+                            <constraint firstItem="P4D-ZG-GWv" firstAttribute="leading" secondItem="tAM-NG-4YQ" secondAttribute="leading" id="uJd-La-hfb"/>
+                            <constraint firstItem="rzf-Jz-OXR" firstAttribute="top" secondItem="P4D-ZG-GWv" secondAttribute="bottom" id="ui2-ej-DkU"/>
+                            <constraint firstItem="NxN-fP-uhv" firstAttribute="top" secondItem="eGq-nh-9nm" secondAttribute="bottom" constant="8" id="xa2-sm-U59"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0IG-Bk-cfx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAf-4W-k6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="386"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chi_siamo" width="320" height="127"/>
+        <image name="footer_verde" width="320" height="74"/>
+        <image name="freccia_destra" width="20" height="27"/>
+        <image name="freccia_sinistra" width="20" height="27"/>
+        <image name="lente_piccola" width="69" height="96"/>
+        <image name="logo_FGP" width="117" height="171"/>
+        <image name="omini_grandi" width="101" height="94"/>
+        <image name="pulsante_entra" width="116" height="45"/>
+        <image name="sfondo_blu" width="320" height="480"/>
+        <image name="sfondo_verde" width="320" height="480"/>
+        <image name="telefono_piccolo" width="72" height="95"/>
+    </resources>
+</document>
