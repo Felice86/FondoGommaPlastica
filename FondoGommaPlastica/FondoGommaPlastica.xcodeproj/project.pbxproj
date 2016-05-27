@@ -115,7 +115,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 6D5E0DBD1CF7139600E08CE9;
@@ -300,6 +299,7 @@
 				6D5E0DDF1CF7139600E08CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
