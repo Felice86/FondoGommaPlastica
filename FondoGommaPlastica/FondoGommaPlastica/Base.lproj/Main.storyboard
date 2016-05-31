@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB3-Pd-HiP">
                                 <rect key="frame" x="102" y="473" width="116" height="45"/>
                                 <state key="normal" image="pulsante_entra"/>
+                                <connections>
+                                    <segue destination="EPt-q5-Qkp" kind="presentation" modalTransitionStyle="crossDissolve" id="zyl-x1-FUo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -58,10 +61,69 @@
             </objects>
             <point key="canvasLocation" x="-31" y="386"/>
         </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="qaR-9O-s7N">
+            <objects>
+                <viewController id="EPt-q5-Qkp" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2o-BT-3wq"/>
+                        <viewControllerLayoutGuide type="bottom" id="bge-rJ-W1O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n5x-2g-MjE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-2a-Gpp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer_verde" translatesAutoresizingMaskIntoConstraints="NO" id="tlz-Qc-x5x">
+                                <rect key="frame" x="0.0" y="494" width="320" height="74"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdZ-hD-ttr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Ebb-Oe-As5"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9d-go-YiW">
+                                <rect key="frame" x="0.0" y="140" width="320" height="354"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UMQ-2a-Gpp" secondAttribute="trailing" id="0rY-XH-Qrs"/>
+                            <constraint firstItem="bge-rJ-W1O" firstAttribute="top" secondItem="tlz-Qc-x5x" secondAttribute="bottom" id="5Be-Tu-1S8"/>
+                            <constraint firstAttribute="trailing" secondItem="R9d-go-YiW" secondAttribute="trailing" id="8qd-vQ-ImT"/>
+                            <constraint firstItem="UMQ-2a-Gpp" firstAttribute="top" secondItem="n5x-2g-MjE" secondAttribute="top" id="Fjh-Yy-XDh"/>
+                            <constraint firstItem="tlz-Qc-x5x" firstAttribute="top" secondItem="R9d-go-YiW" secondAttribute="bottom" id="K5O-if-U61"/>
+                            <constraint firstAttribute="bottom" secondItem="UMQ-2a-Gpp" secondAttribute="bottom" id="KOK-y1-ABj"/>
+                            <constraint firstItem="R9d-go-YiW" firstAttribute="leading" secondItem="n5x-2g-MjE" secondAttribute="leading" id="R2l-WT-Cmw"/>
+                            <constraint firstAttribute="trailing" secondItem="tlz-Qc-x5x" secondAttribute="trailing" id="bZY-UP-GRe"/>
+                            <constraint firstAttribute="trailing" secondItem="VdZ-hD-ttr" secondAttribute="trailing" id="dd8-oG-GJI"/>
+                            <constraint firstItem="UMQ-2a-Gpp" firstAttribute="leading" secondItem="n5x-2g-MjE" secondAttribute="leading" id="jDu-zK-bpG"/>
+                            <constraint firstItem="VdZ-hD-ttr" firstAttribute="leading" secondItem="n5x-2g-MjE" secondAttribute="leading" id="qPp-Gv-FDF"/>
+                            <constraint firstItem="tlz-Qc-x5x" firstAttribute="leading" secondItem="n5x-2g-MjE" secondAttribute="leading" id="sVi-EL-RDn"/>
+                            <constraint firstItem="VdZ-hD-ttr" firstAttribute="top" secondItem="n5x-2g-MjE" secondAttribute="top" id="tLE-1u-RMo"/>
+                            <constraint firstItem="R9d-go-YiW" firstAttribute="top" secondItem="VdZ-hD-ttr" secondAttribute="bottom" id="wtP-D5-6Gd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="R9d-go-YiW" id="kFg-l9-ZHd"/>
+                        <outlet property="imageScrollView" destination="VdZ-hD-ttr" id="hbd-Q7-52B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akn-4R-PRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="394"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="footer_verde" width="320" height="74"/>
         <image name="logo_FGP" width="117" height="171"/>
         <image name="pulsante_entra" width="116" height="45"/>
+        <image name="sfondo_blu" width="320" height="480"/>
         <image name="sfondo_verde" width="320" height="480"/>
     </resources>
 </document>
