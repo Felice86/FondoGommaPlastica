@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "lente_grande.png",
+      "filename" : "pulsante_torna_indietro.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "lente_grande@2x.png",
+      "filename" : "pulsante_torna_indietro@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "lente_grande@3x.png",
+      "filename" : "pulsante_torna_indietro@3x.png",
       "scale" : "3x"
     },
     {

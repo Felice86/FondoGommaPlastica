@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1667D01CFEFFE1000FD9C7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667D21CFF0390000FD9C7 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */; settings = {ASSET_TAGS = (); }; };
+		6D1667D81CFF2028000FD9C7 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667D71CFF2028000FD9C7 /* InfoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */; settings = {ASSET_TAGS = (); }; };
+		6D1667DD1CFF2404000FD9C7 /* ContattiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */; settings = {ASSET_TAGS = (); }; };
+		6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E11CFF2CF1000FD9C7 /* LoginView.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0DCA1CF7139600E08CE9 /* main.m */; };
 		6D5E0DCE1CF7139600E08CE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0DCD1CF7139600E08CE9 /* AppDelegate.m */; };
 		6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD21CF7139600E08CE9 /* Main.storyboard */; };
@@ -16,6 +25,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D1667CE1CFEFFE1000FD9C7 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		6D1667D11CFF0390000FD9C7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6D1667D21CFF0390000FD9C7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoContentView.xib; sourceTree = "<group>"; };
+		6D1667D61CFF2028000FD9C7 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		6D1667D71CFF2028000FD9C7 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContattiView.xib; sourceTree = "<group>"; };
+		6D1667DB1CFF2404000FD9C7 /* ContattiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContattiViewController.h; sourceTree = "<group>"; };
+		6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContattiViewController.m; sourceTree = "<group>"; };
+		6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		6D1667E01CFF2CF1000FD9C7 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		6D1667E11CFF2CF1000FD9C7 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpazioAderenteViewController.h; sourceTree = "<group>"; };
+		6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpazioAderenteViewController.m; sourceTree = "<group>"; };
 		6D5E0DC61CF7139600E08CE9 /* FondoGommaPlastica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FondoGommaPlastica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5E0DCA1CF7139600E08CE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D5E0DCC1CF7139600E08CE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +65,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D1667E31CFF3AE9000FD9C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D1667DB1CFF2404000FD9C7 /* ContattiViewController.h */,
+				6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */,
+				6D1667D61CFF2028000FD9C7 /* InfoViewController.h */,
+				6D1667D71CFF2028000FD9C7 /* InfoViewController.m */,
+				6D1667D11CFF0390000FD9C7 /* LoginViewController.h */,
+				6D1667D21CFF0390000FD9C7 /* LoginViewController.m */,
+				6D1667CE1CFEFFE1000FD9C7 /* PageContentViewController.h */,
+				6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */,
+				85AA7BB81CFE0E48007AD1DA /* RootViewController.h */,
+				85AA7BB91CFE0E48007AD1DA /* RootViewController.m */,
+				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
+				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6D1667E41CFF3AF8000FD9C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */,
+				6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */,
+				6D1667E01CFF2CF1000FD9C7 /* LoginView.h */,
+				6D1667E11CFF2CF1000FD9C7 /* LoginView.m */,
+				6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		6D5E0DBD1CF7139600E08CE9 = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +122,8 @@
 				6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */,
 				6D5E0DD21CF7139600E08CE9 /* Main.storyboard */,
 				6D5E0DC91CF7139600E08CE9 /* Supporting Files */,
-				85AA7BB81CFE0E48007AD1DA /* RootViewController.h */,
-				85AA7BB91CFE0E48007AD1DA /* RootViewController.m */,
+				6D1667E31CFF3AE9000FD9C7 /* ViewControllers */,
+				6D1667E41CFF3AF8000FD9C7 /* Views */,
 			);
 			path = FondoGommaPlastica;
 			sourceTree = "<group>";
@@ -139,6 +194,9 @@
 			files = (
 				6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */,
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
+				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
+				6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */,
+				6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */,
 				6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5E0DCE1CF7139600E08CE9 /* AppDelegate.m in Sources */,
+				6D1667D01CFEFFE1000FD9C7 /* PageContentViewController.m in Sources */,
+				6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */,
+				6D1667D81CFF2028000FD9C7 /* InfoViewController.m in Sources */,
+				6D1667DD1CFF2404000FD9C7 /* ContattiViewController.m in Sources */,
 				6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */,
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
+				6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */,
+				6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -254,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

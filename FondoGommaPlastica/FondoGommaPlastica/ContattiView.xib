@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contattaci" translatesAutoresizingMaskIntoConstraints="NO" id="5hA-gd-jCS">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="lKr-By-uGj">
+                    <rect key="frame" x="0.0" y="113" width="320" height="13"/>
+                </imageView>
+                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELEFONO T. 0267382452" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-2E-CoL">
+                    <rect key="frame" x="8" y="70" width="304" height="39"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="QoW-wS-YUR">
+                    <rect key="frame" x="0.0" y="189" width="320" height="13"/>
+                </imageView>
+                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuK-g7-h1T">
+                    <rect key="frame" x="8" y="134" width="304" height="51"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">ORARI DI RISPOSTA AL PUBBLICO lunedì, mercoledì e venerdì dalle 9.30 alle 13.00 il martedì ed il giovedì dalle 14.00 alle 17.00</string>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-i9-QNy">
+                    <rect key="frame" x="0.0" y="272" width="320" height="13"/>
+                </imageView>
+                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MAIL e PEC fgp@fondogommaplastica.it fondogommaplastica@pec-mail.it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luz-Gr-urH">
+                    <rect key="frame" x="8" y="210" width="304" height="58"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-1D-1e3">
+                    <rect key="frame" x="130" y="289" width="61" height="51"/>
+                    <state key="normal" image="facebook"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5hA-gd-jCS" secondAttribute="trailing" id="2ee-Gk-YVm"/>
+                <constraint firstAttribute="trailing" secondItem="JuK-g7-h1T" secondAttribute="trailing" constant="8" id="3mZ-9E-GXq"/>
+                <constraint firstAttribute="trailing" secondItem="rEp-2E-CoL" secondAttribute="trailing" constant="8" id="4xq-Cm-WZc"/>
+                <constraint firstItem="Gu6-i9-QNy" firstAttribute="top" secondItem="luz-Gr-urH" secondAttribute="bottom" constant="4" id="7DJ-ov-Yjo"/>
+                <constraint firstAttribute="trailing" secondItem="Gu6-i9-QNy" secondAttribute="trailing" id="7Sb-T2-suj"/>
+                <constraint firstItem="rEp-2E-CoL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="91k-da-Fba"/>
+                <constraint firstItem="JuK-g7-h1T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9tJ-Yz-TPD"/>
+                <constraint firstItem="rEp-2E-CoL" firstAttribute="top" secondItem="5hA-gd-jCS" secondAttribute="bottom" constant="8" id="D4Z-pR-8xO"/>
+                <constraint firstItem="luz-Gr-urH" firstAttribute="top" secondItem="QoW-wS-YUR" secondAttribute="bottom" constant="8" id="Ess-Y4-rWX"/>
+                <constraint firstItem="5hA-gd-jCS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KFC-xw-dw3"/>
+                <constraint firstItem="JuK-g7-h1T" firstAttribute="top" secondItem="lKr-By-uGj" secondAttribute="bottom" constant="8" id="OKN-6C-Mi2"/>
+                <constraint firstItem="Gu6-i9-QNy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SXJ-n4-efJ"/>
+                <constraint firstItem="QoW-wS-YUR" firstAttribute="top" secondItem="JuK-g7-h1T" secondAttribute="bottom" constant="4" id="TIh-SO-3fA"/>
+                <constraint firstItem="lKr-By-uGj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ttu-fm-ZUL"/>
+                <constraint firstItem="5hA-gd-jCS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YUg-bW-LhW"/>
+                <constraint firstItem="Gu6-i9-QNy" firstAttribute="top" secondItem="luz-Gr-urH" secondAttribute="bottom" constant="4" id="bjf-Ad-kQg"/>
+                <constraint firstItem="QoW-wS-YUR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fUE-hC-ZaM"/>
+                <constraint firstItem="QoW-wS-YUR" firstAttribute="top" secondItem="JuK-g7-h1T" secondAttribute="bottom" constant="4" id="guK-WA-QG5"/>
+                <constraint firstItem="oDt-1D-1e3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mAp-Md-7XD"/>
+                <constraint firstItem="luz-Gr-urH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="mUn-bt-4Gh"/>
+                <constraint firstItem="lKr-By-uGj" firstAttribute="top" secondItem="rEp-2E-CoL" secondAttribute="bottom" constant="4" id="oR1-fg-TTB"/>
+                <constraint firstAttribute="trailing" secondItem="QoW-wS-YUR" secondAttribute="trailing" id="qqF-4h-I4p"/>
+                <constraint firstAttribute="trailing" secondItem="lKr-By-uGj" secondAttribute="trailing" id="rHa-Z0-tKu"/>
+                <constraint firstAttribute="trailing" secondItem="luz-Gr-urH" secondAttribute="trailing" constant="8" id="t0R-SJ-GBK"/>
+                <constraint firstItem="oDt-1D-1e3" firstAttribute="top" secondItem="Gu6-i9-QNy" secondAttribute="bottom" constant="4" id="tc5-ZO-OL9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="471" y="335.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="contattaci" width="320" height="62"/>
+        <image name="facebook" width="61" height="51"/>
+        <image name="filetti_bianchi" width="320" height="13"/>
+    </resources>
+</document>

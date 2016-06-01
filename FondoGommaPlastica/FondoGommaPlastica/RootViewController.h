@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PageContentViewController.h"
 
-@interface RootViewController : UIViewController <UIPageViewControllerDataSource>
+@interface RootViewController : UIViewController <UIPageViewControllerDataSource,UIPageViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *footerImageView;
+@property (nonatomic, weak) IBOutlet UIView *contentView;
 
 @end
