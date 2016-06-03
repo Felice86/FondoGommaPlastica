@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Aderente.h"
+
 @class LoginView;
+
 @protocol LoginViewProtocol <NSObject>
 @required
-- (void)loginView:(LoginView*)loginView esegueLoginPer:(NSObject*)utente;
+- (void)loginViewEsegueLogin:(LoginView*)loginView;
 @end
 
 @interface LoginView : UIView
@@ -18,4 +21,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, weak) NSObject<LoginViewProtocol> *delegate;
+
+- (void)resetInput;
+- (void)impostaAdTest;
 @end

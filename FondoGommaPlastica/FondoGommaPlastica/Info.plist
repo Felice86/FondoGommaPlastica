@@ -45,5 +45,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+<!--	<key>NSAppTransportSecurity</key>-->
+<!--	<dict>-->
+<!--		<key>NSExceptionDomains</key>-->
+<!--		<dict>-->
+<!--			<key>fondimatica.it</key>-->
+<!--			<dict>-->
+<!--				<key>NSIncludesSubdomains</key>-->
+<!--				<true/>-->
+<!--				<key>NSExceptionAllowsInsecureHTTPLoads</key>-->
+<!--				<true/>-->
+<!--				<key>NSExceptionMinimumTLSVersion</key>-->
+<!--				<string>TLSv1.1</string>-->
+<!--				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>-->
+<!--				<false/>-->
+<!--			</dict>-->
+<!--		</dict>-->
+<!--	</dict>-->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>idUtenteInvocatore</key>
+	<string>prvmobile01</string>
+	<key>pswInvocatore</key>
+	<string>275888KKOJ</string>
+	<key>baseUrl</key>
+	<string>https://www.fondimatica.it/gommaplasticasvc/Aderente3.svc</string>
+	<key>recapiti</key>
+	<string>%@/recapiti</string>
+	<key>contributi</key>
+	<string>%@/contributi</string>
+	<key>rendimento</key>
+	<string>%@/rendimento</string>
+	<key>anagrafica</key>
+	<string>%@/anagrafica</string>
+	<key>liquidazioni</key>
+	<string>%@/liquidazioni/%@</string>
+	<key>abilitaUtente</key>
+	<string>%@/abilitautente</string>
+	<key>usernameAdTest</key>
+	<string>50123</string>
+	<key>passwordAdTest</key>
+	<string>BF710372UA</string>
+</dict>
+</plist>

@@ -102,32 +102,32 @@
 #pragma mark - ACCESSORI
 -(void) setCustomView:(UIView *)customView {
     NSUInteger z = NSNotFound;
-    z = [self.contentView.subviews indexOfObject:customView];
-    if (z == NSNotFound) {
-        [self.contentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
-        [self.contentView addSubview:customView];
-    }
-//    if (self.contentView) {
-//        z = [self.view.subviews indexOfObject:self.contentView];
-//    }
+//    z = [self.contentView.subviews indexOfObject:customView];
 //    if (z == NSNotFound) {
-//        // old view was not in hierarchy
-//        // you can insert subview at any index and any view you want by default
-//        [self.view addSubview:customView];
-//    } else {
-//        // you can save superview
-//        UIView *superview = self.contentView.superview;
-//        [self.contentView removeFromSuperview];
-//        //also you can copy some attributes of old view:
-//        //customView.center = _customView.center
-//        [superview insertSubview:customView atIndex:z];
+//        [self.contentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+//        [self.contentView addSubview:customView];
 //    }
-    // and save ivar
-//    self.contentView = customView;
+    if (self.contentView) {
+        z = [self.view.subviews indexOfObject:self.contentView];
+    }
+    if (z == NSNotFound) {
+        // old view was not in hierarchy
+        // you can insert subview at any index and any view you want by default
+        [self.view addSubview:customView];
+    } else {
+        // you can save superview
+        UIView *superview = self.contentView.superview;
+        [self.contentView removeFromSuperview];
+        //also you can copy some attributes of old view:
+        //customView.center = _customView.center
+        [superview insertSubview:customView atIndex:z];
+    }
+    //and save ivar
+    self.contentView = customView;
 }
 
 - (void)caricaCurrentContentView {
-//    self.currentPageVC.contentView.frame = self.contentView.frame;
+    self.currentPageVC.contentView.frame = self.contentView.frame;
     [self setCustomView:self.currentPageVC.contentView];
 }
 

@@ -9,6 +9,6 @@
 #import "PageContentViewController.h"
 #import "LoginView.h"
 
-@interface LoginViewController : PageContentViewController <UITextFieldDelegate,LoginViewProtocol>
+@interface LoginViewController : PageContentViewController <UITextFieldDelegate,LoginViewProtocol,NSURLSessionDelegate>
 
 @end

@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "LoginView.h"
 #import "SpazioAderenteViewController.h"
+#import "DataHandler.h"
+#import "Configurations.h"
 
 @interface LoginViewController() {
     CGRect posizioneContentView;
@@ -26,6 +28,18 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didShowKeyboard:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didHideKeyboard:) name:UIKeyboardDidHideNotification object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [(LoginView*)self.contentView resetInput];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+#ifdef DEBUG
+    [(LoginView*)self.contentView impostaAdTest];
+#endif
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,10 +111,53 @@
 }
 
 #pragma mark - LOGIN VIEW PROTOCOL
-- (void)loginView:(LoginView *)loginView esegueLoginPer:(NSObject *)utente {
+- (void)loginViewEsegueLogin:(LoginView *)loginView {
+    Aderente *aderente = [Aderente sharedAderente];
+    NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
+    NSData *passwordData = [aderente.password dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLRequest *request = [[DataHandler sharedData] createWebRequest:abilitaUtenteUrl method:@"POST" body:passwordData];
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:nil];
+    NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Errore:%@",error);
+        } else {
+            BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
+            NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
+#ifdef DEBUG
+            abilitaUtenteResponse = YES;
+#endif
+            if (abilitaUtenteResponse) {
+                [self puoiMostrareVistaAderente];
+            }
+        }
+    }];
+    [dataStack resume];
+}
+
+#pragma mark - ACCESSORI
+- (void)puoiMostrareVistaAderente {
     SpazioAderenteViewController *spazioAderenteViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SpazioAderenteViewController"];
     spazioAderenteViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self presentViewController:spazioAderenteViewController animated:YES completion:nil];
+}
+
+#pragma mark - URL SESSION DELEGATE
+//- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
+//    NSLog(@"didBecomeInvalidWithError");
+//}
+//
+//- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
+//    NSLog(@"URLSessionDidFinishEventsForBackgroundURLSession");
+//}
+//
+//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+//    NSLog(@"didReceiveChallenge withtask:%@",task);
+//}
+
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    NSLog(@"didReceiveChallenge");
+    completionHandler(NSURLSessionAuthChallengeUseCredential, [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);
 }
 
 @end
