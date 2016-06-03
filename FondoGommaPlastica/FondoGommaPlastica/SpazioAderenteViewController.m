@@ -7,6 +7,7 @@
 //
 
 #import "SpazioAderenteViewController.h"
+#import "Aderente.h"
 
 @interface SpazioAderenteViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    Aderente *aderente = [Aderente sharedAderente];
+    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %@",aderente.dataIscrizioneAderente]];
+    [self.nomeCognomeLabel setText:[NSString stringWithFormat:@"%@ %@",aderente.nome,aderente.cognome]];
 }
 
 - (void)didReceiveMemoryWarning {

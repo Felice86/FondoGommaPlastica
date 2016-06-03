@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SpazioAderenteViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *dataIscrizioneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nomeCognomeLabel;
 
 @end

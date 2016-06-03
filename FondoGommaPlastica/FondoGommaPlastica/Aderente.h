@@ -58,7 +58,7 @@
 @property (nonatomic, retain) NSString *nome;
 @property (nonatomic, retain) NSString *cognome;
 @property (nonatomic, retain) NSString *codiceFiscale;
-@property (nonatomic, retain) NSDate *dataIscrizioneAderente;
+@property (nonatomic, retain) NSString *dataIscrizioneAderente;
 
 //Recapiti
 @property (nonatomic, retain) NSMutableDictionary *recapitiDict;
@@ -77,5 +77,7 @@
 //Contributi
 @property (nonatomic, retain) NSMutableArray *contributi;
 
+
+- (void)sistemaDatiRecuperati:(NSDictionary*)datiRecuperati perOperazione:(NSString*)operazione;
 
 @end

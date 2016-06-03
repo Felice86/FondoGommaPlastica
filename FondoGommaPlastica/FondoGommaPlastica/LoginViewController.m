@@ -11,10 +11,12 @@
 #import "SpazioAderenteViewController.h"
 #import "DataHandler.h"
 #import "Configurations.h"
+#import "MBProgressHUD.h"
 
 @interface LoginViewController() {
     CGRect posizioneContentView;
 }
+@property (nonatomic, retain) NSArray *erroriRiscontrati;
 @end
 
 @implementation LoginViewController
@@ -112,6 +114,7 @@
 
 #pragma mark - LOGIN VIEW PROTOCOL
 - (void)loginViewEsegueLogin:(LoginView *)loginView {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     Aderente *aderente = [Aderente sharedAderente];
     NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
     NSData *passwordData = [aderente.password dataUsingEncoding:NSUTF8StringEncoding];
@@ -125,10 +128,12 @@
             BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
             NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
 #ifdef DEBUG
-            abilitaUtenteResponse = YES;
+            if (!abilitaUtenteResponse) {
+                abilitaUtenteResponse = YES;
+            }
 #endif
             if (abilitaUtenteResponse) {
-                [self puoiMostrareVistaAderente];
+                [self continuaRecuperoInfoAderenteAbilitato];
             }
         }
     }];
@@ -136,6 +141,51 @@
 }
 
 #pragma mark - ACCESSORI
+- (void)continuaRecuperoInfoAderenteAbilitato {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] anagrafica] gruppoDispatch:group];
+    });
+    
+//    dispatch_group_async(group, queue, ^{
+//        
+//    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        if (self.erroriRiscontrati.count > 0) {
+            
+        } else {
+            [self puoiMostrareVistaAderente];
+        }
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+}
+
+- (void)eseguiRecuperoInformazioni:(NSString*)configUrl gruppoDispatch:(dispatch_group_t)group {
+    Aderente *aderente = [Aderente sharedAderente];
+    NSURL *metodoUrl = [[DataHandler sharedData] creaUrlDaConfig:configUrl codiceUtente:aderente.username];
+    NSURLRequest *request = [[DataHandler sharedData] createWebRequest:metodoUrl method:@"GET" body:nil];
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:nil];
+    NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"errore:%@",configUrl);
+        } else {
+            NSError *error = nil;
+            NSDictionary *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            if (!error) {
+                [aderente sistemaDatiRecuperati:datiRecuperati perOperazione:configUrl];
+            }
+            dispatch_group_leave(group);
+        }
+    }];
+    [dataStack resume];
+}
+
 - (void)puoiMostrareVistaAderente {
     SpazioAderenteViewController *spazioAderenteViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SpazioAderenteViewController"];
     spazioAderenteViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
@@ -143,18 +193,6 @@
 }
 
 #pragma mark - URL SESSION DELEGATE
-//- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
-//    NSLog(@"didBecomeInvalidWithError");
-//}
-//
-//- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
-//    NSLog(@"URLSessionDidFinishEventsForBackgroundURLSession");
-//}
-//
-//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
-//    NSLog(@"didReceiveChallenge withtask:%@",task);
-//}
-
 - (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
     NSLog(@"didReceiveChallenge");
     completionHandler(NSURLSessionAuthChallengeUseCredential, [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);

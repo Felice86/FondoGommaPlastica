@@ -369,6 +369,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dataIscrizioneLabel" destination="NH8-lJ-qGh" id="zVL-eY-Kpx"/>
+                        <outlet property="nomeCognomeLabel" destination="e1A-3y-OKL" id="mMx-PU-jT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aU-Gw-inN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

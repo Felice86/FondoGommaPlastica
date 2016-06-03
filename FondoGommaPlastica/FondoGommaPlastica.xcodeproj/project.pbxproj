@@ -28,6 +28,7 @@
 		8569CAA21D0184BB00DF74BB /* Aderente.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA11D0184BB00DF74BB /* Aderente.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAA51D01857600DF74BB /* RendimentoDettaglio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA41D01857600DF74BB /* RendimentoDettaglio.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAA81D01857C00DF74BB /* Contributo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA71D01857C00DF74BB /* Contributo.m */; settings = {ASSET_TAGS = (); }; };
+		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		8569CAA41D01857600DF74BB /* RendimentoDettaglio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendimentoDettaglio.m; sourceTree = "<group>"; };
 		8569CAA61D01857C00DF74BB /* Contributo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contributo.h; sourceTree = "<group>"; };
 		8569CAA71D01857C00DF74BB /* Contributo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contributo.m; sourceTree = "<group>"; };
+		8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +178,8 @@
 			children = (
 				8569CA9C1D017EF600DF74BB /* NSString+MD5.h */,
 				8569CA9D1D017EF600DF74BB /* NSString+MD5.m */,
+				8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */,
+				8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */,
 				8569CA971D016FD800DF74BB /* Configurations.plist */,
 			);
 			name = _resource;
@@ -282,6 +287,7 @@
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
 				6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */,
 				6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */,
+				8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
