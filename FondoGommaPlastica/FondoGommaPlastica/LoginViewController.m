@@ -151,9 +151,20 @@
         [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] anagrafica] gruppoDispatch:group];
     });
     
-//    dispatch_group_async(group, queue, ^{
-//        
-//    });
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] recapiti] gruppoDispatch:group];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] rendimento] gruppoDispatch:group];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] contributi] gruppoDispatch:group];
+    });
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         if (self.erroriRiscontrati.count > 0) {
@@ -178,6 +189,7 @@
             NSError *error = nil;
             NSDictionary *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
             if (!error) {
+                NSLog(@"Recuperati dati: %@",configUrl);
                 [aderente sistemaDatiRecuperati:datiRecuperati perOperazione:configUrl];
             }
             dispatch_group_leave(group);
@@ -194,7 +206,7 @@
 
 #pragma mark - URL SESSION DELEGATE
 - (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
-    NSLog(@"didReceiveChallenge");
+//    NSLog(@"didReceiveChallenge");
     completionHandler(NSURLSessionAuthChallengeUseCredential, [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);
 }
 
