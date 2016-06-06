@@ -17,11 +17,12 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "telefono - grande.png",
+      "filename" : "telefono_grande~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "telefono_grande@2x~ipad.png",
       "scale" : "2x"
     }
   ],

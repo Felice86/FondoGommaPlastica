@@ -17,11 +17,12 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "freccia_destra@2x~ipad.png",
+      "filename" : "freccia_destra~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "freccia_destra@2x~ipad.png",
       "scale" : "2x"
     }
   ],

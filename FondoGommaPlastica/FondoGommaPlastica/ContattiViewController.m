@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.contentView = [[[NSBundle mainBundle] loadNibNamed:@"ContattiView" owner:self options:nil] lastObject];
+//    self.contentView = [[[NSBundle mainBundle] loadNibNamed:@"ContattiView" owner:self options:nil] lastObject];
 }
 
 - (void)didReceiveMemoryWarning {

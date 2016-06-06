@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @interface PageContentViewController : UIViewController
 @property (nonatomic, assign) NSUInteger pageIndex;
-@property (nonatomic, retain) UIView *contentView;
+//@property (nonatomic, retain) UIView *contentView;
 @end

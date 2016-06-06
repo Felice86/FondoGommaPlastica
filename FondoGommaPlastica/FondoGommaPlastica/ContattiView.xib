@@ -45,7 +45,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-1D-1e3">
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-1D-1e3" userLabel="facebookButton">
                     <rect key="frame" x="130" y="289" width="61" height="51"/>
                     <state key="normal" image="facebook"/>
                 </button>
@@ -79,7 +79,7 @@
                 <constraint firstItem="oDt-1D-1e3" firstAttribute="top" secondItem="Gu6-i9-QNy" secondAttribute="bottom" constant="4" id="tc5-ZO-OL9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="471" y="335.5"/>
+            <point key="canvasLocation" x="-93" y="90.5"/>
         </view>
     </objects>
     <resources>

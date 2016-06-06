@@ -17,11 +17,11 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "torna indietro.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "pulsante_torna_indietro@2x~ipad.png",
       "scale" : "2x"
     }
   ],

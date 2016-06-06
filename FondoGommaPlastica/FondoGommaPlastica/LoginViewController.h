@@ -9,6 +9,7 @@
 #import "PageContentViewController.h"
 #import "LoginView.h"
 
-@interface LoginViewController : PageContentViewController <UITextFieldDelegate,LoginViewProtocol,NSURLSessionDelegate>
-
+@interface LoginViewController : PageContentViewController <UITextFieldDelegate,NSURLSessionDelegate>
+@property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
 @end

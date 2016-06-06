@@ -12,16 +12,16 @@
     },
     {
       "idiom" : "iphone",
-      "filename" : "pulsante_accedi@3x.png",
       "scale" : "3x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "bottone accedi.png",
+      "filename" : "pulsante_accedi~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "pulsante_accedi@2x~ipad.png",
       "scale" : "2x"
     }
   ],

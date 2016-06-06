@@ -17,11 +17,12 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "visualizza rendimento.png",
+      "filename" : "visualizza_rendimento~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "visualizza_rendimento@2x~ipad.png",
       "scale" : "2x"
     }
   ],

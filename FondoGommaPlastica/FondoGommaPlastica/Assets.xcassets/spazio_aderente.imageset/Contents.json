@@ -17,11 +17,12 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "spazio aderente.png",
+      "filename" : "spazio_aderente~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "spazio_aderente@2x~ipad.png",
       "scale" : "2x"
     }
   ],

@@ -32,7 +32,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self caricaCurrentContentView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +73,7 @@
     if (completed) {
         NSLog(@"pageViewController didFinishAnimating:%@",self.nextVisiblePageVC);
         self.currentPageVC = self.nextVisiblePageVC;
-        [self caricaCurrentContentView];
+//        [self caricaCurrentContentView];
     }
 }
 
@@ -84,7 +87,7 @@
     PageContentViewController *newPageVC = [self viewControllerAtIndex:newPageIndex];
     [self.pageViewController setViewControllers:@[newPageVC] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
     self.currentPageVC = newPageVC;
-    [self caricaCurrentContentView];
+//    [self caricaCurrentContentView];
 }
 
 - (IBAction)muoviVersoDestra:(UIButton*)senderButton {
@@ -96,40 +99,40 @@
     PageContentViewController *newPageVC = [self viewControllerAtIndex:newPageIndex];
     [self.pageViewController setViewControllers:@[newPageVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     self.currentPageVC = newPageVC;
-    [self caricaCurrentContentView];
+//    [self caricaCurrentContentView];
 }
 
 #pragma mark - ACCESSORI
--(void) setCustomView:(UIView *)customView {
-    NSUInteger z = NSNotFound;
-//    z = [self.contentView.subviews indexOfObject:customView];
-//    if (z == NSNotFound) {
-//        [self.contentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
-//        [self.contentView addSubview:customView];
+//-(void) setCustomView:(UIView *)customView {
+//    NSUInteger z = NSNotFound;
+////    z = [self.contentView.subviews indexOfObject:customView];
+////    if (z == NSNotFound) {
+////        [self.contentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+////        [self.contentView addSubview:customView];
+////    }
+//    if (self.contentView) {
+//        z = [self.view.subviews indexOfObject:self.contentView];
 //    }
-    if (self.contentView) {
-        z = [self.view.subviews indexOfObject:self.contentView];
-    }
-    if (z == NSNotFound) {
-        // old view was not in hierarchy
-        // you can insert subview at any index and any view you want by default
-        [self.view addSubview:customView];
-    } else {
-        // you can save superview
-        UIView *superview = self.contentView.superview;
-        [self.contentView removeFromSuperview];
-        //also you can copy some attributes of old view:
-        //customView.center = _customView.center
-        [superview insertSubview:customView atIndex:z];
-    }
-    //and save ivar
-    self.contentView = customView;
-}
-
-- (void)caricaCurrentContentView {
-    self.currentPageVC.contentView.frame = self.contentView.frame;
-    [self setCustomView:self.currentPageVC.contentView];
-}
+//    if (z == NSNotFound) {
+//        // old view was not in hierarchy
+//        // you can insert subview at any index and any view you want by default
+//        [self.view addSubview:customView];
+//    } else {
+//        // you can save superview
+//        UIView *superview = self.contentView.superview;
+//        [self.contentView removeFromSuperview];
+//        //also you can copy some attributes of old view:
+//        //customView.center = _customView.center
+//        [superview insertSubview:customView atIndex:z];
+//    }
+//    //and save ivar
+//    self.contentView = customView;
+//}
+//
+//- (void)caricaCurrentContentView {
+//    self.currentPageVC.contentView.frame = self.contentView.frame;
+//    [self setCustomView:self.currentPageVC.contentView];
+//}
 
 - (void)creaPageViewController {
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:kPageController];
@@ -141,7 +144,8 @@
 
     
     [self addChildViewController:_pageViewController];
-    [self.view insertSubview:_pageViewController.view belowSubview:self.footerImageView];
+//    [self.view insertSubview:_pageViewController.view belowSubview:self.footerImageView];
+    [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
 
     self.currentPageVC = startingViewController;

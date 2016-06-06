@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "lente_piccola@3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "lente_piccola~ipad.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "lente_piccola@2x~ipad.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

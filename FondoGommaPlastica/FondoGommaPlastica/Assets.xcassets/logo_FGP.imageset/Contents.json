@@ -1,22 +1,23 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
       "filename" : "logo_FGP.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
       "filename" : "logo_FGP@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
       "filename" : "logo_FGP@3x.png",
       "scale" : "3x"
     },
     {
       "idiom" : "ipad",
+      "filename" : "logo_FGP~ipad.png",
       "scale" : "1x"
     },
     {

@@ -15,9 +15,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                 </imageView>
                 <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZA-et-qQl">
-                    <rect key="frame" x="0.0" y="135" width="320" height="191"/>
+                    <rect key="frame" x="8" y="156" width="304" height="191"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">È il fondo pensione complementareper i lavoratori e i familiari a caricodei lavoratori del settore gomma, cavi elettrici e affini e materie plastiche; è costituito nella forma di associazione riconosciuta ed è iscritto al n° 125 dell’Albo Covipdei fondi pensione: le caratteristiche generali del Fondo sonodescritte nello Statuto.</mutableString>
+                    <string key="text">È il fondo pensione complementare
+per i lavoratori e i familiari a carico
+dei lavoratori del settore gomma, cavi elettrici e affini e materie plastiche; è costituito nella forma di associazione riconosciuta ed è iscritto al n° 125 dell’Albo Covip
+dei fondi pensione: le caratteristiche generali del Fondo sono
+descritte nello Statuto.</string>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -25,19 +29,24 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="eZA-et-qQl" secondAttribute="trailing" id="1fO-1w-NXm"/>
+                <constraint firstAttribute="bottom" secondItem="eZA-et-qQl" secondAttribute="bottom" id="0JV-JR-B2d"/>
+                <constraint firstAttribute="trailing" secondItem="eZA-et-qQl" secondAttribute="trailing" constant="8" id="1fO-1w-NXm"/>
                 <constraint firstItem="eZA-et-qQl" firstAttribute="top" secondItem="2cz-Yy-CWn" secondAttribute="bottom" id="9Bs-Fh-r9D"/>
                 <constraint firstAttribute="trailing" secondItem="2cz-Yy-CWn" secondAttribute="trailing" id="XRW-83-bgv"/>
                 <constraint firstItem="eZA-et-qQl" firstAttribute="top" secondItem="2cz-Yy-CWn" secondAttribute="bottom" constant="8" id="bZG-ky-pfe"/>
+                <constraint firstItem="2cz-Yy-CWn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jcF-gs-MYd"/>
                 <constraint firstAttribute="bottom" secondItem="eZA-et-qQl" secondAttribute="bottom" id="mRK-oP-hTu"/>
-                <constraint firstItem="eZA-et-qQl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nLB-he-Do5"/>
+                <constraint firstItem="eZA-et-qQl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nLB-he-Do5"/>
                 <constraint firstItem="2cz-Yy-CWn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wUF-QL-qqJ"/>
                 <constraint firstItem="2cz-Yy-CWn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wsK-Gp-xaA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="XRW-83-bgv"/>
+                    <exclude reference="wsK-Gp-xaA"/>
                     <exclude reference="9Bs-Fh-r9D"/>
+                    <exclude reference="bZG-ky-pfe"/>
                     <exclude reference="mRK-oP-hTu"/>
                 </mask>
             </variation>

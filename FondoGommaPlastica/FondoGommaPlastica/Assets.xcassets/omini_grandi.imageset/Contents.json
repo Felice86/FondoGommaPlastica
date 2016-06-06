@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "omini_grandi@3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "omini_grandi~ipad.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "omini_grandi@2x~ipad.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

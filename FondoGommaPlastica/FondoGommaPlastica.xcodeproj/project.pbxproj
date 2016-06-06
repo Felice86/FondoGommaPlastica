@@ -30,7 +30,6 @@
 		8569CAA81D01857C00DF74BB /* Contributo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA71D01857C00DF74BB /* Contributo.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
-		85F170E11D01C82600BE423A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F170DF1D01C82600BE423A /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +75,6 @@
 		8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		85F170E01D01C82600BE423A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 				6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */,
 				6D5E0DDA1CF7139600E08CE9 /* Info.plist */,
 				6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */,
-				85F170DF1D01C82600BE423A /* Main_iPad.storyboard */,
 				6D5E0DD21CF7139600E08CE9 /* Main.storyboard */,
 				6D5E0DC91CF7139600E08CE9 /* Supporting Files */,
 			);
@@ -263,7 +260,6 @@
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
 				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
 				6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */,
-				85F170E11D01C82600BE423A /* Main_iPad.storyboard in Resources */,
 				6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */,
 				6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */,
 			);
@@ -316,14 +312,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		85F170DF1D01C82600BE423A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85F170E01D01C82600BE423A /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -363,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
