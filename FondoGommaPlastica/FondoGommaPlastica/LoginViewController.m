@@ -138,7 +138,10 @@
         
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         self.hud.mode = MBProgressHUDModeAnnularDeterminate;
-        self.hud.label.text = @"Caricamento in corso...";
+        [self.hud setRemoveFromSuperViewOnHide:YES];
+        [self.hud.backgroundView setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]];
+        [self.hud setContentColor:[UIColor whiteColor]];
+        self.hud.label.text = @"Recupero informazioni...";
         
         NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
         NSData *passwordData = [aderente.password dataUsingEncoding:NSUTF8StringEncoding];
