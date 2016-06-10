@@ -16,7 +16,6 @@
 #import "NSString+MD5.h"
 
 @interface LoginViewController() {
-    CGRect posizioneContentView;
     NSUInteger counter;
 }
 @property (nonatomic, retain) NSArray *erroriRiscontrati;
@@ -54,13 +53,17 @@
 }
 
 #pragma mark - TEXT FIELD PROTOCOL
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (void)chiudiTastiera {
     if ([self.usernameTextField isFirstResponder]) {
         [self.usernameTextField resignFirstResponder];
     }
     if ([self.passwordTextField isFirstResponder]) {
         [self.passwordTextField resignFirstResponder];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self chiudiTastiera];
     return YES;
 }
 
@@ -80,9 +83,7 @@
     
     if (maxYTextField > minYKeyboard) {
         [UIView animateWithDuration:.1 animations:^{
-//            [[(LoginView*)self.contentView spazioAderenteImageView] setHidden:YES];
             CGFloat differenza = maxYTextField-minYKeyboard;
-            posizioneContentView = self.view.frame;
             CGRect contentViewFrame = self.view.frame;
             contentViewFrame.origin.y -= differenza+5;
             self.view.frame = contentViewFrame;
@@ -108,8 +109,9 @@
     
     if (maxYTextField < minYKeyboard) {
         [UIView animateWithDuration:.1 animations:^{
-//            [[(LoginView*)self.contentView spazioAderenteImageView] setHidden:NO];
-            self.view.frame = posizioneContentView;
+            CGRect contentViewFrame = self.view.frame;
+            contentViewFrame.origin.y = 0;
+            self.view.frame = contentViewFrame;
         }];
     }
 }
@@ -129,6 +131,7 @@
 
 #pragma mark - ACCESSORI
 - (IBAction)login:(UIButton*)loginButton {
+    [self chiudiTastiera];
     NSString *username = self.usernameTextField.text;
     NSString *passwordMD5 = [self.passwordTextField.text MD5];
     if (username.length > 0 && passwordMD5.length > 0) {

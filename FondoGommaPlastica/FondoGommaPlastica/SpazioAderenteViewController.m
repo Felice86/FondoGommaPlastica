@@ -7,7 +7,6 @@
 //
 
 #import "SpazioAderenteViewController.h"
-#import "Aderente.h"
 
 @interface SpazioAderenteViewController ()
 

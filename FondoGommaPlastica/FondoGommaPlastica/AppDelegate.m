@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Configurations.h"
+//#import "Configurations.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //Test configurazione
-    [Configurations sharedConfiguration];
+//    [Configurations sharedConfiguration];
     return YES;
 }
 

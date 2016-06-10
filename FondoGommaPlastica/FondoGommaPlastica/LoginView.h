@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Aderente.h"
+#import "Fondimatica/Aderente.h"
 
 @class LoginView;
 

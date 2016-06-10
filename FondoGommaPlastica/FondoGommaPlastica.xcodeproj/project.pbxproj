@@ -21,13 +21,8 @@
 		6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD21CF7139600E08CE9 /* Main.storyboard */; };
 		6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */; };
 		6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */; };
-		8569CA951D016C3F00DF74BB /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA941D016C3F00DF74BB /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
-		8569CA981D016FD800DF74BB /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8569CA971D016FD800DF74BB /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
-		8569CA9B1D01701500DF74BB /* Configurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9A1D01701500DF74BB /* Configurations.m */; settings = {ASSET_TAGS = (); }; };
+		6DF48D501D0AF18E00296338 /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF48D4F1D0AF18E00296338 /* libFondimatica.a */; settings = {ASSET_TAGS = (); }; };
 		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; settings = {ASSET_TAGS = (); }; };
-		8569CAA21D0184BB00DF74BB /* Aderente.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA11D0184BB00DF74BB /* Aderente.m */; settings = {ASSET_TAGS = (); }; };
-		8569CAA51D01857600DF74BB /* RendimentoDettaglio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA41D01857600DF74BB /* RendimentoDettaglio.m */; settings = {ASSET_TAGS = (); }; };
-		8569CAA81D01857C00DF74BB /* Contributo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAA71D01857C00DF74BB /* Contributo.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -58,19 +53,10 @@
 		6D5E0DDA1CF7139600E08CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D5E0DE01CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		6D5E0DE11CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		8569CA931D016C3F00DF74BB /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
-		8569CA941D016C3F00DF74BB /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
-		8569CA971D016FD800DF74BB /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
-		8569CA991D01701500DF74BB /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
-		8569CA9A1D01701500DF74BB /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
+		6DF48D261D0AEA8900296338 /* FondoGommaPlastica-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FondoGommaPlastica-prefix.pch"; sourceTree = "<group>"; };
+		6DF48D4F1D0AF18E00296338 /* libFondimatica.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFondimatica.a; sourceTree = "<group>"; };
 		8569CA9C1D017EF600DF74BB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		8569CA9D1D017EF600DF74BB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
-		8569CAA01D0184BB00DF74BB /* Aderente.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aderente.h; sourceTree = "<group>"; };
-		8569CAA11D0184BB00DF74BB /* Aderente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aderente.m; sourceTree = "<group>"; };
-		8569CAA31D01857600DF74BB /* RendimentoDettaglio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendimentoDettaglio.h; sourceTree = "<group>"; };
-		8569CAA41D01857600DF74BB /* RendimentoDettaglio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendimentoDettaglio.m; sourceTree = "<group>"; };
-		8569CAA61D01857C00DF74BB /* Contributo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contributo.h; sourceTree = "<group>"; };
-		8569CAA71D01857C00DF74BB /* Contributo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contributo.m; sourceTree = "<group>"; };
 		8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -82,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF48D501D0AF18E00296338 /* libFondimatica.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				8569CA961D016FC100DF74BB /* _resource */,
-				8569CA921D016C2800DF74BB /* _shared */,
 				6D1667E31CFF3AE9000FD9C7 /* _viewControllers */,
 				6D1667E41CFF3AF8000FD9C7 /* _views */,
 				6D5E0DCC1CF7139600E08CE9 /* AppDelegate.h */,
@@ -157,45 +143,21 @@
 			isa = PBXGroup;
 			children = (
 				6D5E0DCA1CF7139600E08CE9 /* main.m */,
+				6DF48D261D0AEA8900296338 /* FondoGommaPlastica-prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8569CA921D016C2800DF74BB /* _shared */ = {
-			isa = PBXGroup;
-			children = (
-				8569CA9F1D01848E00DF74BB /* _model */,
-				8569CA931D016C3F00DF74BB /* DataHandler.h */,
-				8569CA941D016C3F00DF74BB /* DataHandler.m */,
-				8569CA991D01701500DF74BB /* Configurations.h */,
-				8569CA9A1D01701500DF74BB /* Configurations.m */,
-			);
-			name = _shared;
 			sourceTree = "<group>";
 		};
 		8569CA961D016FC100DF74BB /* _resource */ = {
 			isa = PBXGroup;
 			children = (
+				6DF48D4F1D0AF18E00296338 /* libFondimatica.a */,
 				8569CA9C1D017EF600DF74BB /* NSString+MD5.h */,
 				8569CA9D1D017EF600DF74BB /* NSString+MD5.m */,
 				8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */,
 				8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */,
-				8569CA971D016FD800DF74BB /* Configurations.plist */,
 			);
 			name = _resource;
-			sourceTree = "<group>";
-		};
-		8569CA9F1D01848E00DF74BB /* _model */ = {
-			isa = PBXGroup;
-			children = (
-				8569CAA01D0184BB00DF74BB /* Aderente.h */,
-				8569CAA11D0184BB00DF74BB /* Aderente.m */,
-				8569CAA31D01857600DF74BB /* RendimentoDettaglio.h */,
-				8569CAA41D01857600DF74BB /* RendimentoDettaglio.m */,
-				8569CAA61D01857C00DF74BB /* Contributo.h */,
-				8569CAA71D01857C00DF74BB /* Contributo.m */,
-			);
-			name = _model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8569CA981D016FD800DF74BB /* Configurations.plist in Resources */,
 				6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */,
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
 				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
@@ -272,11 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8569CAA51D01857600DF74BB /* RendimentoDettaglio.m in Sources */,
-				8569CAA21D0184BB00DF74BB /* Aderente.m in Sources */,
-				8569CAA81D01857C00DF74BB /* Contributo.m in Sources */,
-				8569CA9B1D01701500DF74BB /* Configurations.m in Sources */,
-				8569CA951D016C3F00DF74BB /* DataHandler.m in Sources */,
 				6D5E0DCE1CF7139600E08CE9 /* AppDelegate.m in Sources */,
 				6D1667D01CFEFFE1000FD9C7 /* PageContentViewController.m in Sources */,
 				6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */,
@@ -351,9 +307,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-Objc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,8 +347,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-Objc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -404,6 +364,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = FondoGommaPlastica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FondoGommaPlastica",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elpoedizioni.FondoGommaPlastica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,6 +381,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = FondoGommaPlastica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FondoGommaPlastica",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elpoedizioni.FondoGommaPlastica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
