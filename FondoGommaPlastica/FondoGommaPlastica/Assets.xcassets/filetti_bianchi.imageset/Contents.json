@@ -1,17 +1,23 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "filename" : "filetti_bianchi.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "filename" : "filetti_bianchi@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
+      "filename" : "filetti_bianchi-568h@2x.png",
+      "subtype" : "retina4",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
       "filename" : "filetti_bianchi@3x.png",
       "scale" : "3x"
     },
@@ -23,6 +29,12 @@
     {
       "idiom" : "ipad",
       "filename" : "filetti_bianchi@2x~ipad.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "filetti_bianchi-667h@2x.png",
+      "subtype" : "667h",
       "scale" : "2x"
     }
   ],

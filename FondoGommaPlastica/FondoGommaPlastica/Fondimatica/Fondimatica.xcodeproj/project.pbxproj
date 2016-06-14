@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85B1AC5B1D0B412000B56BFA /* Fondimatica.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B1AC5A1D0B412000B56BFA /* Fondimatica.h */; };
+		85B1AC5D1D0B412000B56BFA /* Fondimatica.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B1AC5C1D0B412000B56BFA /* Fondimatica.m */; };
+		85B1AC6C1D0B413F00B56BFA /* Configurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B1AC6B1D0B413F00B56BFA /* Configurations.m */; settings = {ASSET_TAGS = (); }; };
+		85B1AC6F1D0B414800B56BFA /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B1AC6E1D0B414800B56BFA /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
+		85B1AC721D0B414D00B56BFA /* Aderente.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B1AC711D0B414D00B56BFA /* Aderente.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85B1AC551D0B412000B56BFA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				85B1AC5B1D0B412000B56BFA /* Fondimatica.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		85B1AC571D0B412000B56BFA /* libFondimatica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFondimatica.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B1AC5A1D0B412000B56BFA /* Fondimatica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fondimatica.h; sourceTree = "<group>"; };
+		85B1AC5C1D0B412000B56BFA /* Fondimatica.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fondimatica.m; sourceTree = "<group>"; };
+		85B1AC6A1D0B413F00B56BFA /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
+		85B1AC6B1D0B413F00B56BFA /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
+		85B1AC6D1D0B414800B56BFA /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		85B1AC6E1D0B414800B56BFA /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		85B1AC701D0B414D00B56BFA /* Aderente.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aderente.h; sourceTree = "<group>"; };
+		85B1AC711D0B414D00B56BFA /* Aderente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aderente.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85B1AC541D0B412000B56BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85B1AC4E1D0B412000B56BFA = {
+			isa = PBXGroup;
+			children = (
+				85B1AC591D0B412000B56BFA /* Fondimatica */,
+				85B1AC581D0B412000B56BFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85B1AC581D0B412000B56BFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85B1AC571D0B412000B56BFA /* libFondimatica.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85B1AC591D0B412000B56BFA /* Fondimatica */ = {
+			isa = PBXGroup;
+			children = (
+				85B1AC5A1D0B412000B56BFA /* Fondimatica.h */,
+				85B1AC5C1D0B412000B56BFA /* Fondimatica.m */,
+				85B1AC6A1D0B413F00B56BFA /* Configurations.h */,
+				85B1AC6B1D0B413F00B56BFA /* Configurations.m */,
+				85B1AC6D1D0B414800B56BFA /* DataHandler.h */,
+				85B1AC6E1D0B414800B56BFA /* DataHandler.m */,
+				85B1AC701D0B414D00B56BFA /* Aderente.h */,
+				85B1AC711D0B414D00B56BFA /* Aderente.m */,
+			);
+			path = Fondimatica;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85B1AC561D0B412000B56BFA /* Fondimatica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B1AC601D0B412100B56BFA /* Build configuration list for PBXNativeTarget "Fondimatica" */;
+			buildPhases = (
+				85B1AC531D0B412000B56BFA /* Sources */,
+				85B1AC541D0B412000B56BFA /* Frameworks */,
+				85B1AC551D0B412000B56BFA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fondimatica;
+			productName = Fondimatica;
+			productReference = 85B1AC571D0B412000B56BFA /* libFondimatica.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85B1AC4F1D0B412000B56BFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = ElpoEdizioni;
+				TargetAttributes = {
+					85B1AC561D0B412000B56BFA = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 85B1AC521D0B412000B56BFA /* Build configuration list for PBXProject "Fondimatica" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 85B1AC4E1D0B412000B56BFA;
+			productRefGroup = 85B1AC581D0B412000B56BFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85B1AC561D0B412000B56BFA /* Fondimatica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85B1AC531D0B412000B56BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B1AC6C1D0B413F00B56BFA /* Configurations.m in Sources */,
+				85B1AC721D0B414D00B56BFA /* Aderente.m in Sources */,
+				85B1AC6F1D0B414800B56BFA /* DataHandler.m in Sources */,
+				85B1AC5D1D0B412000B56BFA /* Fondimatica.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		85B1AC5E1D0B412100B56BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85B1AC5F1D0B412100B56BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85B1AC611D0B412100B56BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		85B1AC621D0B412100B56BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85B1AC521D0B412000B56BFA /* Build configuration list for PBXProject "Fondimatica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B1AC5E1D0B412100B56BFA /* Debug */,
+				85B1AC5F1D0B412100B56BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85B1AC601D0B412100B56BFA /* Build configuration list for PBXNativeTarget "Fondimatica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B1AC611D0B412100B56BFA /* Debug */,
+				85B1AC621D0B412100B56BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85B1AC4F1D0B412000B56BFA /* Project object */;
+}

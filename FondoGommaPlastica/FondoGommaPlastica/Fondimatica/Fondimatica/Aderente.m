@@ -19,21 +19,21 @@
     return _sharedObject;
 }
 
-- (void)sistemaDatiRecuperati:(NSDictionary *)datiRecuperati perOperazione:(NSString *)operazione {
-    if ([operazione isEqualToString:[[Configurations sharedConfiguration] anagrafica]]) {
-        self.nome = [datiRecuperati objectForKey:knome];
-        self.cognome = [datiRecuperati objectForKey:kcognome];
-        self.codiceFiscale = [datiRecuperati objectForKey:kcodiceFiscale];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd/MM/yyyy"];
-        [dateFormatter setLocale:[NSLocale currentLocale]];
-        NSString *dataIscrizioneJson = [datiRecuperati objectForKey:kdataIscrizione];
-        self.dataIscrizioneAderente = [dateFormatter stringFromDate:[self getJSONDate:dataIscrizioneJson]];
-    }
+#pragma mark - DATI
+- (NSInteger)annoIscrizioneAderente {
+    NSDate *dataRecuperata = [self getJSONDate:[self.anagraficaDict objectForKey:kAnagraficaDataIscrizione]];
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *dc = [calendar components:NSCalendarUnitYear fromDate:dataRecuperata];
+    return dc.year;
+}
+
+- (NSString *)nominativoAderente {
+    NSString *nome = [self.anagraficaDict objectForKey:kAnagraficaNome];
+    NSString *cognome = [self.anagraficaDict objectForKey:kAnagraficaCognome];
+    return [NSString stringWithFormat:@"%@ %@",nome,cognome];
 }
 
 #pragma mark - ACCESSORI
-
 - (NSDate *) getJSONDate:(NSString*)dateFromJSON {
     NSString* header = @"/Date(";
     int headerLength = (int)[header length];
@@ -59,10 +59,8 @@
         rangeOfSecondNumber.length = [timestampString length] - rangeOfSecondNumber.location;
         
         NSString* firstNumberString = [timestampString substringWithRange:rangeOfFirstNumber];
-        NSString* secondNumberString = [timestampString substringWithRange:rangeOfSecondNumber];
         
         unsigned long long firstNumber = [firstNumberString longLongValue];
-        int secondNumber = [secondNumberString intValue];
         
         NSTimeInterval interval = firstNumber/1000;
         

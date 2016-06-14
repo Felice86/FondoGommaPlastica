@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -165,8 +164,8 @@ descritte nello Statuto.</string>
                                     <action selector="muoviVersoDestra:" destination="hLM-s7-VTO" eventType="touchUpInside" id="Li1-P0-bzW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="telefono_piccolo" translatesAutoresizingMaskIntoConstraints="NO" id="RZE-VE-kN2">
-                                <rect key="frame" x="31" y="0.0" width="72" height="95"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefono_piccolo" translatesAutoresizingMaskIntoConstraints="NO" id="RZE-VE-kN2">
+                                <rect key="frame" x="30" y="0.0" width="72" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RZE-VE-kN2" secondAttribute="height" multiplier="72:95" id="qQ9-Ie-QCG"/>
                                 </constraints>
@@ -176,8 +175,8 @@ descritte nello Statuto.</string>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="omini_grandi" translatesAutoresizingMaskIntoConstraints="NO" id="9rI-SV-wih">
-                                <rect key="frame" x="111" y="8" width="101" height="94"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omini_grandi" translatesAutoresizingMaskIntoConstraints="NO" id="9rI-SV-wih">
+                                <rect key="frame" x="110" y="8" width="101" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9rI-SV-wih" secondAttribute="height" multiplier="101:94" id="1Z2-EB-N2H"/>
                                 </constraints>
@@ -187,8 +186,8 @@ descritte nello Statuto.</string>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lente_piccola" translatesAutoresizingMaskIntoConstraints="NO" id="eHp-Z1-l3Z">
-                                <rect key="frame" x="220" y="0.0" width="69" height="96"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lente_piccola" translatesAutoresizingMaskIntoConstraints="NO" id="eHp-Z1-l3Z">
+                                <rect key="frame" x="219" y="0.0" width="69" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eHp-Z1-l3Z" secondAttribute="height" multiplier="23:32" id="y8Z-7Z-zQr"/>
                                 </constraints>
@@ -271,7 +270,7 @@ descritte nello Statuto.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-6X-VCt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-6X-VCt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="V6e-6X-VCt" secondAttribute="height" multiplier="40:71" id="337-tD-CM6"/>
@@ -529,7 +528,7 @@ descritte nello Statuto.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-j8-hcl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_blu" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-j8-hcl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kfZ-j8-hcl" secondAttribute="height" multiplier="2:3" id="4fj-30-8Vr"/>
@@ -559,7 +558,7 @@ descritte nello Statuto.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benvenuto" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-IA-Ryd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benvenuto" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-IA-Ryd">
                                 <rect key="frame" x="0.0" y="140" width="320" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kAF-IA-Ryd" secondAttribute="height" multiplier="16:3" id="UHB-fd-nuU"/>
@@ -576,7 +575,7 @@ descritte nello Statuto.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7B-Xe-siC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7B-Xe-siC" userLabel="footerContainer">
                                 <rect key="frame" x="0.0" y="494" width="320" height="74"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer_verde" translatesAutoresizingMaskIntoConstraints="NO" id="jFH-Xa-kcP">
@@ -611,37 +610,87 @@ descritte nello Statuto.</string>
                                     <constraint firstAttribute="bottom" secondItem="jFH-Xa-kcP" secondAttribute="bottom" id="vTI-98-UeU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVM-Ff-6b4" userLabel="informazioniAderenteButton">
+                                <rect key="frame" x="0.0" y="232" width="320" height="46"/>
+                                <state key="normal" image="informazioni_aderente"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="232" width="320" height="46"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-ee-tDl" userLabel="visualizzaRendimentoButton">
+                                <rect key="frame" x="0.0" y="280" width="320" height="46"/>
+                                <state key="normal" image="visualizza_rendimento"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="279" width="320" height="46"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm4-vW-OQC" userLabel="ultimi12MovimentiButton">
+                                <rect key="frame" x="0.0" y="328" width="320" height="46"/>
+                                <state key="normal" image="ultimi_movimenti"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="326" width="320" height="46"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW3-vg-Rs7" userLabel="datiLiquidazioneButton">
+                                <rect key="frame" x="0.0" y="376" width="320" height="46"/>
+                                <state key="normal" image="dati_liquidazione"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="373" width="320" height="46"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-Gr-vAE" userLabel="altriDatiButton">
+                                <rect key="frame" x="0.0" y="424" width="320" height="46"/>
+                                <state key="normal" image="altri_dati"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="420" width="320" height="46"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="NH8-lJ-qGh" secondAttribute="trailing" id="0Tc-Et-Icz"/>
+                            <constraint firstAttribute="trailing" secondItem="h4e-ee-tDl" secondAttribute="trailing" id="1ek-t7-ZEZ"/>
+                            <constraint firstItem="NW3-vg-Rs7" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="1jg-sy-J2B"/>
+                            <constraint firstItem="h4e-ee-tDl" firstAttribute="top" secondItem="zVM-Ff-6b4" secondAttribute="bottom" constant="2" id="2jE-oW-cfz"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="centerY" secondItem="WVA-1I-Bd0" secondAttribute="centerY" id="4TS-Y4-x1Z"/>
+                            <constraint firstItem="cm4-vW-OQC" firstAttribute="top" secondItem="h4e-ee-tDl" secondAttribute="bottom" constant="2" id="6Gm-nJ-6GF"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="centerX" secondItem="WVA-1I-Bd0" secondAttribute="centerX" id="9RS-BP-sEi"/>
                             <constraint firstItem="NH8-lJ-qGh" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="BHn-fr-CJL"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="centerY" secondItem="WVA-1I-Bd0" secondAttribute="centerY" id="CLV-eB-Ote"/>
+                            <constraint firstAttribute="trailing" secondItem="NW3-vg-Rs7" secondAttribute="trailing" id="Gja-5q-Z0q"/>
+                            <constraint firstItem="0ql-Gr-vAE" firstAttribute="top" secondItem="NW3-vg-Rs7" secondAttribute="bottom" constant="2" id="H33-yt-bmL"/>
                             <constraint firstAttribute="bottom" secondItem="b7B-Xe-siC" secondAttribute="bottom" id="Hre-XG-7UQ"/>
+                            <constraint firstAttribute="trailing" secondItem="zVM-Ff-6b4" secondAttribute="trailing" id="Hsf-hd-pwo"/>
                             <constraint firstAttribute="trailing" secondItem="NH8-lJ-qGh" secondAttribute="trailing" id="I1k-ct-mtf"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="centerX" secondItem="WVA-1I-Bd0" secondAttribute="centerX" id="Jxd-S3-JKN"/>
+                            <constraint firstItem="h4e-ee-tDl" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="MaQ-Ss-U16"/>
                             <constraint firstAttribute="trailing" secondItem="kfZ-j8-hcl" secondAttribute="trailing" id="Nia-q7-eP4"/>
                             <constraint firstItem="b7B-Xe-siC" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="Nir-3C-sIz"/>
                             <constraint firstAttribute="trailing" secondItem="kfZ-j8-hcl" secondAttribute="trailing" id="PDL-He-vw3"/>
+                            <constraint firstItem="zVM-Ff-6b4" firstAttribute="top" secondItem="e1A-3y-OKL" secondAttribute="bottom" constant="8" id="PUb-Qn-R1w"/>
                             <constraint firstAttribute="trailing" secondItem="e1A-3y-OKL" secondAttribute="trailing" id="Qbu-bD-u2S"/>
                             <constraint firstItem="kAF-IA-Ryd" firstAttribute="top" secondItem="NH8-lJ-qGh" secondAttribute="bottom" id="Tuk-2a-xLw"/>
                             <constraint firstItem="e1A-3y-OKL" firstAttribute="top" secondItem="kAF-IA-Ryd" secondAttribute="bottom" id="UkK-Vw-erJ"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="XV4-fr-Vzz"/>
+                            <constraint firstItem="zVM-Ff-6b4" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="YYY-Gx-ZaP"/>
                             <constraint firstItem="kAF-IA-Ryd" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="Zgp-RE-r4h"/>
                             <constraint firstAttribute="trailing" secondItem="b7B-Xe-siC" secondAttribute="trailing" id="aYM-5x-6w5"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="top" secondItem="WVA-1I-Bd0" secondAttribute="top" id="aaW-zP-Ytw"/>
                             <constraint firstItem="1Q8-8b-cTZ" firstAttribute="top" secondItem="kfZ-j8-hcl" secondAttribute="bottom" id="cYY-1l-o3x"/>
                             <constraint firstItem="vkO-i8-z0s" firstAttribute="top" secondItem="WVA-1I-Bd0" secondAttribute="topMargin" constant="10" id="fQI-At-ztM"/>
                             <constraint firstItem="NH8-lJ-qGh" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leadingMargin" id="idP-yQ-tJo"/>
+                            <constraint firstAttribute="trailing" secondItem="cm4-vW-OQC" secondAttribute="trailing" id="kDy-rH-Vn9"/>
+                            <constraint firstItem="NW3-vg-Rs7" firstAttribute="top" secondItem="cm4-vW-OQC" secondAttribute="bottom" constant="2" id="mB7-Rk-KTb"/>
+                            <constraint firstAttribute="trailing" secondItem="0ql-Gr-vAE" secondAttribute="trailing" id="oam-OS-IMb"/>
                             <constraint firstItem="NH8-lJ-qGh" firstAttribute="top" secondItem="vkO-i8-z0s" secondAttribute="bottom" constant="16" id="p7Q-Nd-0EH"/>
                             <constraint firstAttribute="trailing" secondItem="kAF-IA-Ryd" secondAttribute="trailing" id="qkP-pR-SqF"/>
                             <constraint firstItem="vkO-i8-z0s" firstAttribute="top" secondItem="8Vo-Rk-WhY" secondAttribute="bottom" id="qtw-9E-IPz"/>
                             <constraint firstItem="1Q8-8b-cTZ" firstAttribute="top" secondItem="kfZ-j8-hcl" secondAttribute="bottom" id="rUy-yX-15i"/>
                             <constraint firstItem="e1A-3y-OKL" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="u0v-zT-jAs"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="top" secondItem="WVA-1I-Bd0" secondAttribute="top" id="uv9-Lo-HAp"/>
+                            <constraint firstItem="cm4-vW-OQC" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="wxE-ss-K8d"/>
                             <constraint firstItem="kfZ-j8-hcl" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="xlp-Sc-UnP"/>
+                            <constraint firstItem="0ql-Gr-vAE" firstAttribute="leading" secondItem="WVA-1I-Bd0" secondAttribute="leading" id="y4l-1V-18H"/>
                             <constraint firstItem="vkO-i8-z0s" firstAttribute="centerX" secondItem="WVA-1I-Bd0" secondAttribute="centerX" id="zm5-6L-NxU"/>
                         </constraints>
                         <variation key="default">
@@ -663,12 +712,13 @@ descritte nello Statuto.</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="dataIscrizioneLabel" destination="NH8-lJ-qGh" id="zVL-eY-Kpx"/>
+                        <outlet property="informazioniAderenteButton" destination="zVM-Ff-6b4" id="KmB-hF-gra"/>
                         <outlet property="nomeCognomeLabel" destination="e1A-3y-OKL" id="mMx-PU-jT9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aU-Gw-inN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="860"/>
+            <point key="canvasLocation" x="37" y="859.5"/>
         </scene>
         <!--Contatti View Controller-->
         <scene sceneID="xz8-gh-dUn">
@@ -703,6 +753,9 @@ descritte nello Statuto.</string>
                                         <exclude reference="QEL-nC-xQO"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="244" y="8" width="81" height="92"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omini_piccoli" translatesAutoresizingMaskIntoConstraints="NO" id="QV2-p7-dFf">
                                 <rect key="frame" x="209" y="0.0" width="67" height="94"/>
@@ -718,6 +771,9 @@ descritte nello Statuto.</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSF-hu-r65" userLabel="frecciaSinistraButton">
                                 <rect key="frame" x="0.0" y="100" width="150" height="27"/>
                                 <state key="normal" image="freccia_sinistra"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="100" width="274" height="27"/>
+                                </variation>
                                 <connections>
                                     <action selector="muoviVersoSinistra:" destination="hLM-s7-VTO" eventType="touchUpInside" id="Csb-RS-fGg"/>
                                 </connections>
@@ -725,6 +781,9 @@ descritte nello Statuto.</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-Pe-MNI" userLabel="frecciaDestraButton">
                                 <rect key="frame" x="170" y="100" width="150" height="27"/>
                                 <state key="normal" image="freccia_destra"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="294" y="100" width="274" height="27"/>
+                                </variation>
                                 <connections>
                                     <action selector="muoviVersoDestra:" destination="hLM-s7-VTO" eventType="touchUpInside" id="OOf-ka-zma"/>
                                 </connections>
@@ -739,6 +798,9 @@ descritte nello Statuto.</string>
                                         <exclude reference="xM4-xf-aP5"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="124" y="143" width="320" height="62"/>
+                                </variation>
                             </imageView>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELEFONO T. 0267382452" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Az-jm-KJX">
                                 <rect key="frame" x="8" y="213" width="304" height="36"/>
@@ -746,9 +808,15 @@ descritte nello Statuto.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="8" y="213" width="552" height="36"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-ed-R15">
                                 <rect key="frame" x="0.0" y="253" width="320" height="13"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="124" y="253" width="320" height="13"/>
+                                </variation>
                             </imageView>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-bg-gJY">
                                 <rect key="frame" x="8" y="274" width="304" height="51"/>
@@ -757,12 +825,21 @@ descritte nello Statuto.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="8" y="274" width="552" height="22"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-cp-hKk">
                                 <rect key="frame" x="0.0" y="329" width="320" height="13"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="124" y="300" width="320" height="0.0"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetti_bianchi" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Sv-Wnz">
                                 <rect key="frame" x="0.0" y="408" width="320" height="13"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="124" y="312" width="320" height="0.0"/>
+                                </variation>
                             </imageView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ea-yr-8WG" userLabel="facebookButton">
                                 <rect key="frame" x="130" y="425" width="61" height="51"/>
@@ -775,6 +852,9 @@ descritte nello Statuto.</string>
                                         <exclude reference="dck-F0-Bl0"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="254" y="316" width="61" height="0.0"/>
+                                </variation>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer_verde" translatesAutoresizingMaskIntoConstraints="NO" id="Mr6-2P-HYj">
                                 <rect key="frame" x="-4" y="494" width="328" height="74"/>
@@ -786,6 +866,9 @@ descritte nello Statuto.</string>
                                         <exclude reference="eCo-9X-MQe"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="320" width="568" height="0.0"/>
+                                </variation>
                             </imageView>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MAIL e PEC fgp@fondogommaplastica.it fondogommaplastica@pec-mail.it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-0O-jBt">
                                 <rect key="frame" x="8" y="350" width="304" height="54"/>
@@ -793,6 +876,9 @@ descritte nello Statuto.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="8" y="308" width="552" height="0.0"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -863,14 +949,17 @@ descritte nello Statuto.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="altri_dati" width="320" height="46"/>
         <image name="benvenuto" width="320" height="60"/>
         <image name="chi_siamo" width="320" height="127"/>
         <image name="contattaci" width="320" height="62"/>
+        <image name="dati_liquidazione" width="320" height="46"/>
         <image name="facebook" width="61" height="51"/>
         <image name="filetti_bianchi" width="320" height="13"/>
         <image name="footer_verde" width="320" height="74"/>
         <image name="freccia_destra" width="20" height="27"/>
         <image name="freccia_sinistra" width="20" height="27"/>
+        <image name="informazioni_aderente" width="320" height="46"/>
         <image name="lente_grande" width="69" height="92"/>
         <image name="lente_piccola" width="69" height="96"/>
         <image name="login" width="320" height="151"/>
@@ -885,5 +974,7 @@ descritte nello Statuto.</string>
         <image name="spazio_aderente" width="320" height="116"/>
         <image name="telefono_grande" width="81" height="92"/>
         <image name="telefono_piccolo" width="72" height="95"/>
+        <image name="ultimi_movimenti" width="320" height="46"/>
+        <image name="visualizza_rendimento" width="320" height="46"/>
     </resources>
 </document>

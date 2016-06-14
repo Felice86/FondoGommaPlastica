@@ -59,8 +59,8 @@
     return [self.config objectForKey:@"anagrafica"];
 }
 
-- (NSString *)liquidazioni {
-    return [self.config objectForKey:@"liquidazioni"];
+- (NSString *)liquidazioni:(IdTipoPrestazione)idTipoPrestazione {
+    return [NSString stringWithFormat:[self.config objectForKey:@"liquidazioni"],idTipoPrestazione];
 }
 
 - (NSString *)abilitaUtente {
