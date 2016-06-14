@@ -7,6 +7,7 @@
 //
 
 #import "SpazioAderenteViewController.h"
+#import "Fondimatica/Aderente.h"
 
 @interface SpazioAderenteViewController ()
 
@@ -21,8 +22,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     Aderente *aderente = [Aderente sharedAderente];
-    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %@",aderente.dataIscrizioneAderente]];
-    [self.nomeCognomeLabel setText:[NSString stringWithFormat:@"%@ %@",aderente.nome,aderente.cognome]];
+    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %ld",(long)aderente.annoIscrizioneAderente]];
+    [self.nomeCognomeLabel setText:aderente.nominativoAderente];
+    [self.informazioniAderenteButton setImage:[UIImage imageForDeviceWithName:@"informazioni_aderente"] forState:UIControlStateNormal];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

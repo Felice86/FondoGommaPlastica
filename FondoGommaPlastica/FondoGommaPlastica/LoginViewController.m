@@ -140,10 +140,10 @@
         aderente.password = [self.passwordTextField.text MD5];
         
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+//        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
         [self.hud setRemoveFromSuperViewOnHide:YES];
-        [self.hud.backgroundView setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]];
-        [self.hud setContentColor:[UIColor whiteColor]];
+//        [self.hud.backgroundView setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]];
+//        [self.hud setContentColor:[UIColor whiteColor]];
         self.hud.label.text = @"Recupero informazioni...";
         
         NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
@@ -163,6 +163,9 @@
                 }
 #endif
                 if (abilitaUtenteResponse) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+                    });
                     [self continuaRecuperoInfoAderenteAbilitato];
                 }
             }
@@ -218,7 +221,7 @@
 }
 
 - (void)eseguiRecuperoInformazioni:(NSString*)configUrl gruppoDispatch:(dispatch_group_t)group {
-    
+    Configurations *config = [Configurations sharedConfiguration];
     Aderente *aderente = [Aderente sharedAderente];
     NSURL *metodoUrl = [[DataHandler sharedData] creaUrlDaConfig:configUrl codiceUtente:aderente.username];
     NSURLRequest *request = [[DataHandler sharedData] createWebRequest:metodoUrl method:@"GET" body:nil];
@@ -228,12 +231,26 @@
         if (error) {
             NSLog(@"errore:%@",configUrl);
         } else {
-            NSError *error = nil;
-            NSDictionary *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            if (!error) {
+            NSError *errorJSON = nil;
+            NSObject *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            if (!errorJSON) {
                 NSLog(@"Recuperati dati: %@",configUrl);
                 counter++;
-                [aderente sistemaDatiRecuperati:datiRecuperati perOperazione:configUrl];
+                if ([datiRecuperati isKindOfClass:[NSDictionary class]]) {
+                    if ([configUrl isEqualToString:[config anagrafica]]) {
+                        aderente.anagraficaDict = (NSDictionary*)datiRecuperati;
+                    }
+                    if ([configUrl isEqualToString:[config recapiti]]) {
+                        aderente.recapitiDict = (NSDictionary*)datiRecuperati;
+                    }
+                    if ([configUrl isEqualToString:[config rendimento]]) {
+                        aderente.rendimentoDict = (NSDictionary*)datiRecuperati;
+                    }
+                } else if ([datiRecuperati isKindOfClass:[NSArray class]]) {
+                    if ([configUrl isEqualToString:[config contributi]]) {
+                        aderente.contributiArray = (NSArray*)datiRecuperati;
+                    }
+                }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     float progress = (float)1/4 * counter;
                     self.hud.progress = progress;

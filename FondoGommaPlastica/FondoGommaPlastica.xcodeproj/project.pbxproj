@@ -21,11 +21,23 @@
 		6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD21CF7139600E08CE9 /* Main.storyboard */; };
 		6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */; };
 		6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */; };
-		6DF48D501D0AF18E00296338 /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF48D4F1D0AF18E00296338 /* libFondimatica.a */; settings = {ASSET_TAGS = (); }; };
+		854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 854D2B691D0BF2D4002E3315 /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
 		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
+		85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B1AC681D0B412100B56BFA /* libFondimatica.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85B1AC671D0B412100B56BFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85B1AC571D0B412000B56BFA;
+			remoteInfo = Fondimatica;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6D1667CE1CFEFFE1000FD9C7 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -53,14 +65,17 @@
 		6D5E0DDA1CF7139600E08CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D5E0DE01CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		6D5E0DE11CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6DF48D261D0AEA8900296338 /* FondoGommaPlastica-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FondoGommaPlastica-prefix.pch"; sourceTree = "<group>"; };
-		6DF48D4F1D0AF18E00296338 /* libFondimatica.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFondimatica.a; sourceTree = "<group>"; };
+		854D2B691D0BF2D4002E3315 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		8569CA9C1D017EF600DF74BB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		8569CA9D1D017EF600DF74BB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		856B1D8C1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DeviceSpecificMedia.h"; sourceTree = "<group>"; };
+		856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DeviceSpecificMedia.m"; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fondimatica.xcodeproj; path = Fondimatica/Fondimatica.xcodeproj; sourceTree = "<group>"; };
+		85B1AC731D0B41AC00B56BFA /* FondoGommaPlastica-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FondoGommaPlastica-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF48D501D0AF18E00296338 /* libFondimatica.a in Frameworks */,
+				85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +140,7 @@
 		6D5E0DC81CF7139600E08CE9 /* FondoGommaPlastica */ = {
 			isa = PBXGroup;
 			children = (
+				85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */,
 				8569CA961D016FC100DF74BB /* _resource */,
 				6D1667E31CFF3AE9000FD9C7 /* _viewControllers */,
 				6D1667E41CFF3AF8000FD9C7 /* _views */,
@@ -134,6 +150,8 @@
 				6D5E0DDA1CF7139600E08CE9 /* Info.plist */,
 				6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */,
 				6D5E0DD21CF7139600E08CE9 /* Main.storyboard */,
+				856B1D8C1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.h */,
+				856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */,
 				6D5E0DC91CF7139600E08CE9 /* Supporting Files */,
 			);
 			path = FondoGommaPlastica;
@@ -143,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6D5E0DCA1CF7139600E08CE9 /* main.m */,
-				6DF48D261D0AEA8900296338 /* FondoGommaPlastica-prefix.pch */,
+				85B1AC731D0B41AC00B56BFA /* FondoGommaPlastica-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,13 +169,21 @@
 		8569CA961D016FC100DF74BB /* _resource */ = {
 			isa = PBXGroup;
 			children = (
-				6DF48D4F1D0AF18E00296338 /* libFondimatica.a */,
+				854D2B691D0BF2D4002E3315 /* Configurations.plist */,
 				8569CA9C1D017EF600DF74BB /* NSString+MD5.h */,
 				8569CA9D1D017EF600DF74BB /* NSString+MD5.m */,
 				8569CAAA1D01B39D00DF74BB /* MBProgressHUD.h */,
 				8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */,
 			);
 			name = _resource;
+			sourceTree = "<group>";
+		};
+		85B1AC641D0B412100B56BFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85B1AC681D0B412100B56BFA /* libFondimatica.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +231,28 @@
 			mainGroup = 6D5E0DBD1CF7139600E08CE9;
 			productRefGroup = 6D5E0DC71CF7139600E08CE9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 85B1AC641D0B412100B56BFA /* Products */;
+					ProjectRef = 85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6D5E0DC51CF7139600E08CE9 /* FondoGommaPlastica */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		85B1AC681D0B412100B56BFA /* libFondimatica.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFondimatica.a;
+			remoteRef = 85B1AC671D0B412100B56BFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6D5E0DC41CF7139600E08CE9 /* Resources */ = {
@@ -221,6 +263,7 @@
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
 				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
 				6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */,
+				854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */,
 				6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */,
 				6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +282,7 @@
 				6D1667D81CFF2028000FD9C7 /* InfoViewController.m in Sources */,
 				8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */,
 				6D1667DD1CFF2404000FD9C7 /* ContattiViewController.m in Sources */,
+				856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */,
 				6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */,
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
 				6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */,
@@ -307,8 +351,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				HEADER_SEARCH_PATHS = "../**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
@@ -347,8 +391,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				HEADER_SEARCH_PATHS = "../**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-Objc";
 				SDKROOT = iphoneos;

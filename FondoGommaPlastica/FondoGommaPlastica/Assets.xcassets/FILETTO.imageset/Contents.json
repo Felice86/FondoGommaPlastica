@@ -14,16 +14,6 @@
       "idiom" : "universal",
       "filename" : "FILETTO@3x.png",
       "scale" : "3x"
-    },
-    {
-      "idiom" : "ipad",
-      "filename" : "FILETTO~ipad.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "ipad",
-      "filename" : "FILETTO@2x~ipad.png",
-      "scale" : "2x"
     }
   ],
   "info" : {

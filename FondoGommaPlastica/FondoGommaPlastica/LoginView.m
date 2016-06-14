@@ -8,7 +8,8 @@
 
 #import "LoginView.h"
 #import "NSString+MD5.h"
-#import "Configurations.h"
+#import "Fondimatica/Aderente.h"
+#import "Fondimatica/Configurations.h"
 
 @implementation LoginView
 
