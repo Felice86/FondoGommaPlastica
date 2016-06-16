@@ -19,17 +19,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_verde" translatesAutoresizingMaskIntoConstraints="NO" id="5m9-rG-aeQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_intero_FGP" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-IC-AjZ">
-                                <rect key="frame" x="105" y="197" width="111" height="174"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_home" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-Ak-XiI">
+                                <rect key="frame" x="103" y="178" width="115" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="Fnk-mV-0Dc"/>
+                                    <constraint firstAttribute="width" constant="115" id="zoZ-pk-yz0"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5yP-Ak-XiI" firstAttribute="centerX" secondItem="9JJ-hj-0gx" secondAttribute="centerX" id="4RB-Pa-0Ik"/>
                             <constraint firstItem="9oP-jK-wc5" firstAttribute="top" secondItem="5m9-rG-aeQ" secondAttribute="bottom" id="7Hx-nh-U3C"/>
                             <constraint firstItem="5m9-rG-aeQ" firstAttribute="leading" secondItem="9JJ-hj-0gx" secondAttribute="leading" id="DC7-cv-rc0"/>
                             <constraint firstAttribute="trailing" secondItem="5m9-rG-aeQ" secondAttribute="trailing" id="SuR-JQ-Zoh"/>
-                            <constraint firstItem="0nb-IC-AjZ" firstAttribute="centerX" secondItem="9JJ-hj-0gx" secondAttribute="centerX" id="cBx-Sy-BQd"/>
-                            <constraint firstItem="0nb-IC-AjZ" firstAttribute="centerY" secondItem="9JJ-hj-0gx" secondAttribute="centerY" id="vqZ-EY-u0j"/>
+                            <constraint firstItem="5yP-Ak-XiI" firstAttribute="centerY" secondItem="9JJ-hj-0gx" secondAttribute="centerY" id="laS-Yw-q2W"/>
                             <constraint firstItem="5m9-rG-aeQ" firstAttribute="top" secondItem="9JJ-hj-0gx" secondAttribute="top" id="zjO-Mw-J7G"/>
                         </constraints>
                     </view>
@@ -37,11 +41,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-105" y="78"/>
+            <point key="canvasLocation" x="-493" y="-186"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo_intero_FGP" width="111" height="174"/>
+        <image name="logo_home" width="115" height="212"/>
         <image name="sfondo_verde" width="320" height="480"/>
     </resources>
 </document>

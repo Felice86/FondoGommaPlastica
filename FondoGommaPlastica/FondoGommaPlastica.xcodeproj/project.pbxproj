@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D1667D01CFEFFE1000FD9C7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */; settings = {ASSET_TAGS = (); }; };
-		6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667D21CFF0390000FD9C7 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */; settings = {ASSET_TAGS = (); }; };
-		6D1667D81CFF2028000FD9C7 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667D71CFF2028000FD9C7 /* InfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */; settings = {ASSET_TAGS = (); }; };
-		6D1667DD1CFF2404000FD9C7 /* ContattiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */; settings = {ASSET_TAGS = (); }; };
 		6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E11CFF2CF1000FD9C7 /* LoginView.m */; settings = {ASSET_TAGS = (); }; };
 		6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -21,6 +17,13 @@
 		6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD21CF7139600E08CE9 /* Main.storyboard */; };
 		6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */; };
 		6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */; };
+		6DAEDFA11D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9B1D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA21D12AD4C005A40E0 /* Akkurat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9C1D12AD4C005A40E0 /* Akkurat-Bold.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA31D12AD4C005A40E0 /* Akkurat-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9D1D12AD4C005A40E0 /* Akkurat-Light-Italic.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA41D12AD4C005A40E0 /* Akkurat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9E1D12AD4C005A40E0 /* Akkurat-Light.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA51D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9F1D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA61D12AD4C005A40E0 /* Akkurat-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 854D2B691D0BF2D4002E3315 /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
 		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
@@ -40,16 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6D1667CE1CFEFFE1000FD9C7 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
-		6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
-		6D1667D11CFF0390000FD9C7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		6D1667D21CFF0390000FD9C7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoContentView.xib; sourceTree = "<group>"; };
-		6D1667D61CFF2028000FD9C7 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		6D1667D71CFF2028000FD9C7 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContattiView.xib; sourceTree = "<group>"; };
-		6D1667DB1CFF2404000FD9C7 /* ContattiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContattiViewController.h; sourceTree = "<group>"; };
-		6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContattiViewController.m; sourceTree = "<group>"; };
 		6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		6D1667E01CFF2CF1000FD9C7 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		6D1667E11CFF2CF1000FD9C7 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
@@ -65,6 +60,14 @@
 		6D5E0DDA1CF7139600E08CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D5E0DE01CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		6D5E0DE11CF7160900E08CE9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6DAEDF9B1D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Bold-Italic.otf"; sourceTree = "<group>"; };
+		6DAEDF9C1D12AD4C005A40E0 /* Akkurat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Bold.otf"; sourceTree = "<group>"; };
+		6DAEDF9D1D12AD4C005A40E0 /* Akkurat-Light-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Light-Italic.otf"; sourceTree = "<group>"; };
+		6DAEDF9E1D12AD4C005A40E0 /* Akkurat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Light.otf"; sourceTree = "<group>"; };
+		6DAEDF9F1D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Normal-Italic.otf"; sourceTree = "<group>"; };
+		6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Normal.otf"; sourceTree = "<group>"; };
+		6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenvenutoViewController.h; sourceTree = "<group>"; };
+		6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BenvenutoViewController.m; sourceTree = "<group>"; };
 		854D2B691D0BF2D4002E3315 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		8569CA9C1D017EF600DF74BB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		8569CA9D1D017EF600DF74BB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
@@ -93,18 +96,12 @@
 		6D1667E31CFF3AE9000FD9C7 /* _viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D1667DB1CFF2404000FD9C7 /* ContattiViewController.h */,
-				6D1667DC1CFF2404000FD9C7 /* ContattiViewController.m */,
-				6D1667D61CFF2028000FD9C7 /* InfoViewController.h */,
-				6D1667D71CFF2028000FD9C7 /* InfoViewController.m */,
-				6D1667D11CFF0390000FD9C7 /* LoginViewController.h */,
-				6D1667D21CFF0390000FD9C7 /* LoginViewController.m */,
-				6D1667CE1CFEFFE1000FD9C7 /* PageContentViewController.h */,
-				6D1667CF1CFEFFE1000FD9C7 /* PageContentViewController.m */,
 				85AA7BB81CFE0E48007AD1DA /* RootViewController.h */,
 				85AA7BB91CFE0E48007AD1DA /* RootViewController.m */,
 				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
 				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
+				6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */,
+				6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */,
 			);
 			name = _viewControllers;
 			sourceTree = "<group>";
@@ -166,9 +163,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6DAEDF991D12AD2D005A40E0 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DAEDF9B1D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf */,
+				6DAEDF9C1D12AD4C005A40E0 /* Akkurat-Bold.otf */,
+				6DAEDF9D1D12AD4C005A40E0 /* Akkurat-Light-Italic.otf */,
+				6DAEDF9E1D12AD4C005A40E0 /* Akkurat-Light.otf */,
+				6DAEDF9F1D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf */,
+				6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		8569CA961D016FC100DF74BB /* _resource */ = {
 			isa = PBXGroup;
 			children = (
+				6DAEDF991D12AD2D005A40E0 /* fonts */,
 				854D2B691D0BF2D4002E3315 /* Configurations.plist */,
 				8569CA9C1D017EF600DF74BB /* NSString+MD5.h */,
 				8569CA9D1D017EF600DF74BB /* NSString+MD5.m */,
@@ -261,10 +272,16 @@
 			files = (
 				6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */,
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
+				6DAEDFA61D12AD4C005A40E0 /* Akkurat-Normal.otf in Resources */,
+				6DAEDFA11D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf in Resources */,
 				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
 				6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */,
 				854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */,
+				6DAEDFA41D12AD4C005A40E0 /* Akkurat-Light.otf in Resources */,
+				6DAEDFA31D12AD4C005A40E0 /* Akkurat-Light-Italic.otf in Resources */,
+				6DAEDFA51D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf in Resources */,
 				6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */,
+				6DAEDFA21D12AD4C005A40E0 /* Akkurat-Bold.otf in Resources */,
 				6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,16 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5E0DCE1CF7139600E08CE9 /* AppDelegate.m in Sources */,
-				6D1667D01CFEFFE1000FD9C7 /* PageContentViewController.m in Sources */,
 				6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */,
-				6D1667D81CFF2028000FD9C7 /* InfoViewController.m in Sources */,
 				8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */,
-				6D1667DD1CFF2404000FD9C7 /* ContattiViewController.m in Sources */,
 				856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */,
 				6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */,
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
-				6D1667D31CFF0390000FD9C7 /* LoginViewController.m in Sources */,
 				6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */,
+				6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */,
 				8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +370,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
+				PROVISIONING_PROFILE = "011ef32b-83a5-47d6-9e14-4686059c3181";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -395,7 +410,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-Objc";
-				PROVISIONING_PROFILE = "d8a51434-0eed-442e-9aed-9e92eaaee299";
+				PROVISIONING_PROFILE = "3e3ee7cd-8b5d-46fd-9bae-0728854654d2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

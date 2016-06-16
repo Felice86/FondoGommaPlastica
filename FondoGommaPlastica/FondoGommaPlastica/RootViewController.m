@@ -7,31 +7,59 @@
 //
 
 #import "RootViewController.h"
-#import "PageContentViewController.h"
+#import "MBProgressHUD.h"
+#import "Fondimatica/DataHandler.h"
+#import "Fondimatica/Configurations.h"
+#import "SpazioAderenteViewController.h"
 
-#define kPageController @"PageController"
-#define kInfoViewController @"InfoViewController"
-#define kContattiViewController @"ContattiViewController"
-#define kLoginViewController @"LoginViewController"
+@interface RootViewController() {
+    NSUInteger counter;
+    BOOL keyboardIsShown;
+}
+@property (nonatomic, retain) NSArray *erroriRiscontrati;
+@property (nonatomic, retain) MBProgressHUD *hud;
+@property (nonatomic, retain) LoginView *loginView;
+@property (nonatomic, retain) UIView *contattaciView;
+@property (nonatomic, retain) UIView *informazioniView;
+@property (nonatomic, retain) UIButton *selectedButton;
+- (IBAction)ominiClicked:(UIButton *)sender;
+- (IBAction)lenteClicked:(UIButton *)sender;
+- (IBAction)telefonoClicked:(UIButton *)sender;
 
-@interface RootViewController ()
-@property (nonatomic, retain) UIPageViewController *pageViewController;
-@property (nonatomic, retain) NSMutableArray *pagesArray;
-@property (nonatomic, retain) PageContentViewController *currentPageVC;
-@property (nonatomic, retain) PageContentViewController *nextVisiblePageVC;
 @end
 
 @implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.pagesArray = [NSMutableArray array];
-    [self creaPagesArray:@[kInfoViewController,kLoginViewController,kContattiViewController]];
-    [self creaPageViewController];
+    
+    // register for keyboard notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:self.view.window];
+    // register for keyboard notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:self.view.window];
+    
+    self.loginView = (LoginView*)[[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:self options:nil] lastObject];
+    self.loginView.delegate = self;
+    self.loginView.usernameTextField.delegate = self;
+    self.loginView.passwordTextField.delegate = self;
+    self.informazioniView = [[[NSBundle mainBundle] loadNibNamed:@"InfoContentView" owner:self options:nil] lastObject];
+    self.contattaciView = [[[NSBundle mainBundle] loadNibNamed:@"ContattiView" owner:self options:nil] lastObject];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self lenteClicked:self.lenteButton];
+#ifdef DEBUG
+    if (self.selectedButton == self.lenteButton) {
+        [self impostaAdTest];
+    }
+#endif
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,67 +70,16 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - PAGE VIEW CONTROLLER DATA SOURCE
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSUInteger pageIndex = ((PageContentViewController*)viewController).pageIndex;
-    pageIndex++;
-    if (pageIndex > self.pagesArray.count-1) {
-        pageIndex = 0;
-    }
-    
-    return [self viewControllerAtIndex:pageIndex];
+#pragma mark - CONTENT VIEW
+- (void)setContentView:(UIView*)contentView {
+    CGFloat heightContentView = self.contentScrollView.frame.size.height > contentView.frame.size.height ? self.contentScrollView.frame.size.height : contentView.frame.size.height;
+    contentView.frame = CGRectMake(contentView.frame.origin.x, contentView.frame.origin.y, self.contentScrollView.frame.size.width, heightContentView);
+    [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.contentScrollView addSubview:contentView];
+    [self.contentScrollView setContentSize:contentView.frame.size];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSUInteger pageIndex = ((PageContentViewController*)viewController).pageIndex;
-    pageIndex--;
-    if (pageIndex == -1) {
-        pageIndex = self.pagesArray.count-1;
-    }
-    
-    return [self viewControllerAtIndex:pageIndex];;
-}
 
-#pragma mark - PAGE VIEW CONTROLLER DELEGATE
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
-    self.nextVisiblePageVC = (PageContentViewController*)[pendingViewControllers lastObject];
-}
-
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
-    if (completed) {
-        NSLog(@"pageViewController didFinishAnimating:%@",self.nextVisiblePageVC);
-        self.currentPageVC = self.nextVisiblePageVC;
-//        [self caricaCurrentContentView];
-    }
-}
-
-#pragma mark - PAGE CONTENT PROTOCOL
-- (IBAction)muoviVersoSinistra:(UIButton*)senderButton {
-    NSUInteger pageIndex = self.currentPageVC.pageIndex;
-    NSUInteger newPageIndex = pageIndex-1;
-    if (newPageIndex == -1) {
-        newPageIndex = self.pagesArray.count-1;
-    }
-    PageContentViewController *newPageVC = [self viewControllerAtIndex:newPageIndex];
-    [self.pageViewController setViewControllers:@[newPageVC] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-    self.currentPageVC = newPageVC;
-//    [self caricaCurrentContentView];
-}
-
-- (IBAction)muoviVersoDestra:(UIButton*)senderButton {
-    NSUInteger pageIndex = self.currentPageVC.pageIndex;
-    NSUInteger newPageIndex = pageIndex+1;
-    if (newPageIndex > self.pagesArray.count-1) {
-        newPageIndex = 0;
-    }
-    PageContentViewController *newPageVC = [self viewControllerAtIndex:newPageIndex];
-    [self.pageViewController setViewControllers:@[newPageVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    self.currentPageVC = newPageVC;
-//    [self caricaCurrentContentView];
-}
-
-#pragma mark - ACCESSORI
 //-(void) setCustomView:(UIView *)customView {
 //    NSUInteger z = NSNotFound;
 ////    z = [self.contentView.subviews indexOfObject:customView];
@@ -128,40 +105,262 @@
 //    //and save ivar
 //    self.contentView = customView;
 //}
-//
-//- (void)caricaCurrentContentView {
-//    self.currentPageVC.contentView.frame = self.contentView.frame;
-//    [self setCustomView:self.currentPageVC.contentView];
-//}
 
-- (void)creaPageViewController {
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:kPageController];
-    self.pageViewController.dataSource = self;
-    self.pageViewController.delegate = self;
-    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-
-    
-    [self addChildViewController:_pageViewController];
-//    [self.view insertSubview:_pageViewController.view belowSubview:self.footerImageView];
-    [self.view addSubview:_pageViewController.view];
-    [self.pageViewController didMoveToParentViewController:self];
-
-    self.currentPageVC = startingViewController;
-}
-
-- (void)creaPagesArray:(NSArray*)pagesIdentifiers {
-    for (NSString *pageId in pagesIdentifiers) {
-        PageContentViewController *pageContentVC = [self.storyboard instantiateViewControllerWithIdentifier:pageId];
-        [self.pagesArray addObject:pageContentVC];
+- (void)ominiClicked:(UIButton *)sender {
+    if (!self.ominiButton.selected) {
+        self.selectedButton.selected = NO;
+        self.ominiButton.selected = YES;
+        self.selectedButton = self.ominiButton;
+        [self setContentView:self.informazioniView];
     }
 }
 
-- (PageContentViewController*)viewControllerAtIndex:(NSUInteger)pageIndex {
-    PageContentViewController *pageContentViewController = (PageContentViewController*)[self.pagesArray objectAtIndex:pageIndex];
-    pageContentViewController.pageIndex = pageIndex;
-    return pageContentViewController;
+- (void)lenteClicked:(UIButton *)sender {
+    if (!self.lenteButton.selected) {
+        self.selectedButton.selected = NO;
+        self.lenteButton.selected = YES;
+        self.selectedButton = self.lenteButton;
+        [self setContentView:self.loginView];
+    }
+}
+
+- (void)telefonoClicked:(UIButton *)sender {
+    if (!self.telefonoButton.selected) {
+        self.selectedButton.selected = NO;
+        self.telefonoButton.selected = YES;
+        self.selectedButton = self.telefonoButton;
+        [self setContentView:self.contattaciView];
+    }
+}
+
+#pragma mark - LOGIN DELEGATE
+- (void)loginViewEsegueLogin:(LoginView *)loginView {
+    [self chiudiTastiera];
+    Aderente *aderente = [Aderente sharedAderente];
+    if (aderente.username.length > 0 && aderente.password.length > 0) {
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        //        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+        [self.hud setRemoveFromSuperViewOnHide:YES];
+        //        [self.hud.backgroundView setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]];
+        //        [self.hud setContentColor:[UIColor whiteColor]];
+        self.hud.label.text = @"Recupero informazioni...";
+        
+        NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
+        NSData *passwordData = [aderente.password dataUsingEncoding:NSUTF8StringEncoding];
+        NSURLRequest *request = [[DataHandler sharedData] createWebRequest:abilitaUtenteUrl method:@"POST" body:passwordData];
+        NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:nil];
+        NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Errore:%@",error);
+            } else {
+                BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
+                NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
+#ifdef DEBUG
+                if (!abilitaUtenteResponse) {
+                    abilitaUtenteResponse = YES;
+                }
+#endif
+                if (abilitaUtenteResponse) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+                    });
+                    [self continuaRecuperoInfoAderenteAbilitato];
+                }
+            }
+        }];
+        [dataStack resume];
+    }
+}
+
+- (void)continuaRecuperoInfoAderenteAbilitato {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    
+    counter = 0;
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] anagrafica] gruppoDispatch:group];
+        [NSThread sleepForTimeInterval:1];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] recapiti] gruppoDispatch:group];
+        [NSThread sleepForTimeInterval:1];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] rendimento] gruppoDispatch:group];
+        [NSThread sleepForTimeInterval:1];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] contributi] gruppoDispatch:group];
+        [NSThread sleepForTimeInterval:1];
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        if (self.erroriRiscontrati.count > 0) {
+            
+        } else {
+            [self puoiMostrareVistaAderente];
+        }
+        [self.hud hideAnimated:YES];
+    });
+}
+
+- (void)eseguiRecuperoInformazioni:(NSString*)configUrl gruppoDispatch:(dispatch_group_t)group {
+    Configurations *config = [Configurations sharedConfiguration];
+    Aderente *aderente = [Aderente sharedAderente];
+    NSURL *metodoUrl = [[DataHandler sharedData] creaUrlDaConfig:configUrl codiceUtente:aderente.username];
+    NSURLRequest *request = [[DataHandler sharedData] createWebRequest:metodoUrl method:@"GET" body:nil];
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:nil];
+    NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"errore:%@",configUrl);
+        } else {
+            NSError *errorJSON = nil;
+            NSObject *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            if (!errorJSON) {
+                NSLog(@"Recuperati dati: %@",configUrl);
+                counter++;
+                if ([datiRecuperati isKindOfClass:[NSDictionary class]]) {
+                    if ([configUrl isEqualToString:[config anagrafica]]) {
+                        aderente.anagraficaDict = (NSDictionary*)datiRecuperati;
+                    }
+                    if ([configUrl isEqualToString:[config recapiti]]) {
+                        aderente.recapitiDict = (NSDictionary*)datiRecuperati;
+                    }
+                    if ([configUrl isEqualToString:[config rendimento]]) {
+                        aderente.rendimentoDict = (NSDictionary*)datiRecuperati;
+                    }
+                } else if ([datiRecuperati isKindOfClass:[NSArray class]]) {
+                    if ([configUrl isEqualToString:[config contributi]]) {
+                        aderente.contributiArray = (NSArray*)datiRecuperati;
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    float progress = (float)1/4 * counter;
+                    self.hud.progress = progress;
+                });
+            }
+            dispatch_group_leave(group);
+        }
+    }];
+    [dataStack resume];
+}
+
+- (void)puoiMostrareVistaAderente {
+    SpazioAderenteViewController *spazioAderenteViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SpazioAderenteViewController"];
+    spazioAderenteViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentViewController:spazioAderenteViewController animated:YES completion:nil];
+}
+
+#pragma mark - URL SESSION DELEGATE
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    //    NSLog(@"didReceiveChallenge");
+    completionHandler(NSURLSessionAuthChallengeUseCredential, [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);
+}
+
+#pragma mark - TEXT FIELD PROTOCOL
+- (void)chiudiTastiera {
+    if ([self.loginView.usernameTextField isFirstResponder]) {
+        [self.loginView.usernameTextField resignFirstResponder];
+    }
+    if ([self.loginView.passwordTextField isFirstResponder]) {
+        [self.loginView.passwordTextField resignFirstResponder];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self chiudiTastiera];
+    return YES;
+}
+
+- (void)keyboardWillHide:(NSNotification *)n
+{
+    NSDictionary* userInfo = [n userInfo];
+    
+    // get the size of the keyboard
+    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    
+    // resize the scrollview
+    CGRect viewFrame = self.contentScrollView.frame;
+    // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
+    viewFrame.size.height += (keyboardSize.height);
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [self.contentScrollView setFrame:viewFrame];
+    [UIView commitAnimations];
+    
+    keyboardIsShown = NO;
+}
+
+- (void)keyboardWillShow:(NSNotification *)n
+{
+    // This is an ivar I'm using to ensure that we do not do the frame size adjustment on the `UIScrollView` if the keyboard is already shown.  This can happen if the user, after fixing editing a `UITextField`, scrolls the resized `UIScrollView` to another `UITextField` and attempts to edit the next `UITextField`.  If we were to resize the `UIScrollView` again, it would be disastrous.  NOTE: The keyboard notification will fire even when the keyboard is already shown.
+    if (keyboardIsShown) {
+        return;
+    }
+    
+    NSDictionary* userInfo = [n userInfo];
+    
+    // get the size of the keyboard
+    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // resize the noteView
+    CGRect viewFrame = self.contentScrollView.frame;
+    // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
+    viewFrame.size.height -= (keyboardSize.height);
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [self.contentScrollView setFrame:viewFrame];
+    [UIView commitAnimations];
+    keyboardIsShown = YES;
+}
+
+- (void)resetInput {
+    [self.loginView.usernameTextField setText:@""];
+    [self.loginView.passwordTextField setText:@""];
+}
+
+- (void)impostaAdTest {
+    [self.loginView.usernameTextField setText:[[Configurations sharedConfiguration] usernameAdTest]];
+    [self.loginView.passwordTextField setText:[[Configurations sharedConfiguration] passwordAdTest]];
+}
+
+- (IBAction)selezionaPrecedente:(UIButton *)sender {
+    self.selectedButton.selected = NO;
+    if (self.selectedButton == self.telefonoButton) {
+        [self lenteClicked:self.lenteButton];
+        self.frecciaDestraButton.enabled = YES;
+    } else if (self.selectedButton == self.lenteButton) {
+        [self ominiClicked:self.ominiButton];
+    }
+    if (self.selectedButton == self.ominiButton) {
+        sender.enabled = NO;
+    }
+}
+
+- (IBAction)selezionaSuccessivo:(UIButton *)sender {
+    self.selectedButton.selected = NO;
+    if (self.selectedButton == self.ominiButton) {
+        [self lenteClicked:self.lenteButton];
+        self.frecciaSinistraButton.enabled = YES;
+    } else if (self.selectedButton == self.lenteButton) {
+        [self telefonoClicked:self.telefonoButton];
+    }
+    if (self.selectedButton == self.telefonoButton) {
+        sender.enabled = NO;
+    }
 }
 
 @end

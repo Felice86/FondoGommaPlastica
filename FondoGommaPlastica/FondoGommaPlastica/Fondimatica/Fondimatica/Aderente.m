@@ -27,10 +27,12 @@
     return dc.year;
 }
 
-- (NSString *)nominativoAderente {
-    NSString *nome = [self.anagraficaDict objectForKey:kAnagraficaNome];
-    NSString *cognome = [self.anagraficaDict objectForKey:kAnagraficaCognome];
-    return [NSString stringWithFormat:@"%@ %@",nome,cognome];
+- (NSString *)nome {
+    return [self.anagraficaDict objectForKey:kAnagraficaNome];
+}
+
+- (NSString *)cognome {
+    return [self.anagraficaDict objectForKey:kAnagraficaCognome];
 }
 
 #pragma mark - ACCESSORI

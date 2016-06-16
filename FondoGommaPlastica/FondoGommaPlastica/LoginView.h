@@ -17,7 +17,6 @@
 @end
 
 @interface LoginView : UIView
-@property (nonatomic, weak) IBOutlet UIImageView *spazioAderenteImageView;
 @property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, weak) NSObject<LoginViewProtocol> *delegate;

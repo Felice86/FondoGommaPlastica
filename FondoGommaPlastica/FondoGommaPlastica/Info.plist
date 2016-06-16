@@ -48,5 +48,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Akkurat-Bold-Italic.otf</string>
+		<string>Akkurat-Bold.otf</string>
+		<string>Akkurat-Light-Italic.otf</string>
+		<string>Akkurat-Light.otf</string>
+		<string>Akkurat-Normal-Italic.otf</string>
+		<string>Akkurat-Normal.otf</string>
+	</array>
 </dict>
 </plist>

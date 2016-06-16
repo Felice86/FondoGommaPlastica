@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImage+DeviceSpecificMedia.h"
+#import "Fondimatica/Aderente.h"
 
 @interface SpazioAderenteViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *dataIscrizioneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nomeCognomeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *informazioniAderenteButton;
-
+- (void)controllaLoginUtente;
 @end

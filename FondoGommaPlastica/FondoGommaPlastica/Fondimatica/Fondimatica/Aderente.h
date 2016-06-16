@@ -68,5 +68,6 @@
 @property (nonatomic, retain) NSDictionary *rendimentoDict;
 
 - (NSInteger)annoIscrizioneAderente;
-- (NSString*)nominativoAderente;
+- (NSString*)nome;
+- (NSString*)cognome;
 @end

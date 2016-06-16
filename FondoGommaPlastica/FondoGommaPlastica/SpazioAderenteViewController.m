@@ -7,7 +7,7 @@
 //
 
 #import "SpazioAderenteViewController.h"
-#import "Fondimatica/Aderente.h"
+#import "BenvenutoViewController.h"
 
 @interface SpazioAderenteViewController ()
 
@@ -17,18 +17,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (![self isKindOfClass:[BenvenutoViewController class]]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(riportaAlBenvenuto:) name:@"RiportaSpazioAderenteAlBenvenuto" object:nil];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    Aderente *aderente = [Aderente sharedAderente];
-    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %ld",(long)aderente.annoIscrizioneAderente]];
-    [self.nomeCognomeLabel setText:aderente.nominativoAderente];
-    [self.informazioniAderenteButton setImage:[UIImage imageForDeviceWithName:@"informazioni_aderente"] forState:UIControlStateNormal];
+    [super viewWillAppear:animated];
+    [self controllaLoginUtente];
+}
+
+- (void)controllaLoginUtente {
+    NSString *utenteLoggato = [[NSUserDefaults standardUserDefaults] objectForKey:@"UtenteLoggato"];
+    if (!utenteLoggato) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        Aderente *aderente = [Aderente sharedAderente];
+        [self.nomeCognomeLabel setText:[NSString stringWithFormat:@"%@ %@",aderente.nome.uppercaseString,aderente.cognome.uppercaseString]];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+}
+
+- (void)riportaAlBenvenuto:(NSNotification*)notification {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
