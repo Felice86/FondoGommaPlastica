@@ -52,7 +52,7 @@
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetto" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-SS-7mj">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FILETTO" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-SS-7mj">
                     <rect key="frame" x="25" y="190" width="270" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="r2p-pz-S7E"/>
@@ -79,7 +79,7 @@
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filetto" translatesAutoresizingMaskIntoConstraints="NO" id="Wzo-4o-Ugk">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FILETTO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzo-4o-Ugk">
                     <rect key="frame" x="25" y="265" width="270" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Gsx-7s-nLZ"/>
@@ -161,7 +161,7 @@
         </view>
     </objects>
     <resources>
+        <image name="FILETTO" width="270" height="1"/>
         <image name="bottone_accedi" width="101" height="32"/>
-        <image name="filetto" width="270" height="1"/>
     </resources>
 </document>
