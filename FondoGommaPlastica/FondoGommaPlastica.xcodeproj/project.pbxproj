@@ -30,6 +30,8 @@
 		856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B1AC681D0B412100B56BFA /* libFondimatica.a */; };
+		85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EB1D15877800BFAF97 /* CustomImage.m */; settings = {ASSET_TAGS = (); }; };
+		85CD48F01D1589FD00BFAF97 /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EF1D1589FD00BFAF97 /* CustomScrollView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fondimatica.xcodeproj; path = Fondimatica/Fondimatica.xcodeproj; sourceTree = "<group>"; };
 		85B1AC731D0B41AC00B56BFA /* FondoGommaPlastica-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FondoGommaPlastica-prefix.pch"; sourceTree = "<group>"; };
+		85CD48EA1D15877800BFAF97 /* CustomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImage.h; sourceTree = "<group>"; };
+		85CD48EB1D15877800BFAF97 /* CustomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImage.m; sourceTree = "<group>"; };
+		85CD48EE1D1589FD00BFAF97 /* CustomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollView.h; sourceTree = "<group>"; };
+		85CD48EF1D1589FD00BFAF97 /* CustomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 				6D1667E01CFF2CF1000FD9C7 /* LoginView.h */,
 				6D1667E11CFF2CF1000FD9C7 /* LoginView.m */,
 				6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */,
+				85CD48EA1D15877800BFAF97 /* CustomImage.h */,
+				85CD48EB1D15877800BFAF97 /* CustomImage.m */,
+				85CD48EE1D1589FD00BFAF97 /* CustomScrollView.h */,
+				85CD48EF1D1589FD00BFAF97 /* CustomScrollView.m */,
 			);
 			name = _views;
 			sourceTree = "<group>";
@@ -300,8 +310,10 @@
 				6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */,
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
 				6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */,
+				85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */,
 				6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */,
 				8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */,
+				85CD48F01D1589FD00BFAF97 /* CustomScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginView.h"
+#import "CustomScrollView.h"
 
-@interface RootViewController : UIViewController <UITextFieldDelegate,NSURLSessionDelegate,LoginViewProtocol>
-@property (weak, nonatomic) IBOutlet UIButton *ominiButton;
-@property (weak, nonatomic) IBOutlet UIButton *lenteButton;
-@property (weak, nonatomic) IBOutlet UIButton *telefonoButton;
+@interface RootViewController : UIViewController <UITextFieldDelegate,NSURLSessionDelegate,LoginViewProtocol,CustomScrollViewDelegate,UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet CustomScrollView *topScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 @property (weak, nonatomic) IBOutlet UIButton *frecciaSinistraButton;
 @property (weak, nonatomic) IBOutlet UIButton *frecciaDestraButton;
-- (IBAction)selezionaPrecedente:(UIButton *)sender;
-- (IBAction)selezionaSuccessivo:(UIButton *)sender;
+//- (IBAction)selezionaPrecedente:(UIButton *)sender;
+//- (IBAction)selezionaSuccessivo:(UIButton *)sender;
 
 @end

@@ -11,6 +11,7 @@
 #import "Fondimatica/DataHandler.h"
 #import "Fondimatica/Configurations.h"
 #import "SpazioAderenteViewController.h"
+#import "CustomImage.h"
 
 @interface RootViewController() {
     NSUInteger counter;
@@ -21,10 +22,11 @@
 @property (nonatomic, retain) LoginView *loginView;
 @property (nonatomic, retain) UIView *contattaciView;
 @property (nonatomic, retain) UIView *informazioniView;
-@property (nonatomic, retain) UIButton *selectedButton;
-- (IBAction)ominiClicked:(UIButton *)sender;
-- (IBAction)lenteClicked:(UIButton *)sender;
-- (IBAction)telefonoClicked:(UIButton *)sender;
+//@property (nonatomic, retain) UIButton *selectedButton;
+@property (nonatomic, retain) UIView *selectedView;
+//- (IBAction)ominiClicked:(UIButton *)sender;
+//- (IBAction)lenteClicked:(UIButton *)sender;
+//- (IBAction)telefonoClicked:(UIButton *)sender;
 
 @end
 
@@ -54,9 +56,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self lenteClicked:self.lenteButton];
+    [self riempiTopScrollView];
 #ifdef DEBUG
-    if (self.selectedButton == self.lenteButton) {
+    if ([self.selectedView isEqual:self.loginView]) {
         [self impostaAdTest];
     }
 #endif
@@ -70,6 +72,17 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - TOP SCROLL VIEW
+- (void)riempiTopScrollView {
+    NSArray *immaginiDaCaricare = @[@"omino",@"lente",@"telefono",@"omino",@"lente",@"telefono",@"omino",@"lente",@"telefono"];
+    [self.topScrollView scrollViewCon:3 colonneDiOggetti:immaginiDaCaricare];
+}
+
+#pragma mark - CUSTOM SCROLL DELEGATE
+- (void)customScrollView:(id)customScrollView haFinitoDiSelezionareImmagineCentrale:(CustomImage *)immagineCentrale {
+    
+}
+
 #pragma mark - CONTENT VIEW
 - (void)setContentView:(UIView*)contentView {
     CGFloat heightContentView = self.contentScrollView.frame.size.height > contentView.frame.size.height ? self.contentScrollView.frame.size.height : contentView.frame.size.height;
@@ -77,6 +90,7 @@
     [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.contentScrollView addSubview:contentView];
     [self.contentScrollView setContentSize:contentView.frame.size];
+    self.selectedView = contentView;
 }
 
 
@@ -106,32 +120,33 @@
 //    self.contentView = customView;
 //}
 
-- (void)ominiClicked:(UIButton *)sender {
-    if (!self.ominiButton.selected) {
-        self.selectedButton.selected = NO;
-        self.ominiButton.selected = YES;
-        self.selectedButton = self.ominiButton;
-        [self setContentView:self.informazioniView];
-    }
-}
-
-- (void)lenteClicked:(UIButton *)sender {
-    if (!self.lenteButton.selected) {
-        self.selectedButton.selected = NO;
-        self.lenteButton.selected = YES;
-        self.selectedButton = self.lenteButton;
-        [self setContentView:self.loginView];
-    }
-}
-
-- (void)telefonoClicked:(UIButton *)sender {
-    if (!self.telefonoButton.selected) {
-        self.selectedButton.selected = NO;
-        self.telefonoButton.selected = YES;
-        self.selectedButton = self.telefonoButton;
-        [self setContentView:self.contattaciView];
-    }
-}
+//- (void)ominiClicked:(UIButton *)sender {
+//    if (!self.ominiButton.selected) {
+//        self.selectedButton.selected = NO;
+//        self.ominiButton.selected = YES;
+//        self.selectedButton = self.ominiButton;
+//        [self setContentView:self.informazioniView];
+//    }
+//}
+//
+//- (void)lenteClicked:(UIButton *)sender {
+//    if (!self.lenteButton.selected) {
+//        self.selectedButton.selected = NO;
+//        self.lenteButton.selected = YES;
+//        self.selectedButton = self.lenteButton;
+//        [self setContentView:self.loginView];
+//    }
+//}
+//
+//- (void)telefonoClicked:(UIButton *)sender {
+//    if (!self.telefonoButton.selected) {
+//        self.selectedButton.selected = NO;
+//        self.telefonoButton.selected = YES;
+//        self.selectedButton = self.telefonoButton;
+//        [self setContentVi
+//         ew:self.contattaciView];
+//    }
+//}
 
 #pragma mark - LOGIN DELEGATE
 - (void)loginViewEsegueLogin:(LoginView *)loginView {
@@ -337,30 +352,36 @@
     [self.loginView.passwordTextField setText:[[Configurations sharedConfiguration] passwordAdTest]];
 }
 
-- (IBAction)selezionaPrecedente:(UIButton *)sender {
-    self.selectedButton.selected = NO;
-    if (self.selectedButton == self.telefonoButton) {
-        [self lenteClicked:self.lenteButton];
-        self.frecciaDestraButton.enabled = YES;
-    } else if (self.selectedButton == self.lenteButton) {
-        [self ominiClicked:self.ominiButton];
-    }
-    if (self.selectedButton == self.ominiButton) {
-        sender.enabled = NO;
+//- (IBAction)selezionaPrecedente:(UIButton *)sender {
+//    self.selectedButton.selected = NO;
+//    if (self.selectedButton == self.telefonoButton) {
+//        [self lenteClicked:self.lenteButton];
+//        self.frecciaDestraButton.enabled = YES;
+//    } else if (self.selectedButton == self.lenteButton) {
+//        [self ominiClicked:self.ominiButton];
+//    }
+//    if (self.selectedButton == self.ominiButton) {
+//        sender.enabled = NO;
+//    }
+//}
+//
+//- (IBAction)selezionaSuccessivo:(UIButton *)sender {
+//    self.selectedButton.selected = NO;
+//    if (self.selectedButton == self.ominiButton) {
+//        [self lenteClicked:self.lenteButton];
+//        self.frecciaSinistraButton.enabled = YES;
+//    } else if (self.selectedButton == self.lenteButton) {
+//        [self telefonoClicked:self.telefonoButton];
+//    }
+//    if (self.selectedButton == self.telefonoButton) {
+//        sender.enabled = NO;
+//    }
+//}
+
+#pragma mark - ScrollViewDelegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if ([scrollView isEqual:self.topScrollView]) {
+        [self.topScrollView selezionaIndiceCorretto];
     }
 }
-
-- (IBAction)selezionaSuccessivo:(UIButton *)sender {
-    self.selectedButton.selected = NO;
-    if (self.selectedButton == self.ominiButton) {
-        [self lenteClicked:self.lenteButton];
-        self.frecciaSinistraButton.enabled = YES;
-    } else if (self.selectedButton == self.lenteButton) {
-        [self telefonoClicked:self.telefonoButton];
-    }
-    if (self.selectedButton == self.telefonoButton) {
-        sender.enabled = NO;
-    }
-}
-
 @end

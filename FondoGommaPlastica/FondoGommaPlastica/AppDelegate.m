@@ -21,7 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Configurations sharedConfiguration];
+#ifndef DEBUG
     [NSThread sleepForTimeInterval:3];
+#endif
     return YES;
 }
 
