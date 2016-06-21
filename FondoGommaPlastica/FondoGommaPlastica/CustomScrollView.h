@@ -20,6 +20,6 @@
 @property (nonatomic, retain, readonly) CustomImage *immagineCentrale;
 @property (nonatomic, retain, readonly) CustomImage *immagineDestra;
 
-- (void)scrollViewCon:(NSInteger)colonne colonneDiOggetti:(NSArray *)oggettiArray;
+- (void)riempiCustomScrollViewConImmagini;
 - (void)selezionaIndiceCorretto;
 @end

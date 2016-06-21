@@ -56,7 +56,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self riempiTopScrollView];
+//    [self riempiTopScrollView];
+    [self.topScrollView riempiCustomScrollViewConImmagini];
 #ifdef DEBUG
     if ([self.selectedView isEqual:self.loginView]) {
         [self impostaAdTest];
@@ -70,12 +71,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - TOP SCROLL VIEW
-- (void)riempiTopScrollView {
-    NSArray *immaginiDaCaricare = @[@"omino",@"lente",@"telefono",@"omino",@"lente",@"telefono",@"omino",@"lente",@"telefono"];
-    [self.topScrollView scrollViewCon:3 colonneDiOggetti:immaginiDaCaricare];
 }
 
 #pragma mark - CUSTOM SCROLL DELEGATE
@@ -381,7 +376,7 @@
 #pragma mark - ScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     if ([scrollView isEqual:self.topScrollView]) {
-        [self.topScrollView selezionaIndiceCorretto];
+//        [self.topScrollView selezionaIndiceCorretto];
     }
 }
 @end
