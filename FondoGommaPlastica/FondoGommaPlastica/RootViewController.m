@@ -1,3 +1,4 @@
+
 //
 //  RootViewController.m
 //  FondoGommaPlastica
@@ -11,7 +12,9 @@
 #import "Fondimatica/DataHandler.h"
 #import "Fondimatica/Configurations.h"
 #import "SpazioAderenteViewController.h"
+#import "BenvenutoViewController.h"
 #import "CustomImage.h"
+#import "AppDelegate.h"
 
 @interface RootViewController() {
     NSUInteger counter;
@@ -22,11 +25,14 @@
 @property (nonatomic, retain) LoginView *loginView;
 @property (nonatomic, retain) UIView *contattaciView;
 @property (nonatomic, retain) UIView *informazioniView;
-//@property (nonatomic, retain) UIButton *selectedButton;
+@property (nonatomic, weak) IBOutlet UIButton *ominiButton;
+@property (nonatomic, weak) IBOutlet UIButton *lenteButton;
+@property (nonatomic, weak) IBOutlet UIButton *telefonoButton;
+@property (nonatomic, retain) UIButton *selectedButton;
 @property (nonatomic, retain) UIView *selectedView;
-//- (IBAction)ominiClicked:(UIButton *)sender;
-//- (IBAction)lenteClicked:(UIButton *)sender;
-//- (IBAction)telefonoClicked:(UIButton *)sender;
+- (IBAction)ominiClicked:(UIButton *)sender;
+- (IBAction)lenteClicked:(UIButton *)sender;
+- (IBAction)telefonoClicked:(UIButton *)sender;
 
 @end
 
@@ -52,21 +58,26 @@
     self.loginView.passwordTextField.delegate = self;
     self.informazioniView = [[[NSBundle mainBundle] loadNibNamed:@"InfoContentView" owner:self options:nil] lastObject];
     self.contattaciView = [[[NSBundle mainBundle] loadNibNamed:@"ContattiView" owner:self options:nil] lastObject];
+    
+//    self.ominiButton.selected = NO;
+//    self.lenteButton.selected = NO;
+//    self.telefonoButton.selected = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 //    [self riempiTopScrollView];
-    [self.topScrollView riempiCustomScrollViewConImmagini];
+//    [self.topScrollView riempiCustomScrollViewConImmagini];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self lenteClicked:self.lenteButton];
 #ifdef DEBUG
     if ([self.selectedView isEqual:self.loginView]) {
         [self impostaAdTest];
     }
 #endif
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +96,7 @@
     [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.contentScrollView addSubview:contentView];
     [self.contentScrollView setContentSize:contentView.frame.size];
+    self.contentScrollView.contentOffset = CGPointMake(0, 0);
     self.selectedView = contentView;
 }
 
@@ -115,33 +127,32 @@
 //    self.contentView = customView;
 //}
 
-//- (void)ominiClicked:(UIButton *)sender {
-//    if (!self.ominiButton.selected) {
-//        self.selectedButton.selected = NO;
-//        self.ominiButton.selected = YES;
-//        self.selectedButton = self.ominiButton;
-//        [self setContentView:self.informazioniView];
-//    }
-//}
-//
-//- (void)lenteClicked:(UIButton *)sender {
-//    if (!self.lenteButton.selected) {
-//        self.selectedButton.selected = NO;
-//        self.lenteButton.selected = YES;
-//        self.selectedButton = self.lenteButton;
-//        [self setContentView:self.loginView];
-//    }
-//}
-//
-//- (void)telefonoClicked:(UIButton *)sender {
-//    if (!self.telefonoButton.selected) {
-//        self.selectedButton.selected = NO;
-//        self.telefonoButton.selected = YES;
-//        self.selectedButton = self.telefonoButton;
-//        [self setContentVi
-//         ew:self.contattaciView];
-//    }
-//}
+- (void)ominiClicked:(UIButton *)sender {
+    if (!self.ominiButton.selected) {
+        self.selectedButton.selected = NO;
+        self.ominiButton.selected = YES;
+        self.selectedButton = self.ominiButton;
+        [self setContentView:self.informazioniView];
+    }
+}
+
+- (void)lenteClicked:(UIButton *)sender {
+    if (!self.lenteButton.selected) {
+        self.selectedButton.selected = NO;
+        self.lenteButton.selected = YES;
+        self.selectedButton = self.lenteButton;
+        [self setContentView:self.loginView];
+    }
+}
+
+- (void)telefonoClicked:(UIButton *)sender {
+    if (!self.telefonoButton.selected) {
+        self.selectedButton.selected = NO;
+        self.telefonoButton.selected = YES;
+        self.selectedButton = self.telefonoButton;
+        [self setContentView:self.contattaciView];
+    }
+}
 
 #pragma mark - LOGIN DELEGATE
 - (void)loginViewEsegueLogin:(LoginView *)loginView {
@@ -168,7 +179,7 @@
                 NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
 #ifdef DEBUG
                 if (!abilitaUtenteResponse) {
-                    abilitaUtenteResponse = YES;
+                    abilitaUtenteResponse = NO;
                 }
 #endif
                 if (abilitaUtenteResponse) {
@@ -176,6 +187,11 @@
                         self.hud.mode = MBProgressHUDModeAnnularDeterminate;
                     });
                     [self continuaRecuperoInfoAderenteAbilitato];
+                } else {
+                    UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Utente non abilitato." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                    [alertViewController addAction:chiudiAction];
+                    [self presentViewController:alertViewController animated:YES completion:nil];
                 }
             }
         }];
@@ -241,17 +257,21 @@
                 counter++;
                 if ([datiRecuperati isKindOfClass:[NSDictionary class]]) {
                     if ([configUrl isEqualToString:[config anagrafica]]) {
-                        aderente.anagraficaDict = (NSDictionary*)datiRecuperati;
+                        [aderente configuraAnagrafica:(NSDictionary*)datiRecuperati];
+//                        aderente.anagraficaDict = (NSDictionary*)datiRecuperati;
                     }
                     if ([configUrl isEqualToString:[config recapiti]]) {
-                        aderente.recapitiDict = (NSDictionary*)datiRecuperati;
+                        [aderente configuraRecapiti:(NSDictionary*)datiRecuperati];
+//                        aderente.recapitiDict = (NSDictionary*)datiRecuperati;
                     }
                     if ([configUrl isEqualToString:[config rendimento]]) {
-                        aderente.rendimentoDict = (NSDictionary*)datiRecuperati;
+                        [aderente configuraRendimento:(NSDictionary*)datiRecuperati];
+//                        aderente.rendimentoDict = (NSDictionary*)datiRecuperati;
                     }
                 } else if ([datiRecuperati isKindOfClass:[NSArray class]]) {
                     if ([configUrl isEqualToString:[config contributi]]) {
-                        aderente.contributiArray = (NSArray*)datiRecuperati;
+                        [aderente configuraContributi:(NSArray*)datiRecuperati];
+//                        aderente.contributiArray = (NSArray*)datiRecuperati;
                     }
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -266,9 +286,8 @@
 }
 
 - (void)puoiMostrareVistaAderente {
-    SpazioAderenteViewController *spazioAderenteViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SpazioAderenteViewController"];
-    spazioAderenteViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-    [self presentViewController:spazioAderenteViewController animated:YES completion:nil];
+    BenvenutoViewController *benvenutoViewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([BenvenutoViewController class])];
+    [self.navigationController pushViewController:benvenutoViewController animated:YES];
 }
 
 #pragma mark - URL SESSION DELEGATE
@@ -374,9 +393,9 @@
 //}
 
 #pragma mark - ScrollViewDelegate
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    if ([scrollView isEqual:self.topScrollView]) {
-//        [self.topScrollView selezionaIndiceCorretto];
-    }
-}
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+//    if ([scrollView isEqual:self.topScrollView]) {
+////        [self.topScrollView selezionaIndiceCorretto];
+//    }
+//}
 @end

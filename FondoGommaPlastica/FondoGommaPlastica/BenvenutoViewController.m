@@ -7,6 +7,7 @@
 //
 
 #import "BenvenutoViewController.h"
+#import "AppDelegate.h"
 
 @interface BenvenutoViewController ()
 
@@ -16,20 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controllaLoginUtente) name:UIApplicationDidBecomeActiveNotification object:nil];
-    Aderente *aderente = [Aderente sharedAderente];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@ %@",aderente.nome,aderente.cognome] forKey:@"UtenteLoggato"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     Aderente *aderente = [Aderente sharedAderente];
-    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %ld",(long)aderente.annoIscrizioneAderente]];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"dd/MM/yyyy"];
+    [self.dataIscrizioneLabel setText:[NSString stringWithFormat:@"Iscritto dal %@",[df stringFromDate:aderente.anagrafica.dataIscrizione]]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)logout:(id)sender {
+//    [super tornaIndietro:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

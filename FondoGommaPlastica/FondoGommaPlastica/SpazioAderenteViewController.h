@@ -12,5 +12,6 @@
 
 @interface SpazioAderenteViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *nomeCognomeLabel;
-- (void)controllaLoginUtente;
+@property (weak, nonatomic, readonly) IBOutlet UIScrollView *contentScrollView;
+- (IBAction)tornaIndietro:(UIButton*)tornaIndietroButton;
 @end

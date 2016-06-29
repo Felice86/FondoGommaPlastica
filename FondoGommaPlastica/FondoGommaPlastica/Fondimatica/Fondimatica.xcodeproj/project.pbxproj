@@ -50,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85A209341D1E81EE002397AD /* modello */ = {
+			isa = PBXGroup;
+			children = (
+				85B1AC701D0B414D00B56BFA /* Aderente.h */,
+				85B1AC711D0B414D00B56BFA /* Aderente.m */,
+			);
+			name = modello;
+			sourceTree = "<group>";
+		};
 		85B1AC4E1D0B412000B56BFA = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +78,13 @@
 		85B1AC591D0B412000B56BFA /* Fondimatica */ = {
 			isa = PBXGroup;
 			children = (
+				85A209341D1E81EE002397AD /* modello */,
 				85B1AC5A1D0B412000B56BFA /* Fondimatica.h */,
 				85B1AC5C1D0B412000B56BFA /* Fondimatica.m */,
 				85B1AC6A1D0B413F00B56BFA /* Configurations.h */,
 				85B1AC6B1D0B413F00B56BFA /* Configurations.m */,
 				85B1AC6D1D0B414800B56BFA /* DataHandler.h */,
 				85B1AC6E1D0B414800B56BFA /* DataHandler.m */,
-				85B1AC701D0B414D00B56BFA /* Aderente.h */,
-				85B1AC711D0B414D00B56BFA /* Aderente.m */,
 			);
 			path = Fondimatica;
 			sourceTree = "<group>";

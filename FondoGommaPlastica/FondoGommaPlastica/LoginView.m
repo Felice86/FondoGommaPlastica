@@ -18,8 +18,9 @@
     NSString *passwordMD5 = [self.passwordTextField.text MD5];
     if (username.length > 0 && passwordMD5.length > 0) {
         Aderente *aderente = [Aderente sharedAderente];
-        aderente.username = self.usernameTextField.text;
-        aderente.password = [self.passwordTextField.text MD5];
+        NSString *username = self.usernameTextField.text;
+        NSString* passwordMD5 = [self.passwordTextField.text MD5];
+        [aderente eseguiLoginConUsername:username password:passwordMD5];
         [self.delegate loginViewEsegueLogin:self];
     } else {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Controllare i dati inseriti." preferredStyle:UIAlertControllerStyleAlert];

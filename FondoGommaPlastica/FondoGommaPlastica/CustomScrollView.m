@@ -23,7 +23,7 @@
 
 //Inserisce una serie di immagini in colonne
 - (void)riempiCustomScrollViewConImmagini {
-    NSArray *immaginiDaCaricare = @[kImmagineContatti,kImmagineChiSiamo,kImmagineLogin,kImmagineContatti,kImmagineChiSiamo];
+    NSArray *immaginiDaCaricare = @[kImmagineContatti,kImmagineLogin,kImmagineChiSiamo];
     if (!self.immaginiScrollabili) {
         self.immaginiScrollabili =[NSMutableArray arrayWithCapacity:immaginiDaCaricare.count]; 
     } else {
@@ -59,6 +59,7 @@
 }
 
 - (void)selezionaIndiceCorretto {
+    [self.mioDelegate customScrollView:self haFinitoDiSelezionareImmagineCentrale:self.immagineCentrale];
 //    NSInteger indiceDaSelezionare = self.contentOffset.x / self.larghezzaImmagine;
 //    // Vecchia immagine centrale
 //    [self.immagineCentrale zoomSuImmaginePiccola];

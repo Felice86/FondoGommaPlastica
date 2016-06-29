@@ -143,6 +143,7 @@
 		6D5E0DC81CF7139600E08CE9 /* FondoGommaPlastica */ = {
 			isa = PBXGroup;
 			children = (
+				85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */,
 				855CCA5B1D1861FD0067AA85 /* _customScroll */,
 				8569CA961D016FC100DF74BB /* _resource */,
 				6D1667E31CFF3AE9000FD9C7 /* _viewControllers */,
@@ -150,7 +151,6 @@
 				6D5E0DCC1CF7139600E08CE9 /* AppDelegate.h */,
 				6D5E0DCD1CF7139600E08CE9 /* AppDelegate.m */,
 				6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */,
-				85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */,
 				6D5E0DDA1CF7139600E08CE9 /* Info.plist */,
 				6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */,
 				6D5E0DD21CF7139600E08CE9 /* Main.storyboard */,

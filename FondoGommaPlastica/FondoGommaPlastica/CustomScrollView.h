@@ -16,6 +16,7 @@
 @end
 
 @interface CustomScrollView : UIScrollView
+@property (nonatomic, weak) id<CustomScrollViewDelegate> mioDelegate;
 @property (nonatomic, retain, readonly) CustomImage *immagineSinistra;
 @property (nonatomic, retain, readonly) CustomImage *immagineCentrale;
 @property (nonatomic, retain, readonly) CustomImage *immagineDestra;
