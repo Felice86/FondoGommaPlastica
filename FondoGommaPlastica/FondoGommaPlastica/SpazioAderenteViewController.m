@@ -10,11 +10,7 @@
 #import "BenvenutoViewController.h"
 #import <objc/runtime.h>
 
-@interface SpazioAderenteViewController () {
-    CGFloat larghezza;
-    CGRect frameTitoloLabel;
-    CGRect frameValoreLabel;
-}
+@interface SpazioAderenteViewController ()
 @property (nonatomic, weak, readwrite) IBOutlet UIScrollView *contentScrollView;
 @end
 
@@ -28,25 +24,6 @@
     [super viewWillAppear:animated];
     Aderente *aderente = [Aderente sharedAderente];
     [self.nomeCognomeLabel setText:[NSString stringWithFormat:@"%@ %@",aderente.anagrafica.nome.uppercaseString,aderente.anagrafica.cognome.uppercaseString]];
-    if ([self.restorationIdentifier isEqualToString:@"InformazioniAderente"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.anagrafica];
-        frameTitoloLabel.origin.y += 40;
-        frameValoreLabel.origin.y += 40;
-        [self riempiConInformazioni:aderente.recapiti];
-    } else if ([self.restorationIdentifier isEqualToString:@"VisualizzaRendimento"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.rendimento];
-    } else if ([self.restorationIdentifier isEqualToString:@"UltimiMovimenti"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.contributi];
-    } else if ([self.restorationIdentifier isEqualToString:@"DatiLiquidazione"]) {
-        [self iniziaCreazioneLabel];
-//        [self riempiConInformazioni:aderente.];
-    } else if ([self.restorationIdentifier isEqualToString:@"AltriDati"]) {
-        [self iniziaCreazioneLabel];
-//        [self riempiConInformazioni:aderente.anagrafica];
-    }
     [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 

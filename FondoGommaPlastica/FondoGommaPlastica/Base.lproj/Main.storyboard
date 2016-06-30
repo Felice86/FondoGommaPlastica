@@ -537,7 +537,7 @@
         <!--INFORMAZIONI ADERENTE-->
         <scene sceneID="YYP-RA-Gav">
             <objects>
-                <viewController restorationIdentifier="InformazioniAderente" title="INFORMAZIONI ADERENTE" id="VKH-Q9-pwm" customClass="SpazioAderenteViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="InformazioniAderente" title="INFORMAZIONI ADERENTE" id="VKH-Q9-pwm" customClass="InformazioniAderenteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="re8-JB-sBz"/>
                         <viewControllerLayoutGuide type="bottom" id="J2y-Aq-JEi"/>
@@ -665,7 +665,7 @@
         <!--VISUALIZZA RENDIMENTO-->
         <scene sceneID="GHa-ZZ-Ijd">
             <objects>
-                <viewController restorationIdentifier="VisualizzaRendimento" title="VISUALIZZA RENDIMENTO" id="WvY-cO-v5d" customClass="SpazioAderenteViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="VisualizzaRendimento" title="VISUALIZZA RENDIMENTO" id="WvY-cO-v5d" customClass="VisualizzaRendimentoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bQU-6D-qgh"/>
                         <viewControllerLayoutGuide type="bottom" id="fwl-a9-QXR"/>
@@ -901,7 +901,7 @@
         <!--ULTIMI 12 MOVIMENTI-->
         <scene sceneID="WOM-dM-q4e">
             <objects>
-                <viewController restorationIdentifier="UltimiMovimenti" title="ULTIMI 12 MOVIMENTI" id="tnD-fL-ac1" customClass="SpazioAderenteViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="UltimiMovimenti" title="ULTIMI 12 MOVIMENTI" id="tnD-fL-ac1" customClass="UltimiMovimentiViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hfy-e6-7z8"/>
                         <viewControllerLayoutGuide type="bottom" id="U2n-hU-b9k"/>
@@ -1023,7 +1023,7 @@
         <!--DATI LIQUIDAZIONE-->
         <scene sceneID="r5i-y4-cqr">
             <objects>
-                <viewController restorationIdentifier="DatiLiquidazione" title="DATI LIQUIDAZIONE" id="EMC-uK-Om2" customClass="SpazioAderenteViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DatiLiquidazione" title="DATI LIQUIDAZIONE" id="EMC-uK-Om2" customClass="DatiLiquidazioneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hv9-oT-7cO"/>
                         <viewControllerLayoutGuide type="bottom" id="92r-nz-vHa"/>
