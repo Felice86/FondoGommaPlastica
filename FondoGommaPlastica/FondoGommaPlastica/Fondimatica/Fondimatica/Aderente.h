@@ -64,14 +64,6 @@
 #define kLiquidazioneDataRicezione @"dataRicezione"
 #define kLiquidazioneStato @"stato"
 
-typedef enum {
-    TipoPrestazione_Riscatto = 1,
-    TipoPrestazione_TranferimentoOut = 2,
-    TipoPrestazione_TrasferimentoIn = 3,
-    TipoPrestazione_Anticipazione = 6,
-    TipoPrestazione_RiscattoParziale = 8
-} IdTipoPrestazione;
-
 @interface IndirizzoResidenza : NSObject
 @property (nonatomic, retain, readonly) NSString *viaECivico;
 @property (nonatomic, retain, readonly) NSString *luogo;
@@ -159,12 +151,23 @@ typedef enum {
 @property (nonatomic, retain, readonly) Recapiti *recapiti;
 @property (nonatomic, retain, readonly) NSArray *contributi;
 @property (nonatomic, retain, readonly) Rendimento *rendimento;
+@property (nonatomic, retain, readonly) NSArray *riscatti;
+@property (nonatomic, retain, readonly) NSArray *trasferimentiOut;
+@property (nonatomic, retain, readonly) NSArray *trasferimentiIn;
+@property (nonatomic, retain, readonly) NSArray *anticipi;
+@property (nonatomic, retain, readonly) NSArray *riscattiParziali;
+
 + (instancetype)sharedAderente;
 - (void)eseguiLoginConUsername:(NSString*)username password:(NSString*)password;
 - (void)configuraAnagrafica:(NSDictionary*)anagraficaDict;
 - (void)configuraRecapiti:(NSDictionary*)recapitiDict;
 - (void)configuraContributi:(NSArray*)contributiArray;
 - (void)configuraRendimento:(NSDictionary*)rendimentoDict;
+- (void)configuraRiscatti:(NSArray*)riscattiArray;
+- (void)configuraTrasferimentiOut:(NSArray*)trasferimentiOutArray;
+- (void)configuraTrasferimentiIn:(NSArray*)trasferimentiInArray;
+- (void)configuraAnticipi:(NSArray*)anticipiArray;
+- (void)configuraRiscattiParziali:(NSArray*)riscattiParzialiArray;
 - (void)resetAderente;
 + (NSDate*)getJSONDate:(NSString*)dateFromJSON;
 @end

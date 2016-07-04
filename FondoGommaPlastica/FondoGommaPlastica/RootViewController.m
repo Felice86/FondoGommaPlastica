@@ -18,6 +18,7 @@
 
 @interface RootViewController() {
     NSUInteger counter;
+    NSUInteger numeroOperazioni;
     BOOL keyboardIsShown;
 }
 @property (nonatomic, retain) NSArray *erroriRiscontrati;
@@ -202,31 +203,62 @@
 - (void)continuaRecuperoInfoAderenteAbilitato {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t group = dispatch_group_create();
-    
+
     counter = 0;
+    numeroOperazioni = 0;
     
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
         [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] anagrafica] gruppoDispatch:group];
-        [NSThread sleepForTimeInterval:1];
+        numeroOperazioni++;
     });
     
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
         [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] recapiti] gruppoDispatch:group];
-        [NSThread sleepForTimeInterval:1];
+        numeroOperazioni++;
     });
     
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
         [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] rendimento] gruppoDispatch:group];
-        [NSThread sleepForTimeInterval:1];
+        numeroOperazioni++;
     });
     
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
         [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] contributi] gruppoDispatch:group];
-        [NSThread sleepForTimeInterval:1];
+        numeroOperazioni++;
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] liquidazioni:TipoPrestazione_Anticipazione] gruppoDispatch:group];
+        numeroOperazioni++;
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] liquidazioni:TipoPrestazione_Riscatto] gruppoDispatch:group];
+        numeroOperazioni++;
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] liquidazioni:TipoPrestazione_RiscattoParziale] gruppoDispatch:group];
+        numeroOperazioni++;
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] liquidazioni:TipoPrestazione_TranferimentoOut] gruppoDispatch:group];
+        numeroOperazioni++;
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [self eseguiRecuperoInformazioni:[[Configurations sharedConfiguration] liquidazioni:TipoPrestazione_TrasferimentoIn] gruppoDispatch:group];
+        numeroOperazioni++;
     });
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
@@ -273,9 +305,24 @@
                         [aderente configuraContributi:(NSArray*)datiRecuperati];
 //                        aderente.contributiArray = (NSArray*)datiRecuperati;
                     }
+                    if ([configUrl isEqualToString:[config liquidazioni:TipoPrestazione_Anticipazione]]) {
+                        [aderente configuraAnticipi:(NSArray*)datiRecuperati];
+                    }
+                    if ([configUrl isEqualToString:[config liquidazioni:TipoPrestazione_Riscatto]]) {
+                        [aderente configuraRiscatti:(NSArray*)datiRecuperati];
+                    }
+                    if ([configUrl isEqualToString:[config liquidazioni:TipoPrestazione_RiscattoParziale]]) {
+                        [aderente configuraRiscattiParziali:(NSArray*)datiRecuperati];
+                    }
+                    if ([configUrl isEqualToString:[config liquidazioni:TipoPrestazione_TranferimentoOut]]) {
+                        [aderente configuraTrasferimentiOut:(NSArray*)datiRecuperati];
+                    }
+                    if ([configUrl isEqualToString:[config liquidazioni:TipoPrestazione_TrasferimentoIn]]) {
+                        [aderente configuraTrasferimentiIn:(NSArray*)datiRecuperati];
+                    }
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    float progress = (float)1/4 * counter;
+                    float progress = (float)1/numeroOperazioni * counter;
                     self.hud.progress = progress;
                 });
             }

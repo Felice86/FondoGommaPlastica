@@ -9,17 +9,17 @@
 	<key>baseUrl</key>
 	<string>https://www.fondimatica.it/gommaplasticasvc/Aderente3.svc</string>
 	<key>recapiti</key>
-	<string>%@/recapiti</string>
+	<string>/recapiti</string>
 	<key>contributi</key>
-	<string>%@/contributi</string>
+	<string>/contributi</string>
 	<key>rendimento</key>
-	<string>%@/rendimento</string>
+	<string>/rendimento</string>
 	<key>anagrafica</key>
-	<string>%@/anagrafica</string>
+	<string>/anagrafica</string>
 	<key>liquidazioni</key>
-	<string>%@/liquidazioni/%d</string>
+	<string>/liquidazioni/%d</string>
 	<key>abilitaUtente</key>
-	<string>%@/abilitautente</string>
+	<string>/abilitautente</string>
 	<key>usernameAdTest</key>
 	<string>136041</string>
 	<key>passwordAdTest</key>

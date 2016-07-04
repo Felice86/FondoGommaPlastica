@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIImage+DeviceSpecificMedia.h"
 #import "Fondimatica/Aderente.h"
+#import "Fondimatica/Configurations.h"
 
 @interface PageContentViewController : UIViewController
 @property (nonatomic, retain) UIScrollView *contentScrollView;

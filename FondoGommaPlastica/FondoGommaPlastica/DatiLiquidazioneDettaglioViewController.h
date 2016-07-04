@@ -9,5 +9,5 @@
 #import "SpazioAderenteViewController.h"
 
 @interface DatiLiquidazioneDettaglioViewController : SpazioAderenteViewController
-@property (nonatomic, retain) IdTipoPrestazione tipoPrestazione;
+@property (nonatomic, assign) IdTipoPrestazione tipoPrestazione;
 @end

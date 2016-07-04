@@ -183,6 +183,11 @@
 @property (nonatomic, retain, readwrite) Recapiti *recapiti;
 @property (nonatomic, retain, readwrite) NSArray *contributi;
 @property (nonatomic, retain, readwrite) Rendimento *rendimento;
+@property (nonatomic, retain, readwrite) NSArray *riscatti;
+@property (nonatomic, retain, readwrite) NSArray *trasferimentiOut;
+@property (nonatomic, retain, readwrite) NSArray *trasferimentiIn;
+@property (nonatomic, retain, readwrite) NSArray *anticipi;
+@property (nonatomic, retain, readwrite) NSArray *riscattiParziali;
 @end
 
 @implementation Aderente
@@ -230,6 +235,56 @@
         self.rendimento = [[Rendimento alloc] init];
     }
     [self.rendimento configuraRendimento:rendimentoDict];
+}
+
+- (void)configuraRiscatti:(NSArray *)riscattiArray {
+    NSMutableArray *riscattiDaInserire = [NSMutableArray array];
+    for (NSDictionary *liquidazioneDict in riscattiArray) {
+        Liquidazione *oggettoLiquidazione = [[Liquidazione alloc] init];
+        [oggettoLiquidazione configuraLiquidazione:liquidazioneDict];
+        [riscattiDaInserire addObject:oggettoLiquidazione];
+    }
+    self.riscatti = riscattiDaInserire;
+}
+
+- (void)configuraRiscattiParziali:(NSArray *)riscattiParzialiArray {
+    NSMutableArray *riscattiParzialiDaInserire = [NSMutableArray array];
+    for (NSDictionary *liquidazioneDict in riscattiParzialiArray) {
+        Liquidazione *oggettoLiquidazione = [[Liquidazione alloc] init];
+        [oggettoLiquidazione configuraLiquidazione:liquidazioneDict];
+        [riscattiParzialiDaInserire addObject:oggettoLiquidazione];
+    }
+    self.riscattiParziali = riscattiParzialiDaInserire;
+}
+
+- (void)configuraTrasferimentiIn:(NSArray *)trasferimentiInArray {
+    NSMutableArray *trasferimentiDaInserire = [NSMutableArray array];
+    for (NSDictionary *liquidazioneDict in trasferimentiInArray) {
+        Liquidazione *oggettoLiquidazione = [[Liquidazione alloc] init];
+        [oggettoLiquidazione configuraLiquidazione:liquidazioneDict];
+        [trasferimentiDaInserire addObject:oggettoLiquidazione];
+    }
+    self.trasferimentiIn = trasferimentiDaInserire;
+}
+
+- (void)configuraTrasferimentiOut:(NSArray *)trasferimentiOutArray {
+    NSMutableArray *trasferimentiDaInserire = [NSMutableArray array];
+    for (NSDictionary *liquidazioneDict in trasferimentiOutArray) {
+        Liquidazione *oggettoLiquidazione = [[Liquidazione alloc] init];
+        [oggettoLiquidazione configuraLiquidazione:liquidazioneDict];
+        [trasferimentiDaInserire addObject:oggettoLiquidazione];
+    }
+    self.trasferimentiOut = trasferimentiDaInserire;
+}
+
+- (void)configuraAnticipi:(NSArray *)anticipiArray {
+    NSMutableArray *anticipiDaInserire = [NSMutableArray array];
+    for (NSDictionary *liquidazioneDict in anticipiArray) {
+        Liquidazione *oggettoLiquidazione = [[Liquidazione alloc] init];
+        [oggettoLiquidazione configuraLiquidazione:liquidazioneDict];
+        [anticipiDaInserire addObject:oggettoLiquidazione];
+    }
+    self.anticipi = anticipiDaInserire;
 }
 
 - (void)resetAderente {

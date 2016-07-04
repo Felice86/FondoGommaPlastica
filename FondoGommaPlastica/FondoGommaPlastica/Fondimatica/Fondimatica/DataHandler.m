@@ -48,12 +48,14 @@
 
 - (NSURL*)creaUrlDaConfig:(NSString*)config codiceUtente:(NSString*)codiceUtente  {
     NSString *baseUrl = [[Configurations sharedConfiguration] baseUrl];
-    NSString *metodoUrl = [baseUrl stringByAppendingPathComponent:config];
     if (!codiceUtente) {
         codiceUtente = @"";
     }
-    NSString *urlCompleto = [NSString stringWithFormat:metodoUrl, codiceUtente];
-    NSURL *url = [NSURL URLWithString:urlCompleto];
+    NSString *codiceUrl = [baseUrl stringByAppendingPathComponent:codiceUtente];
+    
+    NSString *metodoUrl = [codiceUrl stringByAppendingPathComponent:config];
+    
+    NSURL *url = [NSURL URLWithString:metodoUrl];
     return url;
 }
 

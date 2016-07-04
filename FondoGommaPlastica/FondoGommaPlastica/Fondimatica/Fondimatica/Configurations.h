@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    IdTipoPrestazione_riscatto = 1,
-    IdTipoPrestazione_trasferimentoOut = 2,
-    IdTipoPrestazione_trasfetimentoIn = 3,
-    IdTipoPrestazione_anticipazione = 6,
-    IdTipoPrestazione_riscattoParziale = 8
+    TipoPrestazione_Riscatto = 1,
+    TipoPrestazione_TranferimentoOut = 2,
+    TipoPrestazione_TrasferimentoIn = 3,
+    TipoPrestazione_Anticipazione = 6,
+    TipoPrestazione_RiscattoParziale = 8
 } IdTipoPrestazione;
 
 @interface Configurations : NSObject
