@@ -28,6 +28,12 @@
 		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; settings = {ASSET_TAGS = (); }; };
 		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */; settings = {ASSET_TAGS = (); }; };
+		856E03A61D27EA10000F0832 /* InformazioniAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		856E03A91D27EA2B000F0832 /* VisualizzaRendimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		856E03AC1D27EA3B000F0832 /* UltimiMovimentiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */; settings = {ASSET_TAGS = (); }; };
+		856E03AF1D27EA4F000F0832 /* DatiLiquidazioneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */; settings = {ASSET_TAGS = (); }; };
+		856E03B21D27EBC5000F0832 /* AtriDatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */; settings = {ASSET_TAGS = (); }; };
+		859CB3AF1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */; settings = {ASSET_TAGS = (); }; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B1AC681D0B412100B56BFA /* libFondimatica.a */; };
 		85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EB1D15877800BFAF97 /* CustomImage.m */; settings = {ASSET_TAGS = (); }; };
@@ -77,6 +83,18 @@
 		8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		856B1D8C1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DeviceSpecificMedia.h"; sourceTree = "<group>"; };
 		856B1D8D1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DeviceSpecificMedia.m"; sourceTree = "<group>"; };
+		856E03A41D27EA10000F0832 /* InformazioniAderenteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformazioniAderenteViewController.h; sourceTree = "<group>"; };
+		856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformazioniAderenteViewController.m; sourceTree = "<group>"; };
+		856E03A71D27EA2B000F0832 /* VisualizzaRendimentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualizzaRendimentoViewController.h; sourceTree = "<group>"; };
+		856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualizzaRendimentoViewController.m; sourceTree = "<group>"; };
+		856E03AA1D27EA3A000F0832 /* UltimiMovimentiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UltimiMovimentiViewController.h; sourceTree = "<group>"; };
+		856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UltimiMovimentiViewController.m; sourceTree = "<group>"; };
+		856E03AD1D27EA4F000F0832 /* DatiLiquidazioneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatiLiquidazioneViewController.h; sourceTree = "<group>"; };
+		856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatiLiquidazioneViewController.m; sourceTree = "<group>"; };
+		856E03B01D27EBC5000F0832 /* AtriDatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtriDatiViewController.h; sourceTree = "<group>"; };
+		856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtriDatiViewController.m; sourceTree = "<group>"; };
+		859CB3AD1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatiLiquidazioneDettaglioViewController.h; sourceTree = "<group>"; };
+		859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatiLiquidazioneDettaglioViewController.m; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fondimatica.xcodeproj; path = Fondimatica/Fondimatica.xcodeproj; sourceTree = "<group>"; };
@@ -102,12 +120,9 @@
 		6D1667E31CFF3AE9000FD9C7 /* _viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				856E03A21D27E9CC000F0832 /* SpazioAderente */,
 				85AA7BB81CFE0E48007AD1DA /* RootViewController.h */,
 				85AA7BB91CFE0E48007AD1DA /* RootViewController.m */,
-				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
-				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
-				6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */,
-				6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */,
 			);
 			name = _viewControllers;
 			sourceTree = "<group>";
@@ -205,6 +220,29 @@
 				8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */,
 			);
 			name = _resource;
+			sourceTree = "<group>";
+		};
+		856E03A21D27E9CC000F0832 /* SpazioAderente */ = {
+			isa = PBXGroup;
+			children = (
+				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
+				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
+				6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */,
+				6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */,
+				856E03A41D27EA10000F0832 /* InformazioniAderenteViewController.h */,
+				856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */,
+				856E03A71D27EA2B000F0832 /* VisualizzaRendimentoViewController.h */,
+				856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */,
+				856E03AA1D27EA3A000F0832 /* UltimiMovimentiViewController.h */,
+				856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */,
+				856E03AD1D27EA4F000F0832 /* DatiLiquidazioneViewController.h */,
+				856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */,
+				856E03B01D27EBC5000F0832 /* AtriDatiViewController.h */,
+				856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */,
+				859CB3AD1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.h */,
+				859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */,
+			);
+			name = SpazioAderente;
 			sourceTree = "<group>";
 		};
 		85B1AC641D0B412100B56BFA /* Products */ = {
@@ -315,13 +353,19 @@
 				6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */,
 				8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */,
 				856B1D8E1D0D7BC9003DB8B0 /* UIImage+DeviceSpecificMedia.m in Sources */,
+				856E03B21D27EBC5000F0832 /* AtriDatiViewController.m in Sources */,
 				6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */,
 				85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */,
 				6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */,
+				859CB3AF1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m in Sources */,
+				856E03AF1D27EA4F000F0832 /* DatiLiquidazioneViewController.m in Sources */,
+				856E03A61D27EA10000F0832 /* InformazioniAderenteViewController.m in Sources */,
+				856E03A91D27EA2B000F0832 /* VisualizzaRendimentoViewController.m in Sources */,
 				85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */,
 				6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */,
 				8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */,
 				85CD48F01D1589FD00BFAF97 /* CustomScrollView.m in Sources */,
+				856E03AC1D27EA3B000F0832 /* UltimiMovimentiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

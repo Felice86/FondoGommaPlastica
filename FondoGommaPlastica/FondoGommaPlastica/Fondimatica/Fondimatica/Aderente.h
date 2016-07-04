@@ -44,7 +44,6 @@
 
 #define kRendimentoNomeCompartoAttuale @"nomeCompartoAttuale"
 #define kRendimentoDettaglio @"rendimentoDettaglio"
-
 #define kRendimentoNomeComparto @"nomeComparto"
 #define kRendimentoDataQuota @"dataQuota"
 #define kRendimentoAnniContribuzione @"anniContribuzione"
@@ -56,9 +55,22 @@
 #define kRendimentoContributoTfr @"contributoTfr"
 #define kRendimentoContributoAzienda @"contributoAzienda"
 #define kRendimentoRendimentoFondo @"rendimentoFondo"
-
 #define kRendimentoControvaloreTotale @"controvaloreTotale"
 #define kRendimentoRendimentoAnnuo @"rendimentoAnnuo"
+
+#define kLiquidazioneTipo @"tipo"
+#define kLiquidazioneMotivazione @"motivazione"
+#define kLiquidazioneImportoLordo @"importoLordo"
+#define kLiquidazioneDataRicezione @"dataRicezione"
+#define kLiquidazioneStato @"stato"
+
+typedef enum {
+    TipoPrestazione_Riscatto = 1,
+    TipoPrestazione_TranferimentoOut = 2,
+    TipoPrestazione_TrasferimentoIn = 3,
+    TipoPrestazione_Anticipazione = 6,
+    TipoPrestazione_RiscattoParziale = 8
+} IdTipoPrestazione;
 
 @interface IndirizzoResidenza : NSObject
 @property (nonatomic, retain, readonly) NSString *viaECivico;
@@ -129,6 +141,15 @@
 @property (nonatomic, retain, readonly) NSString *controvaloreTotale;
 @property (nonatomic, retain, readonly) NSString *rendimentoAnnuo;
 - (void)configuraRendimento:(NSDictionary*)rendimentoDict;
+@end
+
+@interface Liquidazione : NSObject
+@property (nonatomic, retain, readonly) NSString *tipo;
+@property (nonatomic, retain, readonly) NSString *motivazione;
+@property (nonatomic, retain, readonly) NSString *importoLordo;
+@property (nonatomic, retain, readonly) NSDate *dataRicezione;
+@property (nonatomic, retain, readonly) NSString *stato;
+- (void)configuraLiquidazione:(NSDictionary*)liquidazioneDict;
 @end
 
 @interface Aderente : NSObject

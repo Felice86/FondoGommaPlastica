@@ -10,8 +10,24 @@
 #import "UIImage+DeviceSpecificMedia.h"
 #import "Fondimatica/Aderente.h"
 
-@interface SpazioAderenteViewController : UIViewController
+@interface PageContentViewController : UIViewController
+@property (nonatomic, retain) UIScrollView *contentScrollView;
+@property (nonatomic, assign) NSUInteger index;
+- (instancetype)initWithFrame:(CGRect)frame;
+@end
+
+@interface SpazioAderenteViewController : UIViewController <UIPageViewControllerDataSource> {
+    CGFloat larghezza;
+    CGRect frameTitoloLabel;
+    CGRect frameValoreLabel;
+}
 @property (weak, nonatomic) IBOutlet UILabel *nomeCognomeLabel;
 @property (weak, nonatomic, readonly) IBOutlet UIScrollView *contentScrollView;
+@property (weak, nonatomic) IBOutlet UILabel *titoloLabel;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (nonatomic, retain) UIPageViewController *pageViewController;
 - (IBAction)tornaIndietro:(UIButton*)tornaIndietroButton;
+- (void)iniziaCreazioneLabelForScrollView:(UIScrollView*)scrollView;
+- (void)creaLabelTitolo:(NSString*)titolo valore:(NSString*)valore scrollView:(UIScrollView*)scrollView;
+- (void)inserisciTutteLeProprietaInOggetto:(NSObject*)oggetto contentScrollViewController:(UIScrollView*)scrollView;
 @end

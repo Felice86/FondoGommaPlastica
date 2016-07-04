@@ -10,11 +10,20 @@
 #import "BenvenutoViewController.h"
 #import <objc/runtime.h>
 
-@interface SpazioAderenteViewController () {
-    CGFloat larghezza;
-    CGRect frameTitoloLabel;
-    CGRect frameValoreLabel;
+@implementation PageContentViewController
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super init];
+    if (self) {
+        self.view.frame = frame;
+        self.contentScrollView = [[UIScrollView alloc] initWithFrame:frame]; 
+        [self.view addSubview:self.contentScrollView];
+    }
+    return self;
 }
+
+@end
+
+@interface SpazioAderenteViewController ()
 @property (nonatomic, weak, readwrite) IBOutlet UIScrollView *contentScrollView;
 @end
 
@@ -28,26 +37,6 @@
     [super viewWillAppear:animated];
     Aderente *aderente = [Aderente sharedAderente];
     [self.nomeCognomeLabel setText:[NSString stringWithFormat:@"%@ %@",aderente.anagrafica.nome.uppercaseString,aderente.anagrafica.cognome.uppercaseString]];
-    if ([self.restorationIdentifier isEqualToString:@"InformazioniAderente"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.anagrafica];
-        frameTitoloLabel.origin.y += 40;
-        frameValoreLabel.origin.y += 40;
-        [self riempiConInformazioni:aderente.recapiti];
-    } else if ([self.restorationIdentifier isEqualToString:@"VisualizzaRendimento"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.rendimento];
-    } else if ([self.restorationIdentifier isEqualToString:@"UltimiMovimenti"]) {
-        [self iniziaCreazioneLabel];
-        [self riempiConInformazioni:aderente.contributi];
-    } else if ([self.restorationIdentifier isEqualToString:@"DatiLiquidazione"]) {
-        [self iniziaCreazioneLabel];
-//        [self riempiConInformazioni:aderente.];
-    } else if ([self.restorationIdentifier isEqualToString:@"AltriDati"]) {
-        [self iniziaCreazioneLabel];
-//        [self riempiConInformazioni:aderente.anagrafica];
-    }
-    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -67,16 +56,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)iniziaCreazioneLabel {
-    [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    larghezza = self.contentScrollView.frame.size.width - 20;
-    frameTitoloLabel = CGRectMake(10, 0, (larghezza/2)+20, 20);
-    frameValoreLabel = CGRectMake((larghezza/2)+20, 0, (larghezza/2)-20, 20);
+- (void)iniziaCreazioneLabelForScrollView:(UIScrollView*)scrollView {
+    if (!scrollView) {
+        scrollView = self.contentScrollView;
+    }
+    [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    larghezza = scrollView.frame.size.width - 20;
+    frameTitoloLabel = CGRectMake(10, 0, (larghezza/2), 20);
+    frameValoreLabel = CGRectMake((larghezza/2), 0, (larghezza/2), 20);
 }
 
-- (void)creaLabelTitolo:(NSString*)titolo valore:(NSString*)valore {
-//    NSLog(@"Titolo:%@ frame:%@",titolo,NSStringFromCGRect(frameTitoloLabel));
-//    NSLog(@"Valore:%@ frame:%@",valore,NSStringFromCGRect(frameValoreLabel));
+- (void)creaLabelTitolo:(NSString*)titolo valore:(NSString*)valore scrollView:(UIScrollView*)scrollView {
+    if (!scrollView) {
+        scrollView = self.contentScrollView;
+    }
     
     UIFont *fontLabel = [UIFont fontWithName:@"Akkurat" size:12.0f];
     
@@ -88,41 +81,51 @@
     
     [titoloLabel setFont:fontLabel];
     [titoloLabel setTextColor:[UIColor whiteColor]];
+    [titoloLabel setMinimumScaleFactor:0.5];
+    [titoloLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [titoloLabel setNumberOfLines:0];
+    [titoloLabel sizeToFit];
+    
     [valoreLabel setFont:fontLabel];
     [valoreLabel setTextColor:[UIColor whiteColor]];
+    [valoreLabel setMinimumScaleFactor:0.5];
+    [valoreLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [valoreLabel setNumberOfLines:0];
+    [valoreLabel sizeToFit];
     
-    [self.contentScrollView addSubview:titoloLabel];
-    [self.contentScrollView addSubview:valoreLabel];
+    [scrollView addSubview:titoloLabel];
+    [scrollView addSubview:valoreLabel];
     
-    frameTitoloLabel.origin.y += 20;
-    frameValoreLabel.origin.y += 20;
+    CGFloat maxY = MAX(titoloLabel.frame.origin.y, valoreLabel.frame.origin.y);
+    frameTitoloLabel.origin.y = maxY + 24;
+    frameValoreLabel.origin.y = maxY + 24;
 }
 
-- (void)inserisciTutteLeProprietaInOggetto:(NSObject*)oggetto {
+- (void)inserisciTutteLeProprietaInOggetto:(NSObject*)oggetto contentScrollViewController:(UIScrollView*)scrollView {
+    if (!scrollView) {
+        scrollView = self.contentScrollView;
+    }
     if ([oggetto isKindOfClass:[NSArray class]]) {
         for (NSObject *oggettino in (NSArray*)oggetto) {
-            [self inserisciTutteLeProprietaInOggetto:oggettino];
+            [self inserisciTutteLeProprietaInOggetto:oggettino contentScrollViewController:scrollView];
         }
     } else {
         NSArray *proprieta = [self propertiesForClass:oggetto.class];
         for (NSString *prop in proprieta) {
             NSObject *valore = [oggetto valueForKey:prop];
             if ([valore isKindOfClass:[NSString class]]) {
-                [self creaLabelTitolo:prop.capitalizedString valore:(NSString*)valore];
+                [self creaLabelTitolo:prop.capitalizedString valore:(NSString*)valore scrollView:scrollView];
             } else if ([valore isKindOfClass:[NSArray class]]) {
                 NSArray *valori = (NSArray*)valore;
                 for (NSObject *oggettoInArray in valori) {
-                    [self inserisciTutteLeProprietaInOggetto:oggettoInArray];
+                    [self inserisciTutteLeProprietaInOggetto:oggettoInArray contentScrollViewController:scrollView];
                 }
             } else {
-                [self inserisciTutteLeProprietaInOggetto:valore];
+                [self inserisciTutteLeProprietaInOggetto:valore contentScrollViewController:scrollView];
             }
         }
     }
-}
-
-- (void)riempiConInformazioni:(NSObject*)oggettoInformazioni {
-    [self inserisciTutteLeProprietaInOggetto:oggettoInformazioni];
+    [scrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
 #pragma mark Recupero properties name
@@ -144,6 +147,16 @@
     free(properties);
     
     return rv;
+}
+
+
+#pragma mark UIPageController
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    return nil;
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    return nil;
 }
 
 @end

@@ -85,6 +85,10 @@
 @property (nonatomic, retain, readwrite) NSString *statoContributo;
 @end
 @implementation Contributo
+- (NSString*)periodo {
+    return [NSString stringWithFormat:@"%@° trimestre",_periodo];
+}
+
 - (void)configuraContributo:(NSDictionary *)contributoDict {
     self.periodo = [[contributoDict objectForKey:kContributiPeriodo] description];
     self.anno = [[contributoDict objectForKey:kContributiAnno] description];
@@ -149,6 +153,26 @@
     }
     self.controvaloreTotale = [rendimentoDict objectForKey:kRendimentoControvaloreTotale];
     self.rendimentoAnnuo = [rendimentoDict objectForKey:kRendimentoRendimentoAnnuo];
+}
+@end
+
+@interface Liquidazione()
+@property (nonatomic, retain, readwrite) NSString *tipo;
+@property (nonatomic, retain, readwrite) NSString *motivazione;
+@property (nonatomic, retain, readwrite) NSString *importoLordo;
+@property (nonatomic, retain, readwrite) NSDate *dataRicezione;
+@property (nonatomic, retain, readwrite) NSString *stato;
+@end
+@implementation Liquidazione
+- (void)configuraLiquidazione:(NSDictionary *)liquidazioneDict {
+    self.tipo = [liquidazioneDict objectForKey:kLiquidazioneTipo];
+    self.motivazione = [liquidazioneDict objectForKey:kLiquidazioneMotivazione];
+    NSNumber *importoDecimal = [NSNumber numberWithDouble:[[liquidazioneDict objectForKey:kLiquidazioneImportoLordo] doubleValue]];
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+    [nf setNumberStyle:NSNumberFormatterCurrencyStyle];
+    self.importoLordo = [nf stringFromNumber:importoDecimal];
+    self.dataRicezione = [Aderente getJSONDate:[liquidazioneDict objectForKey:kLiquidazioneDataRicezione]];
+    self.stato = [liquidazioneDict objectForKey:kLiquidazioneStato];
 }
 @end
 
