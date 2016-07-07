@@ -12,7 +12,7 @@
 @implementation DatiLiquidazioneViewController
 - (void)apriDettaglioLiquidazione:(UIButton *)button {
     DatiLiquidazioneDettaglioViewController *dettagli = [self.storyboard instantiateViewControllerWithIdentifier:@"DatiLiquidazioneDettaglio"];
-    dettagli.tipoPrestazione = button.tag;
+    dettagli.tipoPrestazione = (IdTipoPrestazione)button.tag;
     [self showViewController:dettagli sender:nil];
 }
 

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIImage+DeviceSpecificMedia.h"
 #import "Fondimatica/Aderente.h"
 #import "Fondimatica/Configurations.h"
 

@@ -63,22 +63,18 @@
 //    self.ominiButton.selected = NO;
 //    self.lenteButton.selected = NO;
 //    self.telefonoButton.selected = NO;
+    self.selectedButton = self.ominiButton;
+    self.selectedView = self.informazioniView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    [self riempiTopScrollView];
-//    [self.topScrollView riempiCustomScrollViewConImmagini];
+    self.selectedButton.selected = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self lenteClicked:self.lenteButton];
-#ifdef DEBUG
-    if ([self.selectedView isEqual:self.loginView]) {
-        [self impostaAdTest];
-    }
-#endif
+    [self setContentView:self.selectedView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -143,6 +139,11 @@
         self.lenteButton.selected = YES;
         self.selectedButton = self.lenteButton;
         [self setContentView:self.loginView];
+#ifdef DEBUG
+        if ([self.selectedView isEqual:self.loginView]) {
+            [self impostaAdTest];
+        }
+#endif
     }
 }
 
