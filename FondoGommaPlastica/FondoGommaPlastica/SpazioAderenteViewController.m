@@ -21,6 +21,10 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 @end
 
 @interface SpazioAderenteViewController ()
@@ -61,7 +65,7 @@
         scrollView = self.contentScrollView;
     }
     [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    larghezza = scrollView.frame.size.width - 20;
+    larghezza = self.view.frame.size.width - 20;
     frameTitoloLabel = CGRectMake(10, 0, (larghezza/2), 20);
     frameValoreLabel = CGRectMake((larghezza/2), 0, (larghezza/2), 20);
 }

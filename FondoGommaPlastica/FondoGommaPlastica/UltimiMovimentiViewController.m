@@ -24,16 +24,29 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    CGFloat y = CGRectGetMaxY(self.titoloLabel.frame) + 8;
-    CGFloat height = (self.footerView.frame.origin.y - y);
-    CGRect framePageViewController = CGRectMake(0, y, self.view.frame.size.width, height);
-    [self.pageViewController.view setFrame:framePageViewController];
+    [self refreshUI];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self refreshUI];
+}
+         
+- (void)refreshUI {
+    CGFloat y = CGRectGetMaxY(self.titoloLabel.frame) + 8;
+    CGFloat height = (self.footerView.frame.origin.y - y);
+    CGRect framePageViewController = CGRectMake(0, 0, self.view.frame.size.width, height);
+    for (PageContentViewController *viewController in self.pageViewController.viewControllers) {
+        viewController.contentScrollView.frame = framePageViewController;
+    }
+    framePageViewController.origin.y = y;
+    self.pageViewController.view.frame = framePageViewController;
 }
 
 - (PageContentViewController*)pageContentViewControllerForIndex:(NSUInteger)index {

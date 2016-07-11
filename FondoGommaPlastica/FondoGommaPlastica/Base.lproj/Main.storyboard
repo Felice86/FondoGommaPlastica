@@ -1265,8 +1265,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="oJm-NR-set"/>
                                         <exclude reference="DN2-FF-owA"/>
+                                        <exclude reference="oJm-NR-set"/>
                                     </mask>
                                 </variation>
                             </view>
