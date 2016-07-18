@@ -33,6 +33,7 @@
 		856E03AF1D27EA4F000F0832 /* DatiLiquidazioneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */; settings = {ASSET_TAGS = (); }; };
 		856E03B21D27EBC5000F0832 /* AtriDatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */; settings = {ASSET_TAGS = (); }; };
 		859CB3AF1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */; settings = {ASSET_TAGS = (); }; };
+		85A753A41D3D584400360492 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85A753A61D3D584400360492 /* Localizable.strings */; };
 		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B1AC681D0B412100B56BFA /* libFondimatica.a */; };
 		85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EB1D15877800BFAF97 /* CustomImage.m */; settings = {ASSET_TAGS = (); }; };
@@ -75,6 +76,7 @@
 		6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat-Normal.otf"; sourceTree = "<group>"; };
 		6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenvenutoViewController.h; sourceTree = "<group>"; };
 		6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BenvenutoViewController.m; sourceTree = "<group>"; };
+		852393C71D3D630300157DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		854D2B691D0BF2D4002E3315 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		8569CA9C1D017EF600DF74BB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		8569CA9D1D017EF600DF74BB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtriDatiViewController.m; sourceTree = "<group>"; };
 		859CB3AD1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatiLiquidazioneDettaglioViewController.h; sourceTree = "<group>"; };
 		859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatiLiquidazioneDettaglioViewController.m; sourceTree = "<group>"; };
+		85A753A51D3D584400360492 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85AA7BB81CFE0E48007AD1DA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		85AA7BB91CFE0E48007AD1DA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		85B1AC631D0B412100B56BFA /* Fondimatica.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fondimatica.xcodeproj; path = Fondimatica/Fondimatica.xcodeproj; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 				6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */,
 				6D5E0DD21CF7139600E08CE9 /* Main.storyboard */,
 				6D5E0DC91CF7139600E08CE9 /* Supporting Files */,
+				85A753A61D3D584400360492 /* Localizable.strings */,
 			);
 			path = FondoGommaPlastica;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 				6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */,
 				6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */,
 				6DAEDFA61D12AD4C005A40E0 /* Akkurat-Normal.otf in Resources */,
+				85A753A41D3D584400360492 /* Localizable.strings in Resources */,
 				6DAEDFA11D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf in Resources */,
 				6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */,
 				6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */,
@@ -382,6 +387,15 @@
 				6D5E0DE11CF7160900E08CE9 /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		85A753A61D3D584400360492 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85A753A51D3D584400360492 /* it */,
+				852393C71D3D630300157DB4 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

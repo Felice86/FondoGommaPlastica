@@ -78,7 +78,7 @@
     UIFont *fontLabel = [UIFont fontWithName:@"Akkurat" size:12.0f];
     
     UILabel *titoloLabel = [[UILabel alloc] initWithFrame:frameTitoloLabel];
-    [titoloLabel setText:titolo];
+    [titoloLabel setText:NSLocalizedString(titolo, nil)];
     
     UILabel *valoreLabel = [[UILabel alloc] initWithFrame:frameValoreLabel];
     [valoreLabel setText:valore];
@@ -118,7 +118,7 @@
         for (NSString *prop in proprieta) {
             NSObject *valore = [oggetto valueForKey:prop];
             if ([valore isKindOfClass:[NSString class]]) {
-                [self creaLabelTitolo:prop.capitalizedString valore:(NSString*)valore scrollView:scrollView];
+                [self creaLabelTitolo:prop valore:(NSString*)valore scrollView:scrollView];
             } else if ([valore isKindOfClass:[NSArray class]]) {
                 NSArray *valori = (NSArray*)valore;
                 for (NSObject *oggettoInArray in valori) {

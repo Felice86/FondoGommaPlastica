@@ -1,0 +1,64 @@
+/* 
+  Localizable.strings
+  FondoGommaPlastica
+
+  Created by Felice on 18/07/16.
+  Copyright © 2016 ElpoEdizioni. All rights reserved.
+*/
+
+"nome" = "Nome";
+"cognome" = "Cognome";
+"codiceFiscale" = "Codice fiscale";
+"codiceAderente" = "Codice aderente";
+"dataIscrizione" = "Data iscrizione";
+"dataPrimaAdesione" = "Data prima adesione";
+"ragSocAzienda" = "Ragione sociale azienda";
+"designatiBeneficiari" = "Designati beneficiari";
+"esisteCessioneQuinto" = "Esiste cessione quinto";
+"indirizzoResidenza" = "Indirizzo residenza";
+"viaECivico" = "Indirizzo";
+"luogo" = "Luogo";
+"cap" = "CAP";
+"siglaProv" = "Prov.";
+
+"cellulare" = "Cellulare";
+"eMail" = "Email";
+"esisteConsensoEcViaMail" = "consenso email";
+"fax" = "Fax";
+"telefono" = "Telefono";
+
+"periodo" = "Mese";
+"anno" = "Anno";
+"nomeAzienda" = "Nome azienda";
+"contributoAderente" = "Contributo aderente";
+"contributoAssicurativo" = "Contributo assicurativo";
+"contributoAzienda" = "Contributo azienda";
+"contributoIscrizione" = "Contributo Iscrizione";
+"contributoRivalutazioneTFR" = "Contributo Rivalutazione TFR";
+"contributoTfr" = "Contributo TFR";
+"contributoTfrSilente" = "Contributo TFR silente";
+"contributoVolontario" = "Contributo Volontario";
+"contributoVolontarioAzienda" = "Contributo Volontario azienda";
+"statoContributo" = "Stato contributo";
+
+"nomeCompartoAttuale" = "Nome comparto attuale";
+"rendimentoDettaglio" = "Rendimento dettaglio";
+"nomeComparto" = "Nome comparto";
+"dataQuota" = "Data quota";
+"anniContribuzione" = "Anni contribuzione";
+"mesiContribuzione" = "Mesi contribuzione";
+"quoteAcquistate" = "Quote acquistate";
+"valoreQuota" = "Valore quota";
+"controvalore" = "Controvalore";
+"contributoAderente" = "Contributo aderente";
+"contributoTfr" = "Contributo TFR";
+"contributoAzienda" = "Contributo azienda";
+"rendimentoFondo" = "Rendimento fondo";
+"controvaloreTotale" = "Controvalore totale";
+"rendimentoAnnuo" = "Rendimento annuo";
+
+"tipo" = "Tipo";
+"motivazione" = "Motivazione";
+"importoLordo" = "Importo lordo";
+"dataRicezione" = "Data ricezione";
+"stato" = "Stato";
