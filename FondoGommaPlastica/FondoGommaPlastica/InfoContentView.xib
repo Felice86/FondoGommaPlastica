@@ -11,9 +11,6 @@
         <mutableArray key="Akkurat-Light.otf">
             <string>Akkurat-Light</string>
         </mutableArray>
-        <mutableArray key="Akkurat-Normal-Italic.otf">
-            <string>Akkurat-Italic</string>
-        </mutableArray>
         <mutableArray key="Akkurat-Normal.otf">
             <string>Akkurat</string>
         </mutableArray>
@@ -22,7 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="331"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="298"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-mb-AGL">
@@ -39,7 +36,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v57-zd-Rzr">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v57-zd-Rzr">
                     <rect key="frame" x="0.0" y="116" width="320" height="182"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <string key="text">FONDO GOMMA PLASTICA è il fondo pensione contrattuale delle industrie di produzione di gomma, plastica e cavi elettrici.
@@ -50,34 +47,25 @@ Per approfondimenti lo Statuto e la Nota Infomativa sono pubblicati sul sito www
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                 </textView>
-                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maggiori dettagli sul sito internet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-tK-k0J">
-                    <rect key="frame" x="39" y="306" width="242" height="15"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Akkurat-Italic" family="Akkurat-Italic" pointSize="16"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Q07-mb-AGL" firstAttribute="trailing" secondItem="p0t-fv-ZCj" secondAttribute="trailing" id="2Nw-T8-Rdi"/>
-                <constraint firstAttribute="bottom" secondItem="aiQ-tK-k0J" secondAttribute="bottom" constant="10" id="7u9-Xi-eJr"/>
-                <constraint firstItem="Q07-mb-AGL" firstAttribute="leading" secondItem="p0t-fv-ZCj" secondAttribute="leading" id="Ah8-9C-9Qm"/>
-                <constraint firstItem="v57-zd-Rzr" firstAttribute="top" secondItem="Q07-mb-AGL" secondAttribute="bottom" constant="46" id="BrI-Bs-SMt"/>
-                <constraint firstItem="p0t-fv-ZCj" firstAttribute="centerX" secondItem="v57-zd-Rzr" secondAttribute="centerX" id="NDB-Xb-IUL"/>
-                <constraint firstItem="aiQ-tK-k0J" firstAttribute="top" secondItem="v57-zd-Rzr" secondAttribute="bottom" constant="8" symbolic="YES" id="QLK-e4-Kmz"/>
-                <constraint firstItem="v57-zd-Rzr" firstAttribute="top" secondItem="p0t-fv-ZCj" secondAttribute="bottom" constant="8" symbolic="YES" id="ZgN-xI-ZDa"/>
-                <constraint firstItem="Q07-mb-AGL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="b7Y-2i-pxa"/>
-                <constraint firstAttribute="trailing" secondItem="v57-zd-Rzr" secondAttribute="trailing" id="eh0-md-Pei"/>
-                <constraint firstItem="aiQ-tK-k0J" firstAttribute="centerX" secondItem="v57-zd-Rzr" secondAttribute="centerX" id="ex2-JQ-oan"/>
-                <constraint firstItem="v57-zd-Rzr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fcz-Cf-Dbs"/>
-                <constraint firstItem="p0t-fv-ZCj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="oQD-hJ-EX3"/>
+                <constraint firstItem="Q07-mb-AGL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="3Tb-Rm-cTZ"/>
+                <constraint firstItem="p0t-fv-ZCj" firstAttribute="centerX" secondItem="v57-zd-Rzr" secondAttribute="centerX" id="AHf-YL-UIb"/>
+                <constraint firstAttribute="trailing" secondItem="v57-zd-Rzr" secondAttribute="trailing" id="NS7-FD-pj0"/>
+                <constraint firstItem="v57-zd-Rzr" firstAttribute="top" secondItem="p0t-fv-ZCj" secondAttribute="bottom" constant="8" symbolic="YES" id="X3D-Gf-E8m"/>
+                <constraint firstItem="v57-zd-Rzr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hb1-nR-wUX"/>
+                <constraint firstAttribute="bottom" secondItem="v57-zd-Rzr" secondAttribute="bottom" id="i5L-TN-kcZ"/>
+                <constraint firstItem="v57-zd-Rzr" firstAttribute="top" secondItem="Q07-mb-AGL" secondAttribute="bottom" constant="46" id="lQ7-Ru-M9y"/>
+                <constraint firstItem="Q07-mb-AGL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="sL9-eR-EQx"/>
+                <constraint firstItem="p0t-fv-ZCj" firstAttribute="trailing" secondItem="Q07-mb-AGL" secondAttribute="trailing" id="wsk-PJ-aaS"/>
+                <constraint firstItem="p0t-fv-ZCj" firstAttribute="leading" secondItem="Q07-mb-AGL" secondAttribute="leading" id="zyd-hq-u6Q"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="326" y="331.5"/>
+            <point key="canvasLocation" x="-69" y="187"/>
         </view>
     </objects>
 </document>

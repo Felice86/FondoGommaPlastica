@@ -411,10 +411,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-Zc-L7W" userLabel="bottoniStackView">
+                            <stackView contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-Zc-L7W" userLabel="bottoniStackView">
                                 <rect key="frame" x="0.0" y="233" width="320" height="248"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv9-0t-L1D">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv9-0t-L1D">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -425,7 +425,7 @@
                                             <segue destination="VKH-Q9-pwm" kind="show" id="0Rm-TE-EI2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-6o-3oo">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-6o-3oo">
                                         <rect key="frame" x="0.0" y="50" width="320" height="49"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -436,7 +436,7 @@
                                             <segue destination="WvY-cO-v5d" kind="show" id="dzP-ZX-9ce"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-aF-dVo">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-aF-dVo">
                                         <rect key="frame" x="0.0" y="100" width="320" height="48"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -447,7 +447,7 @@
                                             <segue destination="tnD-fL-ac1" kind="show" id="xsa-EX-uk9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-2H-oer">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-2H-oer">
                                         <rect key="frame" x="0.0" y="149" width="320" height="49"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -458,7 +458,7 @@
                                             <segue destination="EMC-uK-Om2" kind="show" id="oVu-yD-xsM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNQ-1Z-9ad">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNQ-1Z-9ad">
                                         <rect key="frame" x="0.0" y="199" width="320" height="49"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -1105,10 +1105,10 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="u3X-iZ-0KS" userLabel="bottoniStackView">
+                            <stackView contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="u3X-iZ-0KS" userLabel="bottoniStackView">
                                 <rect key="frame" x="0.0" y="201" width="320" height="282"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-dW-ESC">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-dW-ESC">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -1119,7 +1119,7 @@
                                             <action selector="apriDettaglioLiquidazione:" destination="EMC-uK-Om2" eventType="touchUpInside" id="DYe-Xj-wSH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-kX-byS">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-kX-byS">
                                         <rect key="frame" x="0.0" y="57" width="320" height="55"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -1130,7 +1130,7 @@
                                             <action selector="apriDettaglioLiquidazione:" destination="EMC-uK-Om2" eventType="touchUpInside" id="7OM-I4-IbC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-dv-MTb">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-dv-MTb">
                                         <rect key="frame" x="0.0" y="113" width="320" height="56"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -1141,7 +1141,7 @@
                                             <action selector="apriDettaglioLiquidazione:" destination="EMC-uK-Om2" eventType="touchUpInside" id="1vx-mN-m7p"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-Al-wNx">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-Al-wNx">
                                         <rect key="frame" x="0.0" y="170" width="320" height="55"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
@@ -1152,7 +1152,7 @@
                                             <action selector="apriDettaglioLiquidazione:" destination="EMC-uK-Om2" eventType="touchUpInside" id="dvu-NW-FXa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bux-9C-YFi">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bux-9C-YFi">
                                         <rect key="frame" x="0.0" y="226" width="320" height="56"/>
                                         <color key="backgroundColor" red="0.65490196078431373" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="22"/>
