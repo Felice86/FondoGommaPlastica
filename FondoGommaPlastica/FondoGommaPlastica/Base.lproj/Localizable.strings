@@ -11,9 +11,9 @@
 "codiceFiscale" = "Codice fiscale";
 "codiceAderente" = "Codice aderente";
 "dataIscrizione" = "Data iscrizione";
-"dataPrimaAdesione" = "Data prima adesione";
+"dataPrimaAdesione" = "Adesione";
 "ragSocAzienda" = "Ragione sociale azienda";
-"designatiBeneficiari" = "Designati beneficiari";
+"designatiBeneficiari" = "Designazione effettuata";
 "esisteCessioneQuinto" = "Esiste cessione quinto";
 "indirizzoResidenza" = "Indirizzo residenza";
 "viaECivico" = "Indirizzo";

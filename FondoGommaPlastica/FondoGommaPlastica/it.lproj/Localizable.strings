@@ -1,19 +1,19 @@
-/* 
-  Localizable.strings
-  FondoGommaPlastica
-
-  Created by Felice on 18/07/16.
-  Copyright © 2016 ElpoEdizioni. All rights reserved.
-*/
+/*
+ Localizable.strings
+ FondoGommaPlastica
+ 
+ Created by Felice on 18/07/16.
+ Copyright © 2016 ElpoEdizioni. All rights reserved.
+ */
 
 "nome" = "Nome";
 "cognome" = "Cognome";
 "codiceFiscale" = "Codice fiscale";
 "codiceAderente" = "Codice aderente";
 "dataIscrizione" = "Data iscrizione";
-"dataPrimaAdesione" = "Data prima adesione";
+"dataPrimaAdesione" = "Adesione";
 "ragSocAzienda" = "Ragione sociale azienda";
-"designatiBeneficiari" = "Designati beneficiari";
+"designatiBeneficiari" = "Designazione effettuata";
 "esisteCessioneQuinto" = "Esiste cessione quinto";
 "indirizzoResidenza" = "Indirizzo residenza";
 "viaECivico" = "Indirizzo";

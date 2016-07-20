@@ -18,4 +18,5 @@
 //- (IBAction)selezionaPrecedente:(UIButton *)sender;
 //- (IBAction)selezionaSuccessivo:(UIButton *)sender;
 
+- (IBAction)facebookButtonClicked:(id)sender;
 @end

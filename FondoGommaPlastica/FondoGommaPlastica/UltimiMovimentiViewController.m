@@ -37,6 +37,13 @@
     [super viewDidAppear:animated];
     [self refreshUI];
 }
+
+- (void)iniziaCreazioneLabelForScrollView:(UIScrollView *)scrollView {
+    [super iniziaCreazioneLabelForScrollView:scrollView];
+    frameTitoloLabel.size.width += 20;
+    frameValoreLabel.origin.x += 20;
+    frameValoreLabel.size.width -= 20;
+}
          
 - (void)refreshUI {
     CGFloat y = CGRectGetMaxY(self.titoloLabel.frame) + 8;
@@ -57,6 +64,8 @@
     PageContentViewController *pageContentViewController = [[PageContentViewController alloc] initWithFrame:framePageViewController];
     [self iniziaCreazioneLabelForScrollView:pageContentViewController.contentScrollView];
     [self inserisciTutteLeProprietaInOggetto:contributo contentScrollViewController:pageContentViewController.contentScrollView];
+    [self inserisciLegenda:contributo addTo:pageContentViewController.contentScrollView];
+    [pageContentViewController.contentScrollView setContentSize:CGSizeMake(pageContentViewController.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
     pageContentViewController.index = index;
     return pageContentViewController;
 }

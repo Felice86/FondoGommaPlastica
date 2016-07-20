@@ -17,6 +17,8 @@
     
     [self iniziaCreazioneLabelForScrollView:nil];
     [self inserisciTutteLeProprietaInOggetto:aderente.anagrafica contentScrollViewController:nil];
+    [self inserisciLegenda:aderente.anagrafica addTo:nil];
+    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
 @end

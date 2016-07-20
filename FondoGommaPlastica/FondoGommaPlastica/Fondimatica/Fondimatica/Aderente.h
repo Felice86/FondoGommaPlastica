@@ -6,6 +6,7 @@
 //  Copyright © 2016 ElpoEdizioni. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 #define kAnagraficaNome @"nome"
 #define kAnagraficaCognome @"cognome"
@@ -64,7 +65,14 @@
 #define kLiquidazioneDataRicezione @"dataRicezione"
 #define kLiquidazioneStato @"stato"
 
-@interface IndirizzoResidenza : NSObject
+@class Aderente;
+
+@interface InformazioneAderente : NSObject
+- (NSArray*)valoriDaStampare;
+- (NSString*)legenda;
+@end
+
+@interface IndirizzoResidenza : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *viaECivico;
 @property (nonatomic, retain, readonly) NSString *luogo;
 @property (nonatomic, retain, readonly) NSString *cap;
@@ -72,7 +80,7 @@
 - (void)configuraIndirizzoResidenza:(NSDictionary*)indirizzoDict;
 @end
 
-@interface Anagrafica : NSObject
+@interface Anagrafica : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *nome;
 @property (nonatomic, retain, readonly) NSString *cognome;
 @property (nonatomic, retain, readonly) NSString *codiceFiscale;
@@ -86,7 +94,7 @@
 - (void)configuraAnagrafica:(NSDictionary*)anagraficaDict;
 @end
 
-@interface Recapiti : NSObject
+@interface Recapiti : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *telefono;
 @property (nonatomic, retain, readonly) NSString *fax;
 @property (nonatomic, retain, readonly) NSString *cellulare;
@@ -95,7 +103,7 @@
 - (void)configuraRecapiti:(NSDictionary*)recapitiDict;
 @end
 
-@interface Contributo : NSObject
+@interface Contributo : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *periodo;
 @property (nonatomic, retain, readonly) NSString *anno;
 @property (nonatomic, retain, readonly) NSString *nomeAzienda;
@@ -112,7 +120,7 @@
 - (void)configuraContributo:(NSDictionary*)contributoDict;
 @end
 
-@interface RendimentoDettaglio : NSObject
+@interface RendimentoDettaglio : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *nomeComparto;
 @property (nonatomic, retain, readonly) NSDate *dataQuota;
 @property (nonatomic, retain, readonly) NSString *anniContribuzione;
@@ -127,7 +135,7 @@
 - (void)configuraRendimentoDettaglio:(NSDictionary*)rendimentoDettaglioDict;
 @end
 
-@interface Rendimento : NSObject
+@interface Rendimento : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *nomeCompartoAttuale;
 @property (nonatomic, retain, readonly) NSMutableArray *dettagliRendimento;
 @property (nonatomic, retain, readonly) NSString *controvaloreTotale;
@@ -135,7 +143,7 @@
 - (void)configuraRendimento:(NSDictionary*)rendimentoDict;
 @end
 
-@interface Liquidazione : NSObject
+@interface Liquidazione : InformazioneAderente
 @property (nonatomic, retain, readonly) NSString *tipo;
 @property (nonatomic, retain, readonly) NSString *motivazione;
 @property (nonatomic, retain, readonly) NSString *importoLordo;
@@ -158,6 +166,7 @@
 @property (nonatomic, retain, readonly) NSArray *riscattiParziali;
 
 + (instancetype)sharedAderente;
++ (NSString*)recuperaValore:(NSString*)chiave daOggetto:(NSDictionary*)oggetto valuta:(BOOL)isValuta;
 - (void)eseguiLoginConUsername:(NSString*)username password:(NSString*)password;
 - (void)configuraAnagrafica:(NSDictionary*)anagraficaDict;
 - (void)configuraRecapiti:(NSDictionary*)recapitiDict;
@@ -170,4 +179,5 @@
 - (void)configuraRiscattiParziali:(NSArray*)riscattiParzialiArray;
 - (void)resetAderente;
 + (NSDate*)getJSONDate:(NSString*)dateFromJSON;
++ (NSArray *)propertiesForClass:(Class)classe;
 @end

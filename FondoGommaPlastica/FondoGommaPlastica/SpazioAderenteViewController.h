@@ -28,6 +28,7 @@
 @property (nonatomic, retain) UIPageViewController *pageViewController;
 - (IBAction)tornaIndietro:(UIButton*)tornaIndietroButton;
 - (void)iniziaCreazioneLabelForScrollView:(UIScrollView*)scrollView;
+- (void)inserisciLegenda:(NSObject*)oggetto addTo:(UIScrollView*)scrollView;
 - (void)creaLabelTitolo:(NSString*)titolo valore:(NSString*)valore scrollView:(UIScrollView*)scrollView;
 - (void)inserisciTutteLeProprietaInOggetto:(NSObject*)oggetto contentScrollViewController:(UIScrollView*)scrollView;
 @end

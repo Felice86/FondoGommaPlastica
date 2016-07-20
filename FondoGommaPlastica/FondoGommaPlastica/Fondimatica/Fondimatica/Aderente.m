@@ -9,6 +9,19 @@
 #import "Aderente.h"
 #import "Configurations.h"
 
+@interface InformazioneAderente()
+@end
+@implementation InformazioneAderente
+- (NSString *)legenda {
+    return @"";
+}
+
+- (NSArray *)valoriDaStampare {
+    return [Aderente propertiesForClass:self.class];
+}
+
+@end
+
 @interface IndirizzoResidenza()
 @property (nonatomic, retain, readwrite) NSString *viaECivico;
 @property (nonatomic, retain, readwrite) NSString *luogo;
@@ -16,18 +29,11 @@
 @property (nonatomic, retain, readwrite) NSString *siglaProv;
 @end
 @implementation IndirizzoResidenza
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
-}
-
 - (void)configuraIndirizzoResidenza:(NSDictionary *)indirizzoDict {
-    self.viaECivico = [[indirizzoDict objectForKey:kAnagraficaViaECivico] description];
-    self.luogo = [[indirizzoDict objectForKey:kAnagraficaLuogo] description];
-    self.cap = [[indirizzoDict objectForKey:kAnagraficaCap] description];
-    self.siglaProv = [[indirizzoDict objectForKey:kAnagraficaSiglaProv] description];
+    self.viaECivico = [Aderente recuperaValore:kAnagraficaViaECivico daOggetto:indirizzoDict valuta:NO];
+    self.luogo = [Aderente recuperaValore:kAnagraficaLuogo daOggetto:indirizzoDict valuta:NO];
+    self.cap = [Aderente recuperaValore:kAnagraficaCap daOggetto:indirizzoDict valuta:NO];
+    self.siglaProv = [Aderente recuperaValore:kAnagraficaSiglaProv daOggetto:indirizzoDict valuta:NO];
 }
 @end
 
@@ -44,23 +50,16 @@
 @property (nonatomic, retain, readwrite) IndirizzoResidenza *indirizzoResidenza;
 @end
 @implementation Anagrafica
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
-}
-
 - (void)configuraAnagrafica:(NSDictionary *)anagraficaDict {
-    self.nome = [[anagraficaDict objectForKey:kAnagraficaNome] description];
-    self.cognome = [[anagraficaDict objectForKey:kAnagraficaCognome] description];
-    self.codiceFiscale = [[anagraficaDict objectForKey:kAnagraficaCodiceFiscale] description];
-    self.codiceAderente = [[anagraficaDict objectForKey:kAnagraficaCodiceAderente] description];
+    self.nome = [Aderente recuperaValore:kAnagraficaNome daOggetto:anagraficaDict valuta:NO];
+    self.cognome = [Aderente recuperaValore:kAnagraficaCognome daOggetto:anagraficaDict valuta:NO];
+    self.codiceFiscale = [Aderente recuperaValore:kAnagraficaCodiceFiscale daOggetto:anagraficaDict valuta:NO];
+    self.codiceAderente = [Aderente recuperaValore:kAnagraficaCodiceAderente daOggetto:anagraficaDict valuta:NO];
     self.dataIscrizione = [Aderente getJSONDate:[anagraficaDict objectForKey:kAnagraficaDataIscrizione]];
     self.dataPrimaAdesione = [Aderente getJSONDate:[anagraficaDict objectForKey:kAnagraficaDataPrimaAdesione]];
-    self.ragSocAzienda = [[anagraficaDict objectForKey:kAnagraficaRagSocAzienda] description];
-    self.designatiBeneficiari = [[anagraficaDict objectForKey:kAnagraficaDesignatiBeneficiari] boolValue] ? @"SI" : @"NO";
-    self.esisteCessioneQuinto = [[anagraficaDict objectForKey:kAnagraficaEsisteCessioneQuinto] boolValue] ? @"SI" : @"NO";
+    self.ragSocAzienda = [Aderente recuperaValore:kAnagraficaRagSocAzienda daOggetto:anagraficaDict valuta:NO];
+    self.designatiBeneficiari = [Aderente recuperaValore:kAnagraficaDesignatiBeneficiari daOggetto:anagraficaDict valuta:NO];
+    self.esisteCessioneQuinto = [Aderente recuperaValore:kAnagraficaEsisteCessioneQuinto daOggetto:anagraficaDict valuta:NO];
     self.indirizzoResidenza = [[IndirizzoResidenza alloc] init];
     [self.indirizzoResidenza configuraIndirizzoResidenza:[anagraficaDict objectForKey:kAnagraficaIndirizzoResidenza]];
 }
@@ -74,19 +73,12 @@
 @property (nonatomic, retain, readwrite) NSString *esisteConsensoEcViaMail;
 @end
 @implementation Recapiti
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
-}
-
 - (void)configuraRecapiti:(NSDictionary *)recapitiDict {
-    self.telefono = [[recapitiDict objectForKey:kRecapitiTelefono] description];
-    self.fax = [[recapitiDict objectForKey:kRecapitiFax] description];
-    self.cellulare = [[recapitiDict objectForKey:kRecapitiCellulare] description];
-    self.email = [[recapitiDict objectForKey:kRecapitiEmail] description];
-    self.esisteConsensoEcViaMail = [[recapitiDict objectForKey:kRecapitiEsisteConsensoEcViaMail] boolValue] ? @"SI" : @"NO";
+    self.telefono = [Aderente recuperaValore:kRecapitiTelefono daOggetto:recapitiDict valuta:NO];
+    self.fax = [Aderente recuperaValore:kRecapitiFax daOggetto:recapitiDict valuta:NO];
+    self.cellulare = [Aderente recuperaValore:kRecapitiCellulare daOggetto:recapitiDict valuta:NO];
+    self.email = [Aderente recuperaValore:kRecapitiEmail daOggetto:recapitiDict valuta:NO];
+    self.esisteConsensoEcViaMail = [Aderente recuperaValore:kRecapitiEsisteConsensoEcViaMail daOggetto:recapitiDict valuta:NO];
 }
 @end
 
@@ -106,81 +98,31 @@
 @property (nonatomic, retain, readwrite) NSString *statoContributo;
 @end
 @implementation Contributo
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if ([[dict objectForKey:field] isKindOfClass:[NSNull class]]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
+- (NSArray *)valoriDaStampare {
+    return @[kContributiPeriodo,kContributiAnno,kContributiNomeAzienda,kContributiContributoAderente,kContributiContributoAzienda,kContributiContributoTfr,kContributiStatoContributo];
 }
 
-- (NSString*)meseDaPeriodo:(NSInteger)periodo {
-    switch (periodo) {
-        case 1:
-            return @"Gennaio";
-            break;
-        case 2:
-            return @"Febbraio";
-            break;
-        case 3:
-            return @"Marzo";
-            break;
-        case 4:
-            return @"Aprile";
-            break;
-        case 5:
-            return @"Maggio";
-            break;
-        case 6:
-            return @"Giugno";
-            break;
-        case 7:
-            return @"Luglio";
-            break;
-        case 8:
-            return @"Agosto";
-            break;
-        case 9:
-            return @"Settembre";
-            break;
-        case 10:
-            return @"Ottobre";
-            break;
-        case 11:
-            return @"Novembre";
-            break;
-        case 12:
-            return @"Dicembre";
-            break;
-        default:
-            return @"";
-            break;
-    }
-}
-
-- (NSString*)aggiungiValuta:(NSNumber*)decimal {
-    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    NSLocale *itLocale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
-    [currencyFormatter setLocale:itLocale];
-    return [currencyFormatter stringFromNumber:decimal];
+- (NSString *)legenda {
+    return @"Legenda:\nAttribuito=segnalato dall'azienda senza versamento\nSpesato=importo appena incassato\nQuotato=incassato e investito";
 }
 
 - (void)configuraContributo:(NSDictionary *)contributoDict {
-    NSInteger periodoInt = [[contributoDict objectForKey:kContributiPeriodo] integerValue];
-    self.periodo = [self meseDaPeriodo:periodoInt];
-    self.anno = [[contributoDict objectForKey:kContributiAnno] description];
-    self.nomeAzienda = [[contributoDict objectForKey:kContributiNomeAzienda] description];
-    self.contributoAderente = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoAderente]]];
-    self.contributoAzienda = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoAzienda]]];
-    self.contributoTfr = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoTfr]]];
-    self.contributoVolontario = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoVolontario]]];
-    self.contributoVolontarioAzienda = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoVolontarioAzienda]]];
-    self.contributoAssicurativo = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoAssicurativo]]];
-    self.contributoIscrizione = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoIscrizione]]];
-    self.contributoTfrSilente = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoTfrSilente]]];
-    self.contributoRivalutazioneTFR = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:contributoDict forField:kContributiContributoRivalutazioneTFR]]];
-    self.statoContributo = [[contributoDict objectForKey:kContributiStatoContributo] description];
+    self.periodo = [Aderente recuperaValore:kContributiPeriodo daOggetto:contributoDict valuta:NO];
+    self.anno = [Aderente recuperaValore:kContributiAnno daOggetto:contributoDict valuta:NO];
+    self.nomeAzienda = [Aderente recuperaValore:kContributiNomeAzienda daOggetto:contributoDict valuta:NO];
+    self.contributoAderente = [Aderente recuperaValore:kContributiContributoAderente daOggetto:contributoDict valuta:YES];
+    self.contributoAzienda = [Aderente recuperaValore:kContributiContributoAzienda daOggetto:contributoDict valuta:YES];
+    self.contributoTfr = [Aderente recuperaValore:kContributiContributoTfr daOggetto:contributoDict valuta:YES];
+    self.contributoVolontario = [Aderente recuperaValore:kContributiContributoVolontario daOggetto:contributoDict valuta:YES];
+    self.contributoVolontarioAzienda = [Aderente recuperaValore:kContributiContributoVolontarioAzienda daOggetto:contributoDict valuta:YES];
+    self.contributoAssicurativo = [Aderente recuperaValore:kContributiContributoAssicurativo daOggetto:contributoDict valuta:YES];
+    self.contributoIscrizione = [Aderente recuperaValore:kContributiContributoIscrizione daOggetto:contributoDict valuta:YES];
+    self.contributoTfrSilente = [Aderente recuperaValore:kContributiContributoTfrSilente daOggetto:contributoDict valuta:YES];
+    self.contributoRivalutazioneTFR = [Aderente recuperaValore:kContributiContributoRivalutazioneTFR daOggetto:contributoDict valuta:YES];
+    self.statoContributo = [Aderente recuperaValore:kContributiStatoContributo daOggetto:contributoDict valuta:NO];
 }
+
+
 @end
 
 @interface RendimentoDettaglio()
@@ -197,33 +139,21 @@
 @property (nonatomic, retain, readwrite) NSString *rendimentoFondo;
 @end
 @implementation RendimentoDettaglio
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
+- (NSArray *)valoriDaStampare {
+    return @[kRendimentoQuoteAcquistate,kRendimentoValoreQuota,kRendimentoControvalore,kRendimentoContributoAderente,kRendimentoContributoAzienda,kRendimentoContributoTfr];
 }
-
-- (NSString*)aggiungiValuta:(NSNumber*)decimal {
-    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    NSLocale *itLocale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
-    [currencyFormatter setLocale:itLocale];
-    return [currencyFormatter stringFromNumber:decimal];
-}
-
 - (void)configuraRendimentoDettaglio:(NSDictionary *)rendimentoDettaglioDict {
-    self.nomeComparto = [[rendimentoDettaglioDict objectForKey:kRendimentoNomeComparto] description]; 
+    self.nomeComparto = [Aderente recuperaValore:kRendimentoNomeComparto daOggetto:rendimentoDettaglioDict valuta:NO];
     self.dataQuota = [Aderente getJSONDate:[rendimentoDettaglioDict objectForKey:kRendimentoDataQuota]];
-    self.anniContribuzione = [[rendimentoDettaglioDict objectForKey:kRendimentoAnniContribuzione] description];
-    self.mesiContribuzione = [[rendimentoDettaglioDict objectForKey:kRendimentoMesiContribuzione] description];
-    self.quoteAcquistate = [[rendimentoDettaglioDict objectForKey:kRendimentoQuoteAcquistate] description];
-    self.valoreQuota = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoValoreQuota]]];
-    self.controvalore = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoControvalore]]];
-    self.contributoAderente = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoContributoAderente]]];
-    self.contributoTfr = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoContributoTfr]]];
-    self.contributoAzienda = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoContributoAzienda]]];
-    self.rendimentoFondo = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDettaglioDict forField:kRendimentoRendimentoFondo]]];
+    self.anniContribuzione = [Aderente recuperaValore:kRendimentoAnniContribuzione daOggetto:rendimentoDettaglioDict valuta:NO];
+    self.mesiContribuzione = [Aderente recuperaValore:kRendimentoMesiContribuzione daOggetto:rendimentoDettaglioDict valuta:NO];
+    self.quoteAcquistate = [Aderente recuperaValore:kRendimentoQuoteAcquistate daOggetto:rendimentoDettaglioDict valuta:NO];
+    self.valoreQuota = [Aderente recuperaValore:kRendimentoValoreQuota daOggetto:rendimentoDettaglioDict valuta:YES];
+    self.controvalore = [Aderente recuperaValore:kRendimentoControvalore daOggetto:rendimentoDettaglioDict valuta:YES];
+    self.contributoAderente = [Aderente recuperaValore:kRendimentoContributoAderente daOggetto:rendimentoDettaglioDict valuta:YES];
+    self.contributoTfr = [Aderente recuperaValore:kRendimentoContributoTfr daOggetto:rendimentoDettaglioDict valuta:YES];
+    self.contributoAzienda = [Aderente recuperaValore:kRendimentoContributoAzienda daOggetto:rendimentoDettaglioDict valuta:YES];
+    self.rendimentoFondo = [Aderente recuperaValore:kRendimentoRendimentoFondo daOggetto:rendimentoDettaglioDict valuta:YES];
 }
 @end
 
@@ -234,21 +164,9 @@
 @property (nonatomic, retain, readwrite) NSString *rendimentoAnnuo;
 @end
 @implementation Rendimento
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
+- (NSArray *)valoriDaStampare {
+    return @[kRendimentoNomeCompartoAttuale,@"dettagliRendimento"];
 }
-
-- (NSString*)aggiungiValuta:(NSNumber*)decimal {
-    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    NSLocale *itLocale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
-    [currencyFormatter setLocale:itLocale];
-    return [currencyFormatter stringFromNumber:decimal];
-}
-
 - (void)configuraRendimento:(NSDictionary *)rendimentoDict {
     self.nomeCompartoAttuale = [rendimentoDict objectForKey:kRendimentoNomeCompartoAttuale];
     NSArray *dettagli = [rendimentoDict objectForKey:kRendimentoDettaglio];
@@ -258,8 +176,8 @@
         [rendimentoDettaglio configuraRendimentoDettaglio:rendimentoDettaglioDict];
         [self.dettagliRendimento addObject:rendimentoDettaglio];
     }
-    self.controvaloreTotale = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDict forField:kRendimentoControvaloreTotale]]];
-    self.rendimentoAnnuo = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:rendimentoDict forField:kRendimentoRendimentoAnnuo]]];
+    self.controvaloreTotale = [Aderente recuperaValore:kRendimentoControvaloreTotale daOggetto:rendimentoDict valuta:YES];
+    self.rendimentoAnnuo = [Aderente recuperaValore:kRendimentoRendimentoAnnuo daOggetto:rendimentoDict valuta:YES];
 }
 @end
 
@@ -271,27 +189,16 @@
 @property (nonatomic, retain, readwrite) NSString *stato;
 @end
 @implementation Liquidazione
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
-}
-
-- (NSString*)aggiungiValuta:(NSNumber*)decimal {
-    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    NSLocale *itLocale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
-    [currencyFormatter setLocale:itLocale];
-    return [currencyFormatter stringFromNumber:decimal];
+- (NSString *)legenda {
+    return @"Legenda:\n- da elaborare=accettata\n- elaborata=inserita a sistema\n- valorizzata=quote vendute con stima tassazione\n- da validare= pronta per la lista pagamenti\n- liquidabile=inserita nella prossima lista pagamenti\n- liquidata=pagamento effettuato (sarà disponibile con i tempi della banca)";
 }
 
 - (void)configuraLiquidazione:(NSDictionary *)liquidazioneDict {
-    self.tipo = [liquidazioneDict objectForKey:kLiquidazioneTipo];
-    self.motivazione = [liquidazioneDict objectForKey:kLiquidazioneMotivazione];
-    self.importoLordo = [self aggiungiValuta:[NSNumber numberWithDouble:[self doubleValue:liquidazioneDict forField:kLiquidazioneImportoLordo]]];
+    self.tipo = [Aderente recuperaValore:kLiquidazioneTipo daOggetto:liquidazioneDict valuta:NO];
+    self.motivazione = [Aderente recuperaValore:kLiquidazioneMotivazione daOggetto:liquidazioneDict valuta:NO];
+    self.importoLordo = [Aderente recuperaValore:kLiquidazioneImportoLordo daOggetto:liquidazioneDict valuta:YES];
     self.dataRicezione = [Aderente getJSONDate:[liquidazioneDict objectForKey:kLiquidazioneDataRicezione]];
-    self.stato = [liquidazioneDict objectForKey:kLiquidazioneStato];
+    self.stato = [Aderente recuperaValore:kLiquidazioneStato daOggetto:liquidazioneDict valuta:NO];
 }
 @end
 
@@ -318,13 +225,6 @@
         _sharedObject = [[self alloc] init];
     });
     return _sharedObject;
-}
-
-- (double)doubleValue:(NSDictionary*)dict forField:(NSString*)field {
-    if (![dict objectForKey:field]) {
-        return 0;
-    }
-    return [[dict objectForKey:field] doubleValue];
 }
 
 - (void)eseguiLoginConUsername:(NSString *)username password:(NSString *)password {
@@ -421,7 +321,40 @@
 }
 
 #pragma mark - ACCESSORI
++ (NSString*)aggiungiValuta:(NSNumber*)decimal {
+    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
+    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSLocale *itLocale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
+    [currencyFormatter setLocale:itLocale];
+    return [currencyFormatter stringFromNumber:decimal];
+}
+
++ (NSString *)recuperaValore:(NSString *)chiave daOggetto:(NSDictionary *)oggetto valuta:(BOOL)isValuta{
+    NSObject *valoreObject = [oggetto objectForKey:chiave];
+    if ([valoreObject isKindOfClass:[NSNull class]]) {
+        return @"n.d.";
+    }
+//    if (valoreObject isKindOfClass:[ns])
+    if ([NSStringFromClass(valoreObject.class) isEqualToString:@"__NSCFBoolean"]) {
+        BOOL valoreBool = [(NSNumber*)valoreObject boolValue];
+        return valoreBool?@"SI":@"NO";
+    }
+    if ([chiave isEqualToString:kContributiPeriodo]) {
+        NSInteger meseInt = [(NSString*)valoreObject integerValue];
+        return [self meseDaPeriodo:meseInt];
+    }
+    if (isValuta) {
+        double valoreDouble = [(NSString*)valoreObject doubleValue];
+        NSNumber *valoreNumber = [NSNumber numberWithDouble:valoreDouble];
+        return [self aggiungiValuta:valoreNumber];
+    }
+    return [valoreObject description];
+}
+
 + (NSDate *) getJSONDate:(NSString*)dateFromJSON {
+    if ([dateFromJSON isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
     NSString* header = @"/Date(";
     int headerLength = (int)[header length];
     
@@ -458,6 +391,70 @@
     NSTimeInterval interval = firstNumber/1000;
     
     return [NSDate dateWithTimeIntervalSince1970:interval];
+}
+
++ (NSString*)meseDaPeriodo:(NSInteger)periodo {
+    switch (periodo) {
+        case 1:
+            return @"Gennaio";
+            break;
+        case 2:
+            return @"Febbraio";
+            break;
+        case 3:
+            return @"Marzo";
+            break;
+        case 4:
+            return @"Aprile";
+            break;
+        case 5:
+            return @"Maggio";
+            break;
+        case 6:
+            return @"Giugno";
+            break;
+        case 7:
+            return @"Luglio";
+            break;
+        case 8:
+            return @"Agosto";
+            break;
+        case 9:
+            return @"Settembre";
+            break;
+        case 10:
+            return @"Ottobre";
+            break;
+        case 11:
+            return @"Novembre";
+            break;
+        case 12:
+            return @"Dicembre";
+            break;
+        default:
+            return @"";
+            break;
+    }
+}
+
++ (NSArray *)propertiesForClass:(Class)classe
+{
+    unsigned count;
+    objc_property_t *properties = class_copyPropertyList(classe, &count);
+    
+    NSMutableArray *rv = [NSMutableArray array];
+    
+    unsigned i;
+    for (i = 0; i < count; i++)
+    {
+        objc_property_t property = properties[i];
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        [rv addObject:name];
+    }
+    
+    free(properties);
+    
+    return rv;
 }
 
 @end

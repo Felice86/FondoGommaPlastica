@@ -8,7 +8,6 @@
 
 #import "SpazioAderenteViewController.h"
 #import "BenvenutoViewController.h"
-#import <objc/runtime.h>
 
 @implementation PageContentViewController
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -114,11 +113,21 @@
             [self inserisciTutteLeProprietaInOggetto:oggettino contentScrollViewController:scrollView];
         }
     } else {
-        NSArray *proprieta = [self propertiesForClass:oggetto.class];
-        for (NSString *prop in proprieta) {
+//        NSArray *proprieta = [Aderente propertiesForClass:oggetto.class];
+        NSArray *valoriDaStampare = [(InformazioneAderente*)oggetto valoriDaStampare];
+        for (NSString *prop in valoriDaStampare) {
             NSObject *valore = [oggetto valueForKey:prop];
             if ([valore isKindOfClass:[NSString class]]) {
                 [self creaLabelTitolo:prop valore:(NSString*)valore scrollView:scrollView];
+            } else if ([valore isKindOfClass:[NSDate class]]) {
+                NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                if ([prop isEqualToString:kAnagraficaDataPrimaAdesione]) {
+                    [df setDateFormat:@"yyyy MM"];
+                } else {
+                    [df setDateFormat:@"dd/MM/yyyy"];
+                }
+                NSString *valoreString = [df stringFromDate:(NSDate*)valore];
+                [self creaLabelTitolo:prop valore:valoreString scrollView:scrollView];
             } else if ([valore isKindOfClass:[NSArray class]]) {
                 NSArray *valori = (NSArray*)valore;
                 for (NSObject *oggettoInArray in valori) {
@@ -129,30 +138,35 @@
             }
         }
     }
-    [scrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
-#pragma mark Recupero properties name
-- (NSArray *)propertiesForClass:(Class)class
-{
-    unsigned count;
-    objc_property_t *properties = class_copyPropertyList(class, &count);
-    
-    NSMutableArray *rv = [NSMutableArray array];
-    
-    unsigned i;
-    for (i = 0; i < count; i++)
-    {
-        objc_property_t property = properties[i];
-        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-        [rv addObject:name];
+- (void)inserisciLegenda:(InformazioneAderente*)oggetto addTo:(UIScrollView*)scrollView {
+    if (oggetto.legenda.length > 0) {
+        if (!scrollView) {
+            scrollView = self.contentScrollView;
+        }
+        
+        NSString *legenda = oggetto.legenda;
+        CGFloat widthLegenda = scrollView.frame.size.width -16;
+        UIFont *fontLabel = [UIFont fontWithName:@"Akkurat" size:12.0f];
+        CGRect rectLegenda = [legenda boundingRectWithSize:CGSizeMake(widthLegenda, CGFLOAT_MAX)
+                                    options:NSStringDrawingUsesLineFragmentOrigin
+                                 attributes:@{NSFontAttributeName:fontLabel}
+                                    context:nil];
+        
+        CGFloat heightLegenda = rectLegenda.size.height;
+        CGFloat yLegenda = CGRectGetMaxY(frameTitoloLabel) + 8;
+        CGFloat xLegenda = 8;
+        
+        UILabel *labelLegenda = [[UILabel alloc] initWithFrame:CGRectMake(xLegenda, yLegenda, widthLegenda, heightLegenda)];
+        labelLegenda.numberOfLines = 0;
+        labelLegenda.font = fontLabel;
+        labelLegenda.textColor = [UIColor whiteColor];
+        [labelLegenda setText:oggetto.legenda];
+        [scrollView addSubview:labelLegenda];
+        frameTitoloLabel = labelLegenda.frame;
     }
-    
-    free(properties);
-    
-    return rv;
 }
-
 
 #pragma mark UIPageController
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {

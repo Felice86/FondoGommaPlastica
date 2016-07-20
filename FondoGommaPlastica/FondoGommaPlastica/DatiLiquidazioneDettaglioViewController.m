@@ -44,6 +44,7 @@
     
     for (Liquidazione *oggettoLiquidazione in arrayLiquidazioni) {
         [self inserisciTutteLeProprietaInOggetto:oggettoLiquidazione contentScrollViewController:nil];
+        
 //        UIImage *separatore = [UIImage imageNamed:@"FILETTO.png"];
 //        UIImageView *separatoreView = [[UIImageView alloc] initWithImage:separatore];
 //        CGRect frame = separatoreView.frame;
@@ -54,6 +55,8 @@
 //        frameTitoloLabel.origin.y = CGRectGetMaxY(separatoreView.frame) + 4;
 //        frameValoreLabel.origin.y = CGRectGetMaxY(separatoreView.frame) + 4;
     }
+    [self inserisciLegenda:arrayLiquidazioni.lastObject addTo:nil];
+    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
 @end

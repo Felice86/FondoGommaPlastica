@@ -224,22 +224,22 @@
 		856E03A21D27E9CC000F0832 /* SpazioAderente */ = {
 			isa = PBXGroup;
 			children = (
-				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
-				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
-				6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */,
-				6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */,
-				856E03A41D27EA10000F0832 /* InformazioniAderenteViewController.h */,
-				856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */,
-				856E03A71D27EA2B000F0832 /* VisualizzaRendimentoViewController.h */,
-				856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */,
-				856E03AA1D27EA3A000F0832 /* UltimiMovimentiViewController.h */,
-				856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */,
-				856E03AD1D27EA4F000F0832 /* DatiLiquidazioneViewController.h */,
-				856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */,
 				856E03B01D27EBC5000F0832 /* AtriDatiViewController.h */,
 				856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */,
+				6DAEDFA71D12F09B005A40E0 /* BenvenutoViewController.h */,
+				6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */,
 				859CB3AD1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.h */,
 				859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */,
+				856E03AD1D27EA4F000F0832 /* DatiLiquidazioneViewController.h */,
+				856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */,
+				856E03A41D27EA10000F0832 /* InformazioniAderenteViewController.h */,
+				856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */,
+				6D1667E51CFF4284000FD9C7 /* SpazioAderenteViewController.h */,
+				6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */,
+				856E03AA1D27EA3A000F0832 /* UltimiMovimentiViewController.h */,
+				856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */,
+				856E03A71D27EA2B000F0832 /* VisualizzaRendimentoViewController.h */,
+				856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */,
 			);
 			name = SpazioAderente;
 			sourceTree = "<group>";

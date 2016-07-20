@@ -15,6 +15,8 @@
     Aderente *aderente = [Aderente sharedAderente];
     [self iniziaCreazioneLabelForScrollView:nil];
     [self inserisciTutteLeProprietaInOggetto:aderente.recapiti contentScrollViewController:nil];
+    [self inserisciLegenda:aderente.recapiti addTo:nil];
+    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, CGRectGetMaxY(frameTitoloLabel))];
 }
 
 @end

@@ -92,11 +92,17 @@
     contentView.frame = CGRectMake(contentView.frame.origin.x, contentView.frame.origin.y, self.contentScrollView.frame.size.width, heightContentView);
     [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.contentScrollView addSubview:contentView];
-    [self.contentScrollView setContentSize:contentView.frame.size];
+    CGSize contentSize = contentView.frame.size;
+    contentSize.height -= 20;
+    [self.contentScrollView setContentSize:contentSize];
     self.contentScrollView.contentOffset = CGPointMake(0, 0);
     self.selectedView = contentView;
 }
 
+- (void)facebookButtonClicked:(id)sender {
+    NSURL *urlFB = [NSURL URLWithString:@"https://www.facebook.com/Fondo-Gomma-Plastica-949956355080192/"];
+    [[UIApplication sharedApplication] openURL:urlFB];
+}
 
 //-(void) setCustomView:(UIView *)customView {
 //    NSUInteger z = NSNotFound;
