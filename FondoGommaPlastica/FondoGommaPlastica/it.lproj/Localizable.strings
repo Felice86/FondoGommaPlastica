@@ -10,11 +10,11 @@
 "cognome" = "Cognome";
 "codiceFiscale" = "Codice fiscale";
 "codiceAderente" = "Codice aderente";
-"dataIscrizione" = "Data iscrizione";
-"dataPrimaAdesione" = "Adesione";
-"ragSocAzienda" = "Ragione sociale azienda";
-"designatiBeneficiari" = "Designazione effettuata";
-"esisteCessioneQuinto" = "Esiste cessione quinto";
+"dataIscrizione" = "Adesione al fondo";
+"dataPrimaAdesione" = "Prima iscrizione";
+"ragSocAzienda" = "Azienda";
+"designatiBeneficiari" = "Beneficiari";
+"esisteCessioneQuinto" = "Contratti cessione quinto";
 "indirizzoResidenza" = "Indirizzo residenza";
 "viaECivico" = "Indirizzo";
 "luogo" = "Luogo";
@@ -29,7 +29,7 @@
 
 "periodo" = "Mese";
 "anno" = "Anno";
-"nomeAzienda" = "Nome azienda";
+"nomeAzienda" = "Azienda";
 "contributoAderente" = "Contributo aderente";
 "contributoAssicurativo" = "Contributo assicurativo";
 "contributoAzienda" = "Contributo azienda";
@@ -49,7 +49,7 @@
 "mesiContribuzione" = "Mesi contribuzione";
 "quoteAcquistate" = "Quote acquistate";
 "valoreQuota" = "Valore quota";
-"controvalore" = "Controvalore";
+"controvalore" = "Valore posizione";
 "contributoAderente" = "Contributo aderente";
 "contributoTfr" = "Contributo TFR";
 "contributoAzienda" = "Contributo azienda";

@@ -103,7 +103,7 @@
 }
 
 - (NSString *)legenda {
-    return @"Legenda:\nAttribuito=segnalato dall'azienda senza versamento\nSpesato=importo appena incassato\nQuotato=incassato e investito";
+    return @"Legenda:\n- ATTRIBUITO: importo dichiarato dall’azienda e non versato\n- SPESATO: importo appena incassato e in fase di investimento\n- QUOTATO: importo incassato e correttamente investito";
 }
 
 - (void)configuraContributo:(NSDictionary *)contributoDict {
@@ -190,7 +190,7 @@
 @end
 @implementation Liquidazione
 - (NSString *)legenda {
-    return @"Legenda:\n- da elaborare=accettata\n- elaborata=inserita a sistema\n- valorizzata=quote vendute con stima tassazione\n- da validare= pronta per la lista pagamenti\n- liquidabile=inserita nella prossima lista pagamenti\n- liquidata=pagamento effettuato (sarà disponibile con i tempi della banca)";
+    return @"Legenda:\n- DA ELABORARE: accettata\n- ELABORATA: inserita a sistema\n- VALORIZZATA: quote vendute e tassazione calcolata\n- DA VALIDARE C/O FONDO: pronta per la lista dei pagamenti\n- LIQUIDABILE: inserita nei pagamenti del mese\n- LIQUIDATA: pagamento effettuato (sarà disponibile con i tempi della banca)";
 }
 
 - (void)configuraLiquidazione:(NSDictionary *)liquidazioneDict {

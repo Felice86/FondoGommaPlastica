@@ -8,36 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		6D01CB2D1D2E38C100BE6362 /* UltimiMovimentiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AB1D27EA3B000F0832 /* UltimiMovimentiViewController.m */; };
-		6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */; settings = {ASSET_TAGS = (); }; };
-		6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */; settings = {ASSET_TAGS = (); }; };
-		6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */; settings = {ASSET_TAGS = (); }; };
-		6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E11CFF2CF1000FD9C7 /* LoginView.m */; settings = {ASSET_TAGS = (); }; };
-		6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6D1667D51CFF19F5000FD9C7 /* InfoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D41CFF19F5000FD9C7 /* InfoContentView.xib */; };
+		6D1667DA1CFF22CB000FD9C7 /* ContattiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667D91CFF22CB000FD9C7 /* ContattiView.xib */; };
+		6D1667DF1CFF24D5000FD9C7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1667DE1CFF24D5000FD9C7 /* LoginView.xib */; };
+		6D1667E21CFF2CF1000FD9C7 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E11CFF2CF1000FD9C7 /* LoginView.m */; };
+		6D1667E71CFF4284000FD9C7 /* SpazioAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1667E61CFF4284000FD9C7 /* SpazioAderenteViewController.m */; };
 		6D5E0DCB1CF7139600E08CE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0DCA1CF7139600E08CE9 /* main.m */; };
 		6D5E0DCE1CF7139600E08CE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0DCD1CF7139600E08CE9 /* AppDelegate.m */; };
 		6D5E0DD41CF7139600E08CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD21CF7139600E08CE9 /* Main.storyboard */; };
 		6D5E0DD61CF7139600E08CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD51CF7139600E08CE9 /* Assets.xcassets */; };
 		6D5E0DD91CF7139600E08CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E0DD71CF7139600E08CE9 /* LaunchScreen.storyboard */; };
-		6DAEDFA11D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9B1D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA21D12AD4C005A40E0 /* Akkurat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9C1D12AD4C005A40E0 /* Akkurat-Bold.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA31D12AD4C005A40E0 /* Akkurat-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9D1D12AD4C005A40E0 /* Akkurat-Light-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA41D12AD4C005A40E0 /* Akkurat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9E1D12AD4C005A40E0 /* Akkurat-Light.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA51D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9F1D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA61D12AD4C005A40E0 /* Akkurat-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */; settings = {ASSET_TAGS = (); }; };
-		6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 854D2B691D0BF2D4002E3315 /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
-		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; settings = {ASSET_TAGS = (); }; };
-		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		856E03A61D27EA10000F0832 /* InformazioniAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */; settings = {ASSET_TAGS = (); }; };
-		856E03A91D27EA2B000F0832 /* VisualizzaRendimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		856E03AF1D27EA4F000F0832 /* DatiLiquidazioneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */; settings = {ASSET_TAGS = (); }; };
-		856E03B21D27EBC5000F0832 /* AtriDatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */; settings = {ASSET_TAGS = (); }; };
-		859CB3AF1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6DAEDFA11D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9B1D12AD4C005A40E0 /* Akkurat-Bold-Italic.otf */; };
+		6DAEDFA21D12AD4C005A40E0 /* Akkurat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9C1D12AD4C005A40E0 /* Akkurat-Bold.otf */; };
+		6DAEDFA31D12AD4C005A40E0 /* Akkurat-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9D1D12AD4C005A40E0 /* Akkurat-Light-Italic.otf */; };
+		6DAEDFA41D12AD4C005A40E0 /* Akkurat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9E1D12AD4C005A40E0 /* Akkurat-Light.otf */; };
+		6DAEDFA51D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDF9F1D12AD4C005A40E0 /* Akkurat-Normal-Italic.otf */; };
+		6DAEDFA61D12AD4C005A40E0 /* Akkurat-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA01D12AD4C005A40E0 /* Akkurat-Normal.otf */; };
+		6DAEDFA91D12F09B005A40E0 /* BenvenutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAEDFA81D12F09B005A40E0 /* BenvenutoViewController.m */; };
+		854D2B6A1D0BF2D4002E3315 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 854D2B691D0BF2D4002E3315 /* Configurations.plist */; };
+		8569CA9E1D017EF600DF74BB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CA9D1D017EF600DF74BB /* NSString+MD5.m */; };
+		8569CAAC1D01B39D00DF74BB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569CAAB1D01B39D00DF74BB /* MBProgressHUD.m */; };
+		856E03A61D27EA10000F0832 /* InformazioniAderenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A51D27EA10000F0832 /* InformazioniAderenteViewController.m */; };
+		856E03A91D27EA2B000F0832 /* VisualizzaRendimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03A81D27EA2B000F0832 /* VisualizzaRendimentoViewController.m */; };
+		856E03AF1D27EA4F000F0832 /* DatiLiquidazioneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03AE1D27EA4F000F0832 /* DatiLiquidazioneViewController.m */; };
+		856E03B21D27EBC5000F0832 /* AtriDatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E03B11D27EBC5000F0832 /* AtriDatiViewController.m */; };
+		859CB3AF1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859CB3AE1D29942700B63BFA /* DatiLiquidazioneDettaglioViewController.m */; };
 		85A753A41D3D584400360492 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85A753A61D3D584400360492 /* Localizable.strings */; };
-		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
+		85AA7BBA1CFE0E48007AD1DA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7BB91CFE0E48007AD1DA /* RootViewController.m */; };
 		85B1AC741D0B459900B56BFA /* libFondimatica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B1AC681D0B412100B56BFA /* libFondimatica.a */; };
-		85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EB1D15877800BFAF97 /* CustomImage.m */; settings = {ASSET_TAGS = (); }; };
-		85CD48F01D1589FD00BFAF97 /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EF1D1589FD00BFAF97 /* CustomScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		85CD48EC1D15877800BFAF97 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EB1D15877800BFAF97 /* CustomImage.m */; };
+		85CD48F01D1589FD00BFAF97 /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD48EF1D1589FD00BFAF97 /* CustomScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,12 +278,13 @@
 		6D5E0DBE1CF7139600E08CE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = ElpoEdizioni;
 				TargetAttributes = {
 					6D5E0DC51CF7139600E08CE9 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 2F8VYP58PJ;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -414,11 +415,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniele Spinelli (KB56DS8A72)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -442,7 +444,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
-				PROVISIONING_PROFILE = "011ef32b-83a5-47d6-9e14-4686059c3181";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,11 +462,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniele Spinelli (2F8VYP58PJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -482,7 +484,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-Objc";
-				PROVISIONING_PROFILE = "3e3ee7cd-8b5d-46fd-9bae-0728854654d2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -493,7 +494,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniele Spinelli (KB56DS8A72)";
+				DEVELOPMENT_TEAM = 2F8VYP58PJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = FondoGommaPlastica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,6 +505,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elpoedizioni.FondoGommaPlastica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "238d05d5-dc05-4b34-b385-0c77a7b81009";
+				PROVISIONING_PROFILE_SPECIFIER = Developer_ElpoEdizioni;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,7 +515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniele Spinelli (2F8VYP58PJ)";
+				DEVELOPMENT_TEAM = 2F8VYP58PJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = FondoGommaPlastica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -521,6 +526,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elpoedizioni.FondoGommaPlastica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b3a317a-da3d-43af-8442-5204f48170f6";
+				PROVISIONING_PROFILE_SPECIFIER = AdHoc_ElpoEdizioni;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

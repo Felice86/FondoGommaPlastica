@@ -70,6 +70,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.selectedButton.selected = YES;
+    
+    if (self.selectedView) {
+        if ([self.selectedView isEqual:self.loginView]) {
+            if (![self.loginView.switchButton isOn]) {
+                [self.loginView resetInput];
+            }
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -145,11 +153,10 @@
         self.lenteButton.selected = YES;
         self.selectedButton = self.lenteButton;
         [self setContentView:self.loginView];
-#ifdef DEBUG
-        if ([self.selectedView isEqual:self.loginView]) {
-            [self impostaAdTest];
-        }
-#endif
+        [self.loginView checkAndSetSavedUsernameAndPassword];
+//#ifdef DEBUG
+//        [self.loginView impostaAdTest];
+//#endif
     }
 }
 
@@ -168,6 +175,7 @@
     Aderente *aderente = [Aderente sharedAderente];
     if (aderente.username.length > 0 && aderente.password.length > 0) {
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         //        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
         [self.hud setRemoveFromSuperViewOnHide:YES];
         //        [self.hud.backgroundView setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.5]];
@@ -269,12 +277,20 @@
     });
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        [self.hud hideAnimated:YES];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if (self.erroriRiscontrati.count > 0) {
-            
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Si sono verificati alcuni errori nel recupero delle informazioni. Riprovare." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *riprovaAction = [UIAlertAction actionWithTitle:@"Riprova" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self loginViewEsegueLogin:self.loginView];
+            }];
+            UIAlertAction *cancellaAction = [UIAlertAction actionWithTitle:@"Annulla" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:riprovaAction];
+            [alert addAction:cancellaAction];
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             [self puoiMostrareVistaAderente];
         }
-        [self.hud hideAnimated:YES];
     });
 }
 
@@ -410,15 +426,27 @@
     keyboardIsShown = YES;
 }
 
-- (void)resetInput {
-    [self.loginView.usernameTextField setText:@""];
-    [self.loginView.passwordTextField setText:@""];
-}
-
-- (void)impostaAdTest {
-    [self.loginView.usernameTextField setText:[[Configurations sharedConfiguration] usernameAdTest]];
-    [self.loginView.passwordTextField setText:[[Configurations sharedConfiguration] passwordAdTest]];
-}
+//- (void)resetInput {
+//    [self.loginView.usernameTextField setText:@""];
+//    [self.loginView.passwordTextField setText:@""];
+//}
+//
+//- (void)impostaAdTest {
+//    [self.loginView.usernameTextField setText:[[Configurations sharedConfiguration] usernameAdTest]];
+//    [self.loginView.passwordTextField setText:[[Configurations sharedConfiguration] passwordAdTest]];
+//}
+//
+//- (void)checkAndSetSavedUsernameAndPassword
+//{
+//    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:kUsernameSaved];
+//    NSString* passwordMD5 = [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordSaved];
+//    if (username.length > 0) {
+//        [self.loginView.usernameTextField setText:username];
+//    }
+//    if (passwordMD5.length > 0) {
+//        [self.loginView.passwordTextField setText:passwordMD5];
+//    }
+//}
 
 //- (IBAction)selezionaPrecedente:(UIButton *)sender {
 //    self.selectedButton.selected = NO;

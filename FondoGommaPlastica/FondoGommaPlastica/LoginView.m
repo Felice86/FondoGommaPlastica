@@ -42,4 +42,35 @@
     [self.passwordTextField setText:[[Configurations sharedConfiguration] passwordAdTest]];
 }
 
+- (void)checkAndSetSavedUsernameAndPassword
+{
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:kUsernameSaved];
+    NSString* passwordMD5 = [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordSaved];
+    if (username.length > 0) {
+        [self.usernameTextField setText:username];
+        [self.switchButton setOn:YES];
+    } else {
+        [self.switchButton setOn:NO];
+    }
+    if (passwordMD5.length > 0) {
+        [self.passwordTextField setText:passwordMD5];
+        [self.switchButton setOn:YES];
+    } else {
+        [self.switchButton setOn:NO];
+    }
+}
+
+- (IBAction)switchButtonChangeSettings:(UISwitch*)switchSender
+{
+    if ([switchSender isOn]) {
+        NSString *username = self.usernameTextField.text;
+        NSString* passwordMD5 = self.passwordTextField.text;
+        [[NSUserDefaults standardUserDefaults] setObject:username forKey:kUsernameSaved];
+        [[NSUserDefaults standardUserDefaults] setObject:passwordMD5 forKey:kPasswordSaved];
+    } else {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUsernameSaved];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kPasswordSaved];
+    }
+}
+
 @end

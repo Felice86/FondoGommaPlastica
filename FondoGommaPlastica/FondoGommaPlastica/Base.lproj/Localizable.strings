@@ -10,11 +10,11 @@
 "cognome" = "Cognome";
 "codiceFiscale" = "Codice fiscale";
 "codiceAderente" = "Codice aderente";
-"dataIscrizione" = "Data iscrizione";
-"dataPrimaAdesione" = "Adesione";
-"ragSocAzienda" = "Ragione sociale azienda";
-"designatiBeneficiari" = "Designazione effettuata";
-"esisteCessioneQuinto" = "Esiste cessione quinto";
+"dataIscrizione" = "Adesione al fondo";
+"dataPrimaAdesione" = "Prima iscrizione";
+"ragSocAzienda" = "Azienda";
+"designatiBeneficiari" = "Beneficiari";
+"esisteCessioneQuinto" = "Contratti cessione quinto";
 "indirizzoResidenza" = "Indirizzo residenza";
 "viaECivico" = "Indirizzo";
 "luogo" = "Luogo";
@@ -29,8 +29,8 @@
 
 "periodo" = "Mese";
 "anno" = "Anno";
-"nomeAzienda" = "Nome azienda";
-"contributoAderente" = "Contributo aderente";
+"nomeAzienda" = "Azienda";
+"contributoAderente" = "Contributo aderente / Base";
 "contributoAssicurativo" = "Contributo assicurativo";
 "contributoAzienda" = "Contributo azienda";
 "contributoIscrizione" = "Contributo Iscrizione";
@@ -49,10 +49,7 @@
 "mesiContribuzione" = "Mesi contribuzione";
 "quoteAcquistate" = "Quote acquistate";
 "valoreQuota" = "Valore quota";
-"controvalore" = "Controvalore";
-"contributoAderente" = "Contributo aderente";
-"contributoTfr" = "Contributo TFR";
-"contributoAzienda" = "Contributo azienda";
+"controvalore" = "Valore posizione";
 "rendimentoFondo" = "Rendimento fondo";
 "controvaloreTotale" = "Controvalore totale";
 "rendimentoAnnuo" = "Rendimento annuo";

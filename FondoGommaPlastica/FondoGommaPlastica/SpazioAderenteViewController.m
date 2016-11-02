@@ -118,7 +118,24 @@
         for (NSString *prop in valoriDaStampare) {
             NSObject *valore = [oggetto valueForKey:prop];
             if ([valore isKindOfClass:[NSString class]]) {
-                [self creaLabelTitolo:prop valore:(NSString*)valore scrollView:scrollView];
+                NSString *valoreString = nil;
+                if ([prop isEqualToString:kAnagraficaDesignatiBeneficiari]) {
+                    if ([(NSString*)valore isEqualToString:@"NO"]) {
+                        valoreString = @"EREDI";
+                    }
+                    if ([(NSString*)valore isEqualToString:@"SI"]) {
+                        valoreString = @"DESIGNAZIONE EFFETTUATA";
+                    }
+                } else if ([prop isEqualToString:kAnagraficaEsisteCessioneQuinto]) {
+                    if ([(NSString*)valore isEqualToString:@"NO"]) {
+                        valoreString = @"NESSUNO";
+                    } else {
+                        valoreString = (NSString*)valore;
+                    }
+                } else {
+                    valoreString = (NSString*)valore;
+                }
+                [self creaLabelTitolo:prop valore:valoreString scrollView:scrollView];
             } else if ([valore isKindOfClass:[NSDate class]]) {
                 NSDateFormatter *df = [[NSDateFormatter alloc] init];
                 if ([prop isEqualToString:kAnagraficaDataPrimaAdesione]) {

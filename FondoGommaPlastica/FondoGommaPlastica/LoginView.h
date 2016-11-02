@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Fondimatica/Aderente.h"
 
+#define kUsernameSaved @"usernameSaved"
+#define kPasswordSaved @"passwordSaved"
+
 @class LoginView;
 
 @protocol LoginViewProtocol <NSObject>
@@ -19,8 +22,10 @@
 @interface LoginView : UIView
 @property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
+@property (nonatomic, weak) IBOutlet UISwitch *switchButton;
 @property (nonatomic, weak) NSObject<LoginViewProtocol> *delegate;
 
 - (void)resetInput;
 - (void)impostaAdTest;
+- (void)checkAndSetSavedUsernameAndPassword;
 @end
