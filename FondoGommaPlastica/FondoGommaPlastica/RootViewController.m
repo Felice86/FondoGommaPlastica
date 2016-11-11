@@ -190,24 +190,49 @@
         NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (error) {
                 NSLog(@"Errore:%@",error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.hud hideAnimated:YES];
+                    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                });
+                UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Si è verificato un errore. Riprovare." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                [alertViewController addAction:chiudiAction];
+                [self presentViewController:alertViewController animated:YES completion:nil];
             } else {
-                BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
-                NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
-#ifdef DEBUG
-                if (!abilitaUtenteResponse) {
-                    abilitaUtenteResponse = NO;
-                }
-#endif
-                if (abilitaUtenteResponse) {
+                NSInteger httpStatusCode = [(NSHTTPURLResponse*)response statusCode];
+                if (httpStatusCode != 200) {
+                    NSString *message = [[NSHTTPURLResponse localizedStringForStatusCode:httpStatusCode] capitalizedString];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+                        [self.hud hideAnimated:YES];
+                        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                     });
-                    [self continuaRecuperoInfoAderenteAbilitato];
-                } else {
-                    UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Utente non abilitato." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:message preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
                     [alertViewController addAction:chiudiAction];
                     [self presentViewController:alertViewController animated:YES completion:nil];
+                } else {
+                    BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
+                    NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
+    #ifdef DEBUG
+                    if (!abilitaUtenteResponse) {
+                        abilitaUtenteResponse = NO;
+                    }
+    #endif
+                    if (abilitaUtenteResponse) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            self.hud.mode = MBProgressHUDModeAnnularDeterminate;
+                        });
+                        [self continuaRecuperoInfoAderenteAbilitato];
+                    } else {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.hud hideAnimated:YES];
+                            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                        });
+                        UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Utente non abilitato." preferredStyle:UIAlertControllerStyleAlert];
+                        UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                        [alertViewController addAction:chiudiAction];
+                        [self presentViewController:alertViewController animated:YES completion:nil];
+                    }
                 }
             }
         }];
