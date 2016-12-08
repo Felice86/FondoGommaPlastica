@@ -205,11 +205,11 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.hud hideAnimated:YES];
                         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                        UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:message preferredStyle:UIAlertControllerStyleAlert];
+                        UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                        [alertViewController addAction:chiudiAction];
+                        [self presentViewController:alertViewController animated:YES completion:nil];
                     });
-                    UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:message preferredStyle:UIAlertControllerStyleAlert];
-                    UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
-                    [alertViewController addAction:chiudiAction];
-                    [self presentViewController:alertViewController animated:YES completion:nil];
                 } else {
                     BOOL abilitaUtenteResponse = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] boolValue];
                     NSLog(@"Abilitazione utente: %d",abilitaUtenteResponse);
@@ -227,11 +227,11 @@
                         dispatch_async(dispatch_get_main_queue(), ^{
                             [self.hud hideAnimated:YES];
                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                            UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Utente non abilitato." preferredStyle:UIAlertControllerStyleAlert];
+                            UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                            [alertViewController addAction:chiudiAction];
+                            [self presentViewController:alertViewController animated:YES completion:nil];
                         });
-                        UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Utente non abilitato." preferredStyle:UIAlertControllerStyleAlert];
-                        UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
-                        [alertViewController addAction:chiudiAction];
-                        [self presentViewController:alertViewController animated:YES completion:nil];
                     }
                 }
             }
