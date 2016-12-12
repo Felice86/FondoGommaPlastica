@@ -207,11 +207,11 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.hud hideAnimated:YES];
                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                    UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Si è verificato un errore. Riprovare." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
+                    [alertViewController addAction:chiudiAction];
+                    [self presentViewController:alertViewController animated:YES completion:nil];
                 });
-                UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Attenzione" message:@"Si è verificato un errore. Riprovare." preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *chiudiAction = [UIAlertAction actionWithTitle:@"Chiudi" style:UIAlertActionStyleCancel handler:nil];
-                [alertViewController addAction:chiudiAction];
-                [self presentViewController:alertViewController animated:YES completion:nil];
             } else {
                 NSInteger httpStatusCode = [(NSHTTPURLResponse*)response statusCode];
                 if (httpStatusCode != 200) {
