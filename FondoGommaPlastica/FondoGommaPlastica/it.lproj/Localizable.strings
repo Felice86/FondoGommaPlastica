@@ -30,7 +30,7 @@
 "periodo" = "Mese";
 "anno" = "Anno";
 "nomeAzienda" = "Azienda";
-"contributoAderente" = "Contributo aderente";
+"contributoAderente" = "Contributo aderente / Base";
 "contributoAssicurativo" = "Contributo assicurativo";
 "contributoAzienda" = "Contributo azienda";
 "contributoIscrizione" = "Contributo Iscrizione";
@@ -39,6 +39,7 @@
 "contributoTfrSilente" = "Contributo TFR silente";
 "contributoVolontario" = "Contributo Volontario";
 "contributoVolontarioAzienda" = "Contributo Volontario azienda";
+"totaleContributi" = "Totale contributi";
 "statoContributo" = "Stato contributo";
 
 "nomeCompartoAttuale" = "Nome comparto attuale";
@@ -50,9 +51,6 @@
 "quoteAcquistate" = "Quote acquistate";
 "valoreQuota" = "Valore quota";
 "controvalore" = "Valore posizione";
-"contributoAderente" = "Contributo aderente";
-"contributoTfr" = "Contributo TFR";
-"contributoAzienda" = "Contributo azienda";
 "rendimentoFondo" = "Rendimento fondo";
 "controvaloreTotale" = "Controvalore totale";
 "rendimentoAnnuo" = "Rendimento annuo";

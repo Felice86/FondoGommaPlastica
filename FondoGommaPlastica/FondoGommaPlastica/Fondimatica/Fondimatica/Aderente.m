@@ -95,11 +95,12 @@
 @property (nonatomic, retain, readwrite) NSString *contributoIscrizione;
 @property (nonatomic, retain, readwrite) NSString *contributoTfrSilente;
 @property (nonatomic, retain, readwrite) NSString *contributoRivalutazioneTFR;
+@property (nonatomic, retain, readwrite) NSString *totaleContributi;
 @property (nonatomic, retain, readwrite) NSString *statoContributo;
 @end
 @implementation Contributo
 - (NSArray *)valoriDaStampare {
-    return @[kContributiPeriodo,kContributiAnno,kContributiNomeAzienda,kContributiContributoAderente,kContributiContributoAzienda,kContributiContributoTfr,kContributiStatoContributo];
+    return @[kContributiPeriodo,kContributiAnno,kContributiNomeAzienda,kContributiContributoAderente,kContributiContributoVolontario,kContributiContributoAzienda,kContributiContributoTfr,kContributiContributoTfrSilente,kContributiTotaleContributi,kContributiStatoContributo];
 }
 
 - (NSString *)legenda {
@@ -119,6 +120,7 @@
     self.contributoIscrizione = [Aderente recuperaValore:kContributiContributoIscrizione daOggetto:contributoDict valuta:YES];
     self.contributoTfrSilente = [Aderente recuperaValore:kContributiContributoTfrSilente daOggetto:contributoDict valuta:YES];
     self.contributoRivalutazioneTFR = [Aderente recuperaValore:kContributiContributoRivalutazioneTFR daOggetto:contributoDict valuta:YES];
+    self.totaleContributi = [Aderente recuperaValore:kContributiTotaleContributi daOggetto:contributoDict valuta:YES];
     self.statoContributo = [Aderente recuperaValore:kContributiStatoContributo daOggetto:contributoDict valuta:NO];
 }
 

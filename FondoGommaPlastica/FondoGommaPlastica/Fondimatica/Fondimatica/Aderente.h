@@ -41,6 +41,7 @@
 #define kContributiContributoTfrSilente @"contributoTfrSilente"
 #define kContributiContributoVolontario @"contributoVolontario"
 #define kContributiContributoVolontarioAzienda @"contributoVolontarioAzienda"
+#define kContributiTotaleContributi @"totaleContributi"
 #define kContributiStatoContributo @"statoContributo"
 
 #define kRendimentoNomeCompartoAttuale @"nomeCompartoAttuale"
@@ -116,6 +117,7 @@
 @property (nonatomic, retain, readonly) NSString *contributoIscrizione;
 @property (nonatomic, retain, readonly) NSString *contributoTfrSilente;
 @property (nonatomic, retain, readonly) NSString *contributoRivalutazioneTFR;
+@property (nonatomic, retain, readonly) NSString *totaleContributi;
 @property (nonatomic, retain, readonly) NSString *statoContributo;
 - (void)configuraContributo:(NSDictionary*)contributoDict;
 @end

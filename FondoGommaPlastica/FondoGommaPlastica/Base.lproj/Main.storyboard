@@ -267,23 +267,24 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="7VV-Ri-F5K"/>
-                                <exclude reference="SfF-5X-5KT"/>
-                                <exclude reference="mVl-hO-Xb5"/>
-                                <exclude reference="z9V-la-tuX"/>
-                                <exclude reference="0ly-pN-f7O"/>
-                                <exclude reference="kJi-bG-wWV"/>
                                 <exclude reference="IiS-Qs-QpR"/>
                                 <exclude reference="TiA-hA-N2W"/>
                                 <exclude reference="alB-1E-zlS"/>
                                 <exclude reference="lYm-0Q-Stb"/>
+                                <exclude reference="0ly-pN-f7O"/>
+                                <exclude reference="kJi-bG-wWV"/>
                                 <exclude reference="WF8-fX-6Tq"/>
                                 <exclude reference="nKO-Hz-gqL"/>
+                                <exclude reference="7VV-Ri-F5K"/>
+                                <exclude reference="SfF-5X-5KT"/>
+                                <exclude reference="mVl-hO-Xb5"/>
+                                <exclude reference="z9V-la-tuX"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="contentScrollView" destination="vf0-dw-uL2" id="Rpn-os-xHS"/>
+                        <outlet property="footerView" destination="aUm-3g-9PL" id="0nB-ee-Tkm"/>
                         <outlet property="lenteButton" destination="x2J-fe-Wt9" id="goc-E8-FJY"/>
                         <outlet property="ominiButton" destination="pKb-mH-86m" id="Gh4-Ab-CZI"/>
                         <outlet property="telefonoButton" destination="yUG-aa-jka" id="lkv-dS-K07"/>
@@ -489,11 +490,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="0Tc-Et-Icz"/>
-                                <exclude reference="idP-yQ-tJo"/>
-                                <exclude reference="Hre-XG-7UQ"/>
-                                <exclude reference="Nir-3C-sIz"/>
-                                <exclude reference="aYM-5x-6w5"/>
                                 <exclude reference="4TS-Y4-x1Z"/>
                                 <exclude reference="9RS-BP-sEi"/>
                                 <exclude reference="CLV-eB-Ote"/>
@@ -501,7 +497,12 @@
                                 <exclude reference="Nia-q7-eP4"/>
                                 <exclude reference="uv9-Lo-HAp"/>
                                 <exclude reference="xlp-Sc-UnP"/>
+                                <exclude reference="0Tc-Et-Icz"/>
+                                <exclude reference="idP-yQ-tJo"/>
                                 <exclude reference="qtw-9E-IPz"/>
+                                <exclude reference="Hre-XG-7UQ"/>
+                                <exclude reference="Nir-3C-sIz"/>
+                                <exclude reference="aYM-5x-6w5"/>
                                 <exclude reference="rUy-yX-15i"/>
                             </mask>
                         </variation>

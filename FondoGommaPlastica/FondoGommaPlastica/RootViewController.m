@@ -31,6 +31,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *telefonoButton;
 @property (nonatomic, retain) UIButton *selectedButton;
 @property (nonatomic, retain) UIView *selectedView;
+@property (nonatomic, weak) IBOutlet UIView *footerView;
 - (IBAction)ominiClicked:(UIButton *)sender;
 - (IBAction)lenteClicked:(UIButton *)sender;
 - (IBAction)telefonoClicked:(UIButton *)sender;
@@ -78,6 +79,12 @@
             }
         }
     }
+//    [self setContentView:self.selectedView];
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -96,7 +103,13 @@
 
 #pragma mark - CONTENT VIEW
 - (void)setContentView:(UIView*)contentView {
-    CGFloat heightContentView = self.contentScrollView.frame.size.height > contentView.frame.size.height ? self.contentScrollView.frame.size.height : contentView.frame.size.height;
+    CGFloat heightContentView = 0;
+    CGFloat maxYScrolView = CGRectGetMaxY(self.contentScrollView.frame);
+    if (maxYScrolView > self.footerView.frame.origin.y) {
+        heightContentView = self.footerView.frame.origin.y - self.contentScrollView.frame.origin.y;
+    } else {
+        heightContentView = self.contentScrollView.frame.size.height;
+    }
     contentView.frame = CGRectMake(contentView.frame.origin.x, contentView.frame.origin.y, self.contentScrollView.frame.size.width, heightContentView);
     [self.contentScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.contentScrollView addSubview:contentView];
@@ -183,7 +196,8 @@
         self.hud.label.text = @"Recupero informazioni...";
         
         NSURL *abilitaUtenteUrl = [[DataHandler sharedData] creaUrlDaConfig:[[Configurations sharedConfiguration] abilitaUtente] codiceUtente:aderente.username];
-        NSData *passwordData = [aderente.password dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *passwordEscape = [NSString stringWithFormat:@"\"%@\"",aderente.password];
+        NSData *passwordData = [passwordEscape dataUsingEncoding:NSUTF8StringEncoding];
         NSURLRequest *request = [[DataHandler sharedData] createWebRequest:abilitaUtenteUrl method:@"POST" body:passwordData];
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:self delegateQueue:nil];
@@ -329,6 +343,7 @@
     NSURLSessionDataTask *dataStack = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"errore:%@",configUrl);
+            dispatch_group_leave(group);
         } else {
             NSError *errorJSON = nil;
             NSObject *datiRecuperati = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];

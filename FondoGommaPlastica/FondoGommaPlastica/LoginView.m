@@ -58,6 +58,11 @@
     } else {
         [self.switchButton setOn:NO];
     }
+#ifdef DEBUG
+    if (username.length == 0 && passwordMD5.length == 0) {
+        [self impostaAdTest];
+    }
+#endif
 }
 
 - (IBAction)switchButtonChangeSettings:(UISwitch*)switchSender
